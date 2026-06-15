@@ -1,0 +1,643 @@
+/* ==========================================================================
+   1. DESIGN SYSTEM & ROOT VARIABLES
+   ========================================================================== */
+@import url('https://googleapis.com');
+
+:root {
+    /* Color Palette */
+    --clr-primary: #0f172a;       /* Deep Slate Blue */
+    --clr-accent: #2563eb;        /* Trust Blue */
+    --clr-accent-hover: #1d4ed8;  /* Darker Blue */
+    --clr-text-main: #334155;     /* Charcoal Body Text */
+    --clr-text-light: #64748b;    /* Slate Muted Text */
+    --clr-bg-light: #f8fafc;      /* Light Off-White Background */
+    --clr-white: #ffffff;
+    
+    /* Layout Tokens */
+    --font-main: 'Inter', sans-serif;
+    --max-width: 1200px;
+    --transition-fast: 0.2s ease-in-out;
+    --transition-smooth: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ==========================================================================
+   2. GLOBAL BASE STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--clr-bg-light);
+    color: var(--clr-text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+main {
+    min-height: calc(100vh - 160px); /* Pushes footer down on short pages */
+    padding-top: 80px; /* Prevents fixed header overlap */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+/* ==========================================================================
+   3. COMPONENT: PRE-LOADER
+   ========================================================================== */
+.preloader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-primary);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity var(--transition-smooth), visibility var(--transition-smooth);
+}
+
+.preloader-overlay.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--clr-accent);
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ==========================================================================
+   4. COMPONENT: HEADER & NAVIGATION
+   ========================================================================== */
+
+/* ==========================================================================
+   FIXED FIXED HEADER COMPONENT CLEARANCE (REMOVES WHITE SPACE GAP)
+   ========================================================================== */
+
+/* 1. FIX: Targets the insertion slot container wrapper to clear default spacing drop artifacts */
+#global-header {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: transparent !important;
+  display: block;
+}
+
+/* 2. FIX: Overrides global header positioning variables to stay pinned on top of the canvas */
+.global-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* 3. FIX: Adjusts html/body settings to completely lock down white background bleeding leaks */
+html, body {
+  background-color: #030712 !important; /* Forces master baseline page canvas to dark mode slate black */
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+}
+
+.logo span {
+    color: var(--clr-accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-weight: 500;
+    color: var(--clr-text-light);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--clr-accent);
+}
+
+/* ==========================================================================
+   5. COMPONENT: FOOTER
+   ========================================================================== */
+.main-footer {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+.main-footer p {
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   6. PAGE SPECIFIC LAYOUT EXAMPLES
+   ========================================================================== */
+.hero-section {
+    max-width: var(--max-width);
+    margin: 4rem auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    color: var(--clr-primary);
+    margin-bottom: 1rem;
+}
+
+
+
+/* --- SHARED VARIABLES & RESET CONFIGURATION --- */
+:root {
+  --primary-blue: #2563eb;
+  --primary-hover: #1d4ed8;
+  --corp-dark: #0f172a;
+  --corp-slate: #64748b;
+  --text-light: #ffffff;
+  --bg-scrolled: rgba(255, 255, 255, 0.95);
+  --header-transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--corp-dark);
+  overflow-x: hidden;
+}
+
+/* --- CORPORATE PRELOADER SHROUD LAYOUT --- */
+/* ==========================================================================
+   HIGH-FIDELITY CYBERNETIC SHROUD PRELOADER
+   ========================================================================== */
+
+#app-preloader-shroud {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100vh;
+  background-color: #030712; /* Deep matte black background mirroring screenshot */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+              visibility 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#app-preloader-shroud.shroud-clear {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-centerpiece {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* --- THE CYBERNETIC RADAR MOLECULE MATRIX --- */
+.cyber-radar-matrix {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+/* Concentric Radar Orbiting Ring Lines */
+.radar-orbit-ring {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ring-outer {
+  width: 220px; height: 220px;
+  animation: corporatePreloaderSpin 12s linear infinite;
+}
+
+.ring-mid {
+  width: 170px; height: 170px;
+  animation: corporatePreloaderSpinReverse 8s linear infinite;
+}
+
+.ring-inner {
+  width: 120px; height: 120px;
+  border-style: dashed;
+  border-color: rgba(34, 211, 238, 0.08);
+  animation: corporatePreloaderSpin 20s linear infinite;
+}
+
+/* Drifting Orbiting Edge Dots */
+.orbit-drifting-node {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.ring-outer .orbit-drifting-node { top: 15%; right: 15%; }
+.ring-mid .orbit-drifting-node { bottom: 10%; left: 15%; }
+
+/* --- CORE MOLECULE STRUCTURAL CONNECTIONS HUB --- */
+.central-molecule-hub {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* Intersecting Structural Vector Web Lines */
+.molecule-line {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.vertical-line { width: 1px; height: 100%; top: 0; left: 50%; }
+.cross-line-left { width: 100%; height: 1px; top: 50%; left: 0; transform: rotate(30deg); }
+.cross-line-right { width: 100%; height: 1px; top: 50%; left: 0; transform: rotate(-30deg); }
+
+/* Molecule Node Placements around the horizon circle */
+.molecule-node {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  z-index: 10;
+  animation: corporateNodePulse 2s ease-in-out infinite alternate;
+}
+
+.pos-top          { top: -6px; left: calc(50% - 6px); animation-delay: 0.2s; }
+.pos-top-right    { top: 16px; right: -6px; animation-delay: 0.4s; }
+.pos-bottom-right { bottom: 16px; right: -6px; animation-delay: 0.6s; }
+.pos-bottom       { bottom: -6px; left: calc(50% - 6px); animation-delay: 0.8s; }
+.pos-bottom-left  { bottom: 16px; left: -6px; animation-delay: 1s; }
+.pos-top-left     { top: 16px; left: -6px; animation-delay: 1.2s; }
+
+/* Centered Molecule Badge Core */
+.molecule-core-badge {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: #030712;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.molecule-brand-vector {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+/* --- THE BRAND HIGH-CONTRAST NEON LIGHTING SYSTEMS --- */
+.neon-cyan {
+  background-color: #22d3ee;
+  box-shadow: 0 0 12px #06b6d4, 0 0 24px rgba(6, 182, 212, 0.4);
+}
+
+.neon-emerald {
+  background-color: #34d399;
+  box-shadow: 0 0 12px #10b981, 0 0 24px rgba(16, 185, 129, 0.4);
+}
+
+.neon-purple {
+  background-color: #a855f7;
+  box-shadow: 0 0 12px #8b5cf6, 0 0 24px rgba(139, 92, 246, 0.4);
+}
+
+/* --- TYPOGRAPHY AND TICKERS --- */
+.loader-brand-label {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  /* Exact matching premium cyan spectrum typography gradient mapping from image reference */
+  background: linear-gradient(135deg, #ffffff 30%, #a855f7 60%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 24px;
+}
+
+.loader-status-ticker {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #4b5563; /* Sleek structural muted gray text */
+  letter-spacing: 0.15em;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+/* Pulsing radar status live dot indicator */
+.radar-status-pulse {
+  width: 6px;
+  height: 6px;
+  background-color: #10b981;
+  border-radius: 50%;
+  position: relative;
+}
+
+.radar-status-pulse::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  border-radius: 50%;
+  background-color: #10b981;
+  animation: corporatePreloaderRadarPulse 1.8s ease-out infinite;
+}
+
+/* --- THE LOADING PROGRESS BAR MODULE --- */
+.loader-progress-track {
+  width: 240px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.loader-progress-fill-bar {
+  width: 0%;
+  height: 100%;
+  /* High contrast linear fill matching system timeline progress grids */
+  background: linear-gradient(90deg, #34d399, #22d3ee, #8b5cf6);
+  border-radius: 4px;
+  animation: corporatePreloaderBarProgress 1.7s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* ==========================================================================
+   HARDWARE-ACCELERATED ANIMATION ROTATIONS
+   ========================================================================== */
+@keyframes corporatePreloaderSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes corporatePreloaderSpinReverse {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes corporateNodePulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.18); opacity: 1; }
+}
+
+@keyframes corporatePreloaderRadarPulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+@keyframes corporatePreloaderBarProgress {
+  0% { width: 0%; }
+  35% { width: 45%; }
+  70% { width: 85%; }
+  100% { width: 100%; }
+}
+
+
+/* --- GLOBAL FIXED HEADER BLOCK --- */
+/* ==========================================================================
+   EXACT MATCH DESIGN SYSTEM FOR STACKLY UNIFIED NAV HEADER
+   ========================================================================== */
+
+.global-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 16px 0 !important; /* Tight professional layout spacing height split */
+  background-color: black;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Injected dynamically via Javascript on scrolling actions */
+.global-header.scrolled {
+  padding: 12px 0 !important;
+  background-color:black!important; /* Smooth solid dark blue glass morphing backdrop */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center; /* FIX: Perfect centered alignment across logo, menus, and buttons rows */
+  justify-content: space-between;
+}
+
+/* --- LOGO IMAGE LAYER DESIGN --- */
+.logo-container {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header-brand-img {
+  height: 36px !important; /* Crisp scaled sizing model matching your reference screenshot bounds */
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text-fallback {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.logo-accent { color: #2563eb; }
+
+/* --- MENUS LINKS PLATFORM CONTROLLER --- */
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 28px; /* Proportional inline grid spacing split gap */
+  margin: 0; padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff !important; /* Pure uniform crisp white visibility */
+  transition: opacity 0.3s ease;
+  position: relative;
+  padding: 6px 0;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* Bottom tracking indicators lines underlying the active workspace screen link choice */
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 2px;
+  background-color: #2563eb; /* Cobalt highlight indicator row line matching screenshot active state */
+  border-radius: 1px;
+}
+
+/* --- DUAL SOLID UNIFORM BUTTON ACTION SUITES --- */
+.auth-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: 20px;
+}
+
+.corp-btn {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* --- RE-ENGINEERED DUAL AUTH BUTTONS WITH LINEAR GRADIENTS --- */
+.corp-btn-auth-solid {
+  /* FIX: Using 'background' instead of 'background-color' enables the gradient layout stream */
+  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 50%, #2563eb 100%) !important; 
+  color: #ffffff !important;
+  border: none !important;
+  padding: 10px 24px !important;
+  border-radius: 30px !important; 
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  
+  /* Primes container sizing parameters for a smooth hover shimmer flow */
+  background-size: 200% auto !important; 
+}
+
+.corp-btn-auth-solid:hover {
+  /* FIX: Slides the gradient position cleanly on cursor tracking instead of breaking color vectors */
+  background-position: right center !important; 
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+.corp-btn-auth-solid:active {
+  transform: translateY(0);
+}
+
+
+/* --- RESPONSIVE HAMBURGER STYLES --- */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px; height: 18px;
+  background: transparent; border: none;
+  cursor: pointer; padding: 0; z-index: 1001;
+}
+.hamburger-bar { height: 2px; width: 100%; background-color: #ffffff; border-radius: 2px; }
+
+/* ==========================================================================
+   MOBILE DROPDOWN DRAWER BREAKPOINTS RECONFIGURATIONS
+   ========================================================================== */
+@media (max-width: 992px) {
+  .nav-container { padding: 0 24px; }
+  .mobile-menu-toggle { display: flex; }
+  
+  .nav-menu {
+    position: fixed; top: 0; right: -100%;
+    width: 280px; height: 100vh;
+    background-color: #0b0f19;
+    padding: 100px 40px 40px 40px;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    display: block;
+  }
+  .nav-menu.mobile-menu-active { right: 0; }
+  .nav-links { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .nav-links a::after { display: none !important; }
+  .auth-group { flex-direction: column; width: 100%; margin-left: 0; margin-top: 16px; gap: 12px; }
+  .corp-btn-auth-solid { width: 100% !important; }
+}

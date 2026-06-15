@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly Corporate Home</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+    body { background-color: #0f172a; color: white; overflow-x: hidden; }
+    .hero-view { height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0f172a, #1e293b); }
+  </style>
+</head>
+<body>
+<!-- --- PREMIUM CORPORATE FIXED HEADER --- -->
+<header class="global-header animate-header">
+  <div class="nav-container">
+      
+    <!-- Brand Logo Configuration -->
+    <a href="index.html" class="logo-container">
+      <div class="logo-wrapper">
+        <img 
+          src="./Assests/stackly-logo-final (1).webp" 
+          alt="Stackly Corporate Logo"
+          class="nav-logo-icon"
+        />
+      </div>
+    </a>
+
+    <!-- Navigation Overlay Menu & Corporate Action Suite -->
+    <nav class="nav-menu" id="mobile-nav-overlay">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        
+        
+        <li class="auth-group">
+          <a href="login.html" class="corp-btn corp-btn-login">Log In</a>
+          <a href="register.html" class="corp-btn corp-btn-signup">Sign Up</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Navigation Toggle Button -->
+    <button id="menu-toggle-trigger" class="mobile-menu-toggle" aria-label="Toggle Menu">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+    
+  </div>
+</header>
+
+<!-- --- EMBEDDED CORPORATE ARCHITECTURE STYLES --- -->
+<style>
+  /* Core Brand Variables */
+  :root {
+    --corp-blue: #2563eb;
+    --corp-blue-hover: #1d4ed8;
+    --corp-dark: #0f172a;
+    --corp-slate: #64748b;
+    --corp-light: #ffffff;
+    --corp-transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  /* Global Fixed Header Core Rules */
+  .global-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    background-color: transparent;
+    transition: var(--corp-transition);
+  }
+
+  /* Active state class injected on scroll via script if needed */
+  .global-header.scrolled {
+    padding: 12px 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo-icon {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 4px 0;
+  }
+
+  /* Adjust typography colors when the bar acquires background fill */
+  .global-header.scrolled .nav-links a {
+    color: var(--corp-slate);
+  }
+
+  .global-header.scrolled .nav-links a:hover,
+  .global-header.scrolled .nav-links a.active {
+    color: var(--corp-dark);
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--corp-light);
+  }
+
+  /* Modern sliding text underline underline effects */
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--corp-blue);
+    transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .nav-links a:hover::after,
+  .nav-links a.active::after {
+    width: 100%;
+  }
+
+  /* Identity Action Layouts Wrapper */
+  .auth-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 16px;
+  }
+
+  /* Base buttons parameters framework */
+  .corp-btn {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05rem !important;
+    padding: 9px 20px !important;
+    border-radius: 30px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    transition: var(--corp-transition) !important;
+  }
+
+  .corp-btn::after {
+    display: none !important; /* Disables underline animations on keys */
+  }
+
+  /* Clean Transparent Log In button formatting */
+  .corp-btn-login {
+    color: var(--corp-light) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    background-color: transparent !important;
+  }
+
+  .global-header.scrolled .corp-btn-login {
+    color: var(--corp-dark) !important;
+    border-color: rgba(15, 23, 42, 0.2) !important;
+  }
+
+  .corp-btn-login:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    transform: translateY(-2px);
+  }
+
+  .global-header.scrolled .corp-btn-login:hover {
+    background-color: rgba(15, 23, 42, 0.05) !important;
+  }
+
+  /* Solid Cobalt Blue Sign Up action button styling rules */
+  .corp-btn-signup {
+    background-color: var(--corp-blue) !important;
+    color: var(--corp-light) !important;
+    border: 1px solid var(--corp-blue) !important;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.2) !important;
+  }
+
+  .corp-btn-signup:hover {
+    background-color: var(--corp-blue-hover) !important;
+    border-color: var(--corp-blue-hover) !important;
+    box-shadow: 0 8px 22px rgba(37, 99, 235, 0.4) !important;
+    transform: translateY(-2px);
+  }
+
+  /* Mobile Hamburger Icon Core Layout details */
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+  }
+
+  .hamburger-bar {
+    height: 2px;
+    width: 100%;
+    background-color: var(--corp-light);
+    border-radius: 2px;
+    transition: var(--corp-transition);
+  }
+
+  .global-header.scrolled .hamburger-bar {
+    background-color: var(--corp-dark);
+  }
+
+  /* --- RESPONSIVE STRUCTURAL MEDIA QUERIES --- */
+  @media (max-width: 992px) {
+    .mobile-menu-toggle {
+      display: flex;
+    }
+
+    /* Turns navigation overlay into a crisp slide-down mobile system drawer */
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 300px;
+      height: 100vh;
+      background-color: var(--corp-dark);
+      padding: 100px 40px 40px 40px;
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+      transition: var(--corp-transition);
+      display: block;
+    }
+
+    /* Activation class targeted toggled via script runtime operations */
+    .nav-menu.mobile-menu-active {
+      right: 0;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.8) !important;
+      font-size: 1.1rem;
+      display: block;
+      width: 100%;
+    }
+
+    .nav-links a::after {
+      display: none;
+    }
+
+    /* Formats authorization actions inside mobile layouts wrapper vertical stacking */
+    .auth-group {
+      flex-direction: column;
+      width: 100%;
+      margin-left: 0;
+      margin-top: 16px;
+      gap: 14px;
+    }
+
+    .corp-btn {
+      width: 100%;
+      justify-content: center;
+      padding: 12px 20px !important;
+    }
+
+    .corp-btn-login {
+      border-color: rgba(255, 255, 255, 0.2) !important;
+    }
+
+    /* Forced hamburger shifts inside responsive display modes overrides */
+    .nav-menu.mobile-menu-active ~ .mobile-menu-toggle .hamburger-bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+      background-color: var(--corp-light);
+    }
+    .nav-menu.mobile-menu-active ~ .mobile-menu-toggle .hamburger-bar:nth-child(2) {
+      opacity: 0;
+    }
+    .nav-menu.mobile-menu-active ~ .mobile-menu-toggle .hamburger-bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+      background-color: var(--corp-light);
+    }
+  }
+</style>
+
+<!-- --- CONTROL SYSTEM INTERACTIONS INTERRUPT ENGINE --- -->
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const targetSlot = window.parent.document.getElementById("global-header");
+    if (targetSlot) {
+      targetSlot.innerHTML = `
+        <style>
+          .global-header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 24px 0; background-color: transparent; transition: all 0.4s ease; font-family: sans-serif; }
+          .global-header.scrolled { padding: 14px 0; background-color: rgba(255, 255, 255, 0.95); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+          .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+          .nav-logo-icon { height: 38px; width: auto; }
+          .nav-links { display: flex; align-items: center; list-style: none; gap: 32px; margin: 0; padding: 0; }
+          .nav-links a { text-decoration: none; font-size: 0.95rem; font-weight: 500; color: rgba(255, 255, 255, 0.85); transition: color 0.3s ease; }
+          .global-header.scrolled .nav-links a { color: #64748b; }
+          .global-header.scrolled .nav-links a:hover { color: #0f172a; }
+          .nav-links a:hover { color: #ffffff; }
+          .auth-group { display: flex; align-items: center; gap: 12px; }
+          .corp-btn { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; padding: 10px 22px; border-radius: 30px; text-decoration: none; display: inline-flex; transition: all 0.3s ease; align-items: center; }
+          .corp-btn-login { color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.4); }
+          .global-header.scrolled .corp-btn-login { color: #0f172a; border-color: #0f172a; }
+          .corp-btn-signup { background-color: #2563eb; color: #ffffff; }
+          .mobile-menu-toggle { display: none; flex-direction: column; gap: 5px; background: transparent; border: none; cursor: pointer; padding: 0; }
+          .hamburger-bar { height: 2px; width: 24px; background-color: #ffffff; border-radius: 2px; }
+          .global-header.scrolled .hamburger-bar { background-color: #0f172a; }
+          @media (max-width: 992px) {
+            .mobile-menu-toggle { display: flex; }
+            .nav-menu { position: fixed; top: 0; right: -100%; width: 280px; height: 100vh; background-color: #0f172a; padding: 80px 30px; transition: all 0.4s ease; box-shadow: -10px 0 30px rgba(0,0,0,0.2); }
+            .nav-menu.mobile-menu-active { right: 0; }
+            .nav-links { flex-direction: column; align-items: flex-start; gap: 24px; }
+            .auth-group { flex-direction: column; width: 100%; gap: 12px; }
+            .corp-btn { width: 100%; justify-content: center; }
+          }
+        </style>
+
+        <header class="global-header">
+          <div class="nav-container">
+            <a href="index.html" class="logo-container">
+              <img src="./Assests/stackly-logo-final (1).webp" alt="Logo" class="nav-logo-icon" />
+            </a>
+            <nav class="nav-menu" id="mobile-nav-overlay">
+              <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li class="auth-group">
+                  <a href="login.html" class="corp-btn corp-btn-login">Log In</a>
+                  <a href="register.html" class="corp-btn corp-btn-signup">Sign Up</a>
+                </li>
+              </ul>
+            </nav>
+            <button id="menu-toggle-trigger" class="mobile-menu-toggle">
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+            </button>
+          </div>
+        </header>
+      `;
+
+      // 4. Mount event listener loops inside parent DOM window contexts
+      const parentWindow = window.parent;
+      const navbar = parentWindow.document.querySelector('.global-header');
+      const toggle = parentWindow.document.getElementById('menu-toggle-trigger');
+      const menu = parentWindow.document.getElementById('mobile-nav-overlay');
+
+      parentWindow.addEventListener('scroll', () => {
+        if (parentWindow.scrollY > 40) navbar.classList.add('scrolled');
+        else navbar.classList.remove('scrolled');
+      });
+
+      if (toggle && menu) {
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          menu.classList.toggle('mobile-menu-active');
+        });
+        parentWindow.document.addEventListener('click', (e) => {
+          if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+            menu.classList.remove('mobile-menu-active');
+          }
+        });
+      }
+    }
+  });
+</script>
+
+

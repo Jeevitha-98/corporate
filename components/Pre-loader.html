@@ -1,181 +1,60 @@
-<!-- 1. CORPORATE SYSTEMS LOADING MODULE (FIXED STATE SHROUD) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stackly Corporate Home</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
-    body { background-color: #0f172a; color: white; overflow-x: hidden; }
-    .hero-view { height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0f172a, #1e293b); }
-  </style>
+  <title>Corporate Workspace Hub</title>
+  
+  <!-- LINK THE LOCAL STYLE SHEET DIRECTLY -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div id="app-preloader-shroud">
   <div class="loader-centerpiece">
-    <div class="corporate-spinner-zone">
-      <!-- FIXED: Corrected spelling to match your "Assests" folder path layout -->
-      <img 
-        src="./Assests/stackly-icon-only.webp" 
-        alt="Stackly Corporate Logo" 
-        class="corporate-logo-vector"
-      />
-      <div class="corporate-orbit-ring"></div>
+    
+    <!-- HIGH-FIDELITY RADAR NODE MULTIVERSE MODULE -->
+    <div class="cyber-radar-matrix">
+      <!-- Outer Orbiting Tracks -->
+      <div class="radar-orbit-ring ring-outer">
+        <span class="orbit-drifting-node neon-cyan"></span>
+      </div>
+      <div class="radar-orbit-ring ring-mid">
+        <span class="orbit-drifting-node neon-emerald"></span>
+      </div>
+      <div class="radar-orbit-ring ring-inner"></div>
+      
+      <!-- Central Molecule Connection Framework Grid -->
+      <div class="central-molecule-hub">
+        <div class="molecule-line vertical-line"></div>
+        <div class="molecule-line cross-line-left"></div>
+        <div class="molecule-line cross-line-right"></div>
+        
+        <!-- Peripheral Core Connection Nodes -->
+        <span class="molecule-node pos-top neon-purple"></span>
+        <span class="molecule-node pos-top-right neon-emerald"></span>
+        <span class="molecule-node pos-bottom-right neon-purple"></span>
+        <span class="molecule-node pos-bottom neon-emerald"></span>
+        <span class="molecule-node pos-bottom-left neon-cyan"></span>
+        <span class="molecule-node pos-top-left neon-cyan"></span>
+        
+        
+        <div class="molecule-core-badge">
+          <img src="./Assests/home/stackly-icon-only (1).webp" alt="Logo" class="molecule-brand-vector" onerror="this.style.visibility='hidden';" />
+        </div>
+      </div>
     </div>
-    <div class="loader-brand-label">Stackly Enterprise Solutions</div>
-    <div class="loader-brand-subtitle">Securing Core Global Infrastructure</div>
+
+    <!-- TYPOGRAPHY INFRASTRUCTURE LABELS -->
+    <div class="loader-brand-label">Stackly</div>
+    
+    <div class="loader-status-ticker">
+      <span class="radar-status-pulse"></span> INITIALIZING AGENTS
+    </div>
+    
+    <!-- GRADIENT SYSTEM TIMELINE LOADING PROGRESS BAR -->
+    <div class="loader-progress-track">
+      <div class="loader-progress-fill-bar"></div>
+    </div>
+
   </div>
 </div>
-
-<style>
-  /* --- CORPORATE PRELOADER SHROUD LAYOUT --- */
-  #app-preloader-shroud {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #0f172a; /* Sleek Deep Slate/Navy Blue */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 99999; /* Higher than sticky headers */
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
-                visibility 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-  }
-
-  /* Dismissal animation class triggered by JavaScript */
-  #app-preloader-shroud.shroud-clear {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-
-  .loader-centerpiece {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .corporate-spinner-zone {
-    position: relative;
-    width: 90px;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 24px;
-  }
-
-  .corporate-logo-vector {
-    width: 44px;
-    height: 44px;
-    object-fit: contain;
-    animation: corporatePulse 2s ease-in-out infinite;
-  }
-
-  /* High-end corporate precision outer spinning line */
-  .corporate-orbit-ring {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 3px solid rgba(37, 99, 235, 0.1); /* Light cobalt tracks */
-    border-top: 3px solid #2563eb; /* Vibrant Cobalt Accent Blue */
-    border-radius: 50%;
-    animation: corporateSpin 1.2s cubic-bezier(0.5, 0.1, 0.5, 0.9) infinite;
-  }
-
-  /* Typography Branding Labels */
-  .loader-brand-label {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    color: #ffffff;
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    margin-bottom: 6px;
-    opacity: 0;
-    animation: corporateFadeInUp 0.8s ease forwards 0.3s;
-  }
-
-  .loader-brand-subtitle {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    color: #64748b; /* Professional Muted Slate Blue */
-    font-size: 0.85rem;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    opacity: 0;
-    animation: corporateFadeInUp 0.8s ease forwards 0.5s;
-  }
-
-  /* --- MOTION ANIMATION KEYFRAMES --- */
-  @keyframes corporateSpin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-
-  @keyframes corporatePulse {
-    0%, 100% { transform: scale(1); opacity: 0.9; }
-    50% { transform: scale(1.05); opacity: 1; }
-  }
-
-  @keyframes corporateFadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-</style>
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    // 1. Target the injection slot in index.html
-    const targetSlot = window.parent.document.getElementById("global-preloader");
-    if (targetSlot) {
-      // 2. Build the markup and style bundle inside the parent document
-      targetSlot.innerHTML = `
-        <style>
-          #app-preloader-shroud {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
-            background-color: #0f172a; display: flex; align-items: center;
-            justify-content: center; z-index: 99999; opacity: 1; visibility: visible;
-            transition: opacity 0.6s ease, visibility 0.6s ease;
-          }
-          #app-preloader-shroud.shroud-clear { opacity: 0; visibility: hidden; pointer-events: none; }
-          .loader-centerpiece { display: flex; flex-direction: column; align-items: center; text-align: center; }
-          .corporate-spinner-zone { position: relative; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
-          .corporate-logo-vector { width: 44px; height: 44px; object-fit: contain; animation: corporatePulse 2s ease-in-out infinite; }
-          .corporate-orbit-ring { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 3px solid rgba(37, 99, 235, 0.1); border-top: 3px solid #2563eb; border-radius: 50%; animation: corporateSpin 1.2s linear infinite; }
-          .loader-brand-label { color: #ffffff; font-size: 1.2rem; font-weight: 600; letter-spacing: 0.05em; font-family: sans-serif; }
-          @keyframes corporateSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-          @keyframes corporatePulse { 0%, 100% { transform: scale(1); opacity: 0.9; } 50% { transform: scale(1.05); opacity: 1; } }
-        </style>
-        <div id="app-preloader-shroud">
-          <div class="loader-centerpiece">
-            <div class="corporate-spinner-zone">
-              <img src="./Assests/stackly-icon-only.webp" alt="Logo" class="corporate-logo-vector" onerror="this.style.display='none';" />
-              <div class="corporate-orbit-ring"></div>
-            </div>
-            <div class="loader-brand-label">Stackly Enterprise Solutions</div>
-          </div>
-        </div>
-      `;
-
-      // 3. Fire off the preloader auto-dismiss timer
-      setTimeout(() => {
-        const preloader = window.parent.document.getElementById('app-preloader-shroud');
-        if (preloader) preloader.classList.add('shroud-clear');
-      }, 1800);
-    }
-  });
-</script>

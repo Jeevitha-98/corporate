@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Initialize Security Profile | Stackly Corp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page-body">
+
+  <!-- DYNAMIC BACKGROUND GRAPHICAL CORE MATRIX -->
+  <div class="auth-canvas-bg">
+    <div class="corporate-blueprint-grid"></div>
+    <div class="corporate-radial-glow"></div>
+  </div>
+
+  <!-- MASTER AUTH CARD NODE WRAPPER -->
+  <div class="auth-panel-card-capsule registration-box">
+    
+    <!-- BACK TO LOG IN LINK TRIGGER CAPSULE -->
+    <div class="auth-card-top-nav-row">
+      <a href="login.html" class="auth-card-home-btn">&larr; Back to Log In</a>
+    </div>
+
+    <div class="auth-card-header">
+      <h2>Create Account</h2>
+      <p>Register your organizational profile to open your project registry deck.</p>
+    </div>
+
+    <form class="auth-form-element" id="consoleRegisterForm" novalidate>
+      
+      <!-- FULL NAME INPUT FIELD -->
+      <div class="form-input-group">
+        <label for="regFullName" class="auth-label-tag">Full Name</label>
+        <input type="text" id="regFullName" class="auth-input-dark-field" placeholder="Enter your full name" required autocomplete="off">
+      </div>
+
+      <!-- EMAIL ADDRESS INPUT FIELD -->
+      <div class="form-input-group">
+        <label for="regEmail" class="auth-label-tag">Email Address</label>
+        <input type="email" id="regEmail" class="auth-input-dark-field" placeholder="you@example.com" required autocomplete="off">
+      </div>
+
+      <!-- PASSWORD INPUT FIELD WITH INTEGRATED EYE BUTTON -->
+      <div class="form-input-group">
+        <label for="regPassword" class="auth-label-tag">Password</label>
+        <div class="password-input-wrapper">
+          <input type="password" id="regPassword" class="auth-input-dark-field" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" required>
+          <button type="button" class="password-eye-trigger" data-target="regPassword" aria-label="Toggle Password Visibility">
+            <svg class="eye-svg eye-open-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+            <svg class="eye-svg eye-closed-icon hidden-eye" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.542-7a10.025 10.025 0 01-4.132-5.4M9.9 4.24a9.13 9.13 0 011.55-.18c4.478 0 8.268 2.943 9.542 7a10.025 10.025 0 01-4.132 5.4M3 3l18 18" /></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- CONFIRM PASSWORD INPUT FIELD WITH INTEGRATED EYE BUTTON -->
+      <div class="form-input-group">
+        <label for="regConfirmPassword" class="auth-label-tag">Confirm Password</label>
+        <div class="password-input-wrapper">
+          <input type="password" id="regConfirmPassword" class="auth-input-dark-field" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" required>
+          <button type="button" class="password-eye-trigger" data-target="regConfirmPassword" aria-label="Toggle Password Visibility">
+            <svg class="eye-svg eye-open-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+            <svg class="eye-svg eye-closed-icon hidden-eye" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.542-7a10.025 10.025 0 01-4.132-5.4M9.9 4.24a9.13 9.13 0 011.55-.18c4.478 0 8.268 2.943 9.542 7a10.025 10.025 0 01-4.132 5.4M3 3l18 18" /></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- PREMIUM SIGN UP SUBMIT GRADIENT PILL -->
+      <div class="form-action-wrapper">
+        <button type="submit" class="auth-submit-cyan-btn">Sign Up &rarr;</button>
+      </div>
+
+      <div class="auth-footer-redirect-link">
+        Already have an account? <a href="login.html">Log In</a>
+      </div>
+
+    </form>
+  </div>
+
+ <style>
+    /* ==========================================================================
+   EXACT MATCH DESIGN SYSTEM FOR SIGNUP PAGE
+   ========================================================================== */
+
+.auth-page-body {
+  position: relative;
+  background-color: #060913 !important; 
+  margin: 0; padding: 40px 24px;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+.auth-canvas-bg {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;
+}
+.auth-canvas-bg .corporate-blueprint-grid {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.008) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.008) 1px, transparent 1px) !important;
+}
+.auth-canvas-bg .corporate-radial-glow {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 700px; height: 500px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.04) 0%, transparent 70%) !important;
+  filter: blur(40px);
+}
+
+.auth-panel-card-capsule.registration-box {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 520px;
+  background-color: #0a0f1c !important; 
+  border: 1px solid rgba(34, 211, 238, 0.15) !important; 
+  border-radius: 24px !important;
+  padding: 40px 44px 44px 44px !important;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6) !important;
+  box-sizing: border-box;
+}
+
+.auth-card-top-nav-row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.auth-card-home-btn {
+  font-family: inherit;
+  text-decoration: none !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #030712 !important;
+  background-color: #ffffff !important; 
+  padding: 6px 18px !important;
+  border-radius: 30px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+.auth-card-home-btn:hover { transform: translateY(-2px) scale(1.04); }
+
+.auth-card-header { text-align: left; margin-bottom: 32px; }
+.auth-card-header h2 { font-size: 2.25rem; font-weight: 800; color: #ffffff !important; text-transform: uppercase; letter-spacing: -0.01em; margin: 0 0 10px 0 !important; }
+.auth-card-header p { font-size: 0.95rem; color: #475569 !important; line-height: 1.5; margin: 0; }
+
+.auth-form-element { display: flex; flex-direction: column; gap: 24px; width: 100%; }
+.form-input-group { display: flex; flex-direction: column; gap: 8px; text-align: left; width: 100%; }
+.auth-label-tag { font-size: 0.75rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.08em !important; color: #475569 !important; margin-bottom: 2px; display: block; }
+
+.auth-input-dark-field {
+  width: 100% !important;
+  height: 44px !important;
+  background-color: #0d1321 !important; 
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 6px !important;
+  padding: 0 44px 0 16px !important; 
+  color: #ffffff !important; 
+  font-size: 0.95rem !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+.auth-input-dark-field:focus {
+  border-color: rgba(34, 211, 238, 0.4) !important; 
+  background-color: #0f172a !important;
+}
+.auth-input-dark-field::placeholder { color: #2b384c !important; }
+
+.password-input-wrapper { position: relative; width: 100%; }
+.password-eye-trigger {
+  position: absolute !important; top: 50% !important; right: 4px !important; transform: translateY(-50%) !important;
+  background: transparent !important; border: none !important; padding: 0 !important; cursor: pointer !important;
+  display: flex !important; align-items: center !important; justify-content: center !important; outline: none !important;
+  z-index: 10 !important; height: 100% !important; width: 40px !important;
+}
+.eye-svg { width: 18px; height: 18px; color: #475569 !important; pointer-events: none !important; }
+.password-eye-trigger:hover .eye-svg { color: #22d3ee !important; }
+.hidden-eye { display: none !important; }
+
+.form-action-wrapper { position: relative; display: flex; width: 100%; margin-top: 8px; }
+.auth-submit-cyan-btn {
+  width: 100% !important; height: 46px !important; border: none !important; border-radius: 30px !important;
+  background: linear-gradient(90deg, #3b82f6 0%, #22d3ee 100%) !important; 
+  color: #ffffff !important; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+  cursor: pointer; position: relative; z-index: 5; box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3) !important;
+  background-size: 200% auto !important; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+.auth-submit-cyan-btn:hover { background-position: right center !important; transform: translateY(-2px); box-shadow: 0 10px 25px rgba(34, 211, 238, 0.5) !important; }
+
+.auth-footer-redirect-link { width: 100%; text-align: center; font-size: 0.85rem; color: #475569; margin-top: 12px; }
+.auth-footer-redirect-link a { color: #94a3b8; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: all 0.2s ease; }
+.auth-footer-redirect-link a:hover { color: #ffffff; border-color: #ffffff; }
+
+@media (max-width: 480px) {
+  .auth-panel-card-capsule.registration-box { padding: 32px 24px !important; border-radius: 16px !important; }
+  .auth-card-header h2 { font-size: 1.85rem; }
+}
+
+ </style>
+
+ <script>
+    /**
+ * STACKLY PLATFORM NATIVE ACCOUNT INITIALIZATION VALIDATOR
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  
+  // --- 1. DUAL INDEPENDENT PASSWORD EYE EYE TOGGLERS CONTROL ---
+  const eyeButtons = document.querySelectorAll('.password-eye-trigger');
+  
+  if (eyeButtons.length > 0) {
+    eyeButtons.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const targetId = this.getAttribute('data-target');
+        const targetField = document.getElementById(targetId);
+        const iconOpen = this.querySelector('.eye-open-icon');
+        const iconClosed = this.querySelector('.eye-closed-icon');
+
+        if (targetField && iconOpen && iconClosed) {
+          if (targetField.type === 'password') {
+            targetField.type = 'text';
+            iconOpen.classList.add('hidden-eye');
+            iconClosed.classList.remove('hidden-eye');
+          } else {
+            targetField.type = 'password';
+            iconOpen.classList.remove('hidden-eye');
+            iconClosed.classList.add('hidden-eye');
+          }
+        }
+      });
+    });
+  }
+
+  // --- 2. INTEGRITY FIELD SUBMIT VERIFIER ---
+  const registerForm = document.getElementById('consoleRegisterForm');
+
+  if (registerForm) {
+    registerForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nameVal = document.getElementById('regFullName').value.trim();
+      const emailVal = document.getElementById('regEmail').value.trim();
+      const passVal = document.getElementById('regPassword').value.trim();
+      const confirmVal = document.getElementById('regConfirmPassword').value.trim();
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      // Rule 01: Verify all text fields are completed
+      if (!nameVal || !emailVal || !passVal || !confirmVal) {
+        alert('Notification: Fill all the fields correctly.');
+        return;
+      }
+
+      // Rule 02: Verify corporate email address pattern
+      if (!emailPattern.test(emailVal)) {
+        alert('Notification: Invalid corporate email format.');
+        return;
+      }
+
+      // Rule 03: Enforce safety character limits metrics
+      if (passVal.length < 6) {
+        alert('Notification: Password key must contain at least 6 characters.');
+        return;
+      }
+
+      // Rule 04: Mismatch lockout parameter block
+      if (passVal !== confirmVal) {
+        alert('Notification: Security verification failed. Passwords do not match.');
+        return;
+      }
+
+      // SUCCESS PATH ROUTE
+      alert('Registration successful! Welcome to Stackly Enterprise Platforms.');
+      window.location.href = 'login.html';
+    });
+  }
+});
+
+ </script>
+</body>
+</html>

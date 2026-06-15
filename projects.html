@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Workspace Hub</title>
+  
+  <!-- LINK THE LOCAL STYLE SHEET DIRECTLY -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app-preloader-shroud">
+  <div class="loader-centerpiece">
+    
+    <!-- HIGH-FIDELITY RADAR NODE MULTIVERSE MODULE -->
+    <div class="cyber-radar-matrix">
+      <!-- Outer Orbiting Tracks -->
+      <div class="radar-orbit-ring ring-outer">
+        <span class="orbit-drifting-node neon-cyan"></span>
+      </div>
+      <div class="radar-orbit-ring ring-mid">
+        <span class="orbit-drifting-node neon-emerald"></span>
+      </div>
+      <div class="radar-orbit-ring ring-inner"></div>
+      
+      <!-- Central Molecule Connection Framework Grid -->
+      <div class="central-molecule-hub">
+        <div class="molecule-line vertical-line"></div>
+        <div class="molecule-line cross-line-left"></div>
+        <div class="molecule-line cross-line-right"></div>
+        
+        <!-- Peripheral Core Connection Nodes -->
+        <span class="molecule-node pos-top neon-purple"></span>
+        <span class="molecule-node pos-top-right neon-emerald"></span>
+        <span class="molecule-node pos-bottom-right neon-purple"></span>
+        <span class="molecule-node pos-bottom neon-emerald"></span>
+        <span class="molecule-node pos-bottom-left neon-cyan"></span>
+        <span class="molecule-node pos-top-left neon-cyan"></span>
+        
+        
+        <div class="molecule-core-badge">
+          <img src="./Assests/home/stackly-icon-only (1).webp" alt="Logo" class="molecule-brand-vector" onerror="this.style.visibility='hidden';" />
+        </div>
+      </div>
+    </div>
+
+    <!-- TYPOGRAPHY INFRASTRUCTURE LABELS -->
+    <div class="loader-brand-label">Stackly</div>
+    
+    <div class="loader-status-ticker">
+      <span class="radar-status-pulse"></span> INITIALIZING AGENTS
+    </div>
+    
+    <!-- GRADIENT SYSTEM TIMELINE LOADING PROGRESS BAR -->
+    <div class="loader-progress-track">
+      <div class="loader-progress-fill-bar"></div>
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- 2. SYSTEM NAVIGATION MANAGEMENT BLOCK -->
+  <!-- STACKLY UNIFIED SYSTEM HEADER BLOCK -->
+<header class="global-header">
+  <div class="nav-container">
+    
+    <!-- BRAND IMAGE LINK LOCKUP -->
+    <a href="index.html" class="logo-container">
+      <img src="./Assests/home/stackly-logo-cyan (1).png" alt="Stackly" class="header-brand-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+      <!-- Fallback plain text layer rules if your local webp path breaks -->
+      <span class="logo-text-fallback" style="display: none;">Stackly<span class="logo-accent">Corp</span></span>
+    </a>
+
+    <!-- SYSTEM HORIZONTAL NAVIGATION MENU -->
+    <nav class="nav-menu" id="mobile-nav-overlay">
+      <ul class="nav-links">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="blog.html" >Blog</a></li>
+        <li><a href="contact.html"  >Contact Us</a></li>
+        
+        <!-- DUAL SOLID UNIFORM BUTTONS ACCOUNTS ACTIONS -->
+        <li class="auth-group">
+          <a href="login.html" class="corp-btn corp-btn-auth-solid">Log In</a>
+          <a href="register.html" class="corp-btn corp-btn-auth-solid">Sign Up</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- MOBILE HAMBURGER TRIGGER ICON CONTROLS -->
+    <button id="menu-toggle-trigger" class="mobile-menu-toggle" aria-label="Toggle Navigation">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+    
+  </div>
+</header>
+
+
+  
+  <!-- --- SYSTEM INTERACTION EVENTS ENGINE SCRIPTS --- -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navbar = document.querySelector('.global-header');
+      const toggle = document.getElementById('menu-toggle-trigger');
+      const menu = document.getElementById('mobile-nav-overlay');
+
+      // 1. Transparent-to-Solid Scroll Transition Tracker
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+
+      // 2. Mobile Responsive Hamburg Drawer Menu Click Triggers
+      if (toggle && menu) {
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          menu.classList.toggle('mobile-menu-active');
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+            menu.classList.remove('mobile-menu-active');
+          }
+        });
+      }
+
+      // 3. LUXURY PRELOADER HOLD DISMISS TIMER ENGINE (1.8 Seconds Display Frame Window)
+      setTimeout(() => {
+        const preloader = document.getElementById('app-preloader-shroud');
+        if (preloader) {
+          preloader.classList.add('shroud-clear');
+        }
+      }, 1800);
+    });
+  </script>

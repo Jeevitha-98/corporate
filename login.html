@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Console Access | Stackly Corp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page-body">
+
+  <!-- DYNAMIC BACKGROUND GRAPHICAL CORE MATRIX -->
+  <div class="auth-canvas-bg">
+    <div class="corporate-blueprint-grid"></div>
+    <div class="corporate-radial-glow"></div>
+  </div>
+
+  <!-- MASTER AUTH CARD NODE WRAPPER -->
+  <div class="auth-panel-card-capsule">
+    
+    <!-- HOME LINK FALLBACK BUTTON FIXED INTERNALLY -->
+    <div class="auth-card-top-nav-row">
+      <a href="index.html" class="auth-card-home-btn">&larr; Home</a>
+    </div>
+
+    <div class="auth-card-header">
+      <h2>Welcome Back</h2>
+      <p>Select your operational role to sign in to your project dashboard.</p>
+    </div>
+
+    <form class="auth-form-element" id="consoleLoginForm" novalidate>
+      
+      <!-- ROLE SELECTION GRID BLOCK -->
+      <div class="form-input-group">
+        <label class="auth-label-tag">Select Role</label>
+        <div class="role-selection-grid">
+          
+          <!-- Role Choice 01: Studio Partner (Active Default) -->
+          <div class="role-option-node active-role-node" data-role="partner">
+            <div class="role-icon-box cyan-gradient-icon">
+              <svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="role-svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </div>
+            <span>Studio Partner</span>
+          </div>
+
+          <!-- Role Choice 02: Corporate Client -->
+          <div class="role-option-node" data-role="client">
+            <div class="role-icon-box clear-icon">
+              <svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="role-svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h18v18H3V3z" />
+              </svg>
+            </div>
+            <span>Corporate Client</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Hidden role tracking input parameter -->
+      <input type="hidden" id="selectedRoleInput" value="partner">
+
+      <!-- DATA INPUT FIELDS -->
+      <div class="form-input-group">
+        <label for="loginEmail" class="auth-label-tag">Email Address</label>
+        <input type="email" id="loginEmail" class="auth-input-dark-field" placeholder="name@company.com" required autocomplete="off">
+      </div>
+
+      <div class="form-input-group">
+        <label for="loginPassword" class="auth-label-tag">Password</label>
+        <div class="password-input-wrapper">
+          <input type="password" id="loginPassword" class="auth-input-dark-field" placeholder="Enter security key" required>
+          
+          <!-- Interactive Eye Toggle Button -->
+          <button type="button" id="passwordToggleBtn" class="password-eye-trigger" aria-label="Toggle Password Visibility">
+            <svg id="eyeIconOpen" class="eye-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+            <svg id="eyeIconClosed" class="eye-svg hidden-eye" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.542-7a10.025 10.025 0 014.132-5.4M9.9 4.24a9.13 9.13 0 011.55-.18c4.478 0 8.268 2.943 9.542 7a10.025 10.025 0 01-4.132 5.4M3 3l18 18" /></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="forgot-password-row">
+        <a href="404.html" class="forgot-link-btn">Forgot Password?</a>
+      </div>
+
+      <!-- GRADIENT SUBMIT ACTION BUTTON -->
+      <div class="form-action-wrapper">
+        <button type="submit" class="auth-submit-cyan-btn">Log In Securely &rarr;</button>
+      </div>
+
+      <!-- OAUTH DIVISION DIVIDER ROW -->
+      <div class="oauth-divider-strip">
+        <span>Or Sign In With</span>
+      </div>
+
+      <div class="oauth-buttons-grid">
+        <a href="404.html" class="oauth-provider-btn">Google</a>
+        <a href="404.html" class="oauth-provider-btn">Facebook</a>
+      </div>
+
+      <div class="auth-footer-redirect-link">
+        Don't have an account? <a href="signup.html">Create Account</a>
+      </div>
+
+    </form>
+  </div>
+
+ 
+  <style>
+    /* ==========================================================================
+   EXACT MATCH CYBERNETIC AUTH PLATFORM SYSTEM DESIGN (LOGIN & EYE FIX)
+   ========================================================================== */
+
+.auth-page-body {
+  position: relative;
+  background-color: #060913 !important; 
+  margin: 0; padding: 40px 24px;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.auth-canvas-bg {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;
+}
+.auth-canvas-bg .corporate-blueprint-grid {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.008) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.008) 1px, transparent 1px) !important;
+}
+.auth-canvas-bg .corporate-radial-glow {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 700px; height: 500px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.04) 0%, transparent 70%) !important;
+  filter: blur(40px);
+}
+
+.auth-panel-card-capsule {
+  position: relative; z-index: 5;
+  width: 100%; max-width: 520px; 
+  background-color: rgba(10, 15, 28, 0.6) !important; 
+  border: 1px solid rgba(34, 211, 238, 0.15) !important; 
+  border-radius: 24px !important;
+  padding: 40px 44px 44px 44px !important;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6), 0 0 40px rgba(6, 182, 212, 0.02) !important;
+  box-sizing: border-box;
+}
+
+.auth-card-top-nav-row { width: 100%; display: flex; justify-content: flex-end; margin-bottom: 16px; }
+
+.auth-card-home-btn {
+  font-family: 'Inter', system-ui, sans-serif;
+  text-decoration: none !important; font-size: 0.8rem; font-weight: 700;
+  color: #030712 !important; background-color: #ffffff !important; 
+  padding: 6px 18px !important; border-radius: 30px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+.auth-card-home-btn:hover { transform: translateY(-2px) scale(1.04); }
+
+.auth-card-header { text-align: left; margin-bottom: 32px; }
+.auth-card-header h2 { font-size: 2.25rem; font-weight: 800; color: #ffffff !important; text-transform: uppercase; letter-spacing: -0.01em; margin: 0 0 10px 0 !important; }
+.auth-card-header p { font-size: 0.95rem; color: #475569 !important; line-height: 1.5; margin: 0; }
+
+.auth-form-element { display: flex; flex-direction: column; gap: 24px; width: 100%; }
+.auth-label-tag { font-size: 0.75rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.08em !important; color: #475569 !important; margin-bottom: 10px; display: block; }
+
+.role-selection-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; width: 100%; }
+.role-option-node { background-color: rgba(255, 255, 255, 0.005) !important; border: 1px solid rgba(255, 255, 255, 0.03) !important; border-radius: 12px !important; padding: 24px 16px !important; display: flex; flex-direction: column; align-items: center; gap: 14px; cursor: pointer; box-sizing: border-box; transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1); }
+.role-option-node span { font-size: 0.85rem; font-weight: 700; color: #475569; }
+.role-icon-box { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.role-svg { width: 20px; height: 20px; stroke-width: 2.5; }
+.clear-icon { background-color: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.03); color: #242f41; }
+
+.role-option-node.active-role-node { border-color: rgba(34, 211, 238, 0.3) !important; background-color: rgba(14, 22, 38, 0.5) !important; }
+.role-option-node.active-role-node span { color: #ffffff !important; }
+.cyan-gradient-icon { background: linear-gradient(135deg, #2563eb 0%, #22d3ee 100%) !important; color: #ffffff !important; box-shadow: 0 4px 15px rgba(34, 211, 238, 0.35); }
+
+/* --- DEEP DARK TEXT FIELDS WITH OVERLAY SAFETY WRAPPERS --- */
+.password-input-wrapper {
+  position: relative !important; width: 100% !important; display: block !important;
+}
+
+.auth-input-dark-field {
+  width: 100% !important; height: 44px !important;
+  background-color: #0d1321 !important; 
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 6px !important;
+  padding: 0 44px 0 16px !important; /* Protects icon padding split bounds */
+  color: #ffffff !important; font-size: 0.95rem !important;
+  font-family: 'Inter', system-ui, sans-serif;
+  outline: none !important; box-sizing: border-box !important;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+.auth-input-dark-field:focus { border-color: rgba(34, 211, 238, 0.4) !important; background-color: #0f172a !important; }
+.auth-input-dark-field::placeholder { color: #2b384c !important; }
+
+/* --- PASSWORD EYE ICON CLICKS DISPATCHER ZONE --- */
+.password-eye-trigger {
+  position: absolute !important; top: 50% !important; right: 4px !important; transform: translateY(-50%) !important;
+  background: transparent !important; border: none !important; padding: 0 !important; cursor: pointer !important;
+  display: flex !important; align-items: center !important; justify-content: center !important; outline: none !important;
+  z-index: 99 !important; /* Forces toggle trigger forward through input frames layers */
+  height: 36px !important; width: 36px !important;
+}
+
+.eye-svg {
+  width: 18px !important; height: 18px !important;
+  color: #64748b !important; /* Forced active gray hue metrics visibility */
+  pointer-events: none !important;
+}
+.password-eye-trigger:hover .eye-svg { color: #22d3ee !important; }
+.hidden-eye { display: none !important; }
+
+.forgot-password-row { width: 100%; display: flex; justify-content: flex-end; margin-top: -8px; }
+.forgot-link-btn { font-size: 0.85rem; font-weight: 600; color: #475569; text-decoration: none; transition: color 0.2s ease; }
+.forgot-link-btn:hover { color: #94a3b8; }
+
+.auth-submit-cyan-btn {
+  width: 100% !important; height: 46px !important; border: none !important; border-radius: 30px !important; font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(90deg, #3b82f6 0%, #22d3ee 100%) !important;
+  color: #ffffff !important; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+  cursor: pointer; position: relative; z-index: 5; box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3) !important;
+  background-size: 200% auto !important; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+.auth-submit-cyan-btn:hover { background-position: right center !important; transform: translateY(-2px); box-shadow: 0 10px 25px rgba(34, 211, 238, 0.5) !important; }
+
+.oauth-divider-strip { width: 100%; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.03); line-height: 0.1em; margin: 8px 0 4px 0; }
+.oauth-divider-strip span { background: #080d19; padding: 0 14px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #334155; }
+
+.oauth-buttons-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; width: 100%; }
+.oauth-provider-btn { height: 40px; background-color: transparent !important; border: 1px solid rgba(255, 255, 255, 0.04) !important; border-radius: 30px !important; display: inline-flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 600; color: #475569 !important; text-decoration: none !important; transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1); }
+.oauth-provider-btn:hover { background-color: rgba(255, 255, 255, 0.01) !important; border-color: rgba(255, 255, 255, 0.1) !important; color: #ffffff !important; transform: translateY(-1px); }
+
+.auth-footer-redirect-link { width: 100%; text-align: center; font-size: 0.85rem; color: #475569; margin-top: 8px; }
+.auth-footer-redirect-link a { color: #94a3b8; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: all 0.2s ease; }
+.auth-footer-redirect-link a:hover { color: #ffffff; border-color: #ffffff; }
+
+@media (max-width: 480px) { .auth-panel-card-capsule { padding: 32px 24px !important; border-radius: 16px !important; } .auth-card-header h2 { font-size: 1.85rem; } }
+
+  </style>
+
+
+
+  <!-- UNIFIED HIGH-PERFORMANCE CLIENT & PARTNER CONSOLE ROUTING ENGINE -->
+<!-- UNIFIED HIGH-PERFORMANCE DIRECT ROUTING ENGINE -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- 1. CORE VARIABLE DEFINITIONS ---
+    const passwordField = document.getElementById('loginPassword');
+    const toggleBtn = document.getElementById('passwordToggleBtn');
+    const eyeOpen = document.getElementById('eyeIconOpen');
+    const eyeClosed = document.getElementById('eyeIconClosed');
+    const loginForm = document.getElementById('consoleLoginForm');
+    const roleNodes = document.querySelectorAll('.role-option-node');
+    const hiddenRoleInput = document.getElementById('selectedRoleInput');
+
+    // --- 2. INTERACTIVE ROLE SELECTION GRID SWITCHER ---
+    if (roleNodes.length > 0 && hiddenRoleInput) {
+      roleNodes.forEach(node => {
+        node.addEventListener('click', function() {
+          roleNodes.forEach(rn => {
+            rn.classList.remove('active-role-node');
+            rn.querySelector('.role-icon-box').className = 'role-icon-box clear-icon';
+          });
+          this.classList.add('active-role-node');
+          this.querySelector('.role-icon-box').className = 'role-icon-box cyan-gradient-icon';
+          hiddenRoleInput.value = this.getAttribute('data-role');
+        });
+      });
+    }
+
+    // --- 3. PASSWORD FIELD VISIBILITY EYE TOGGLER CONTROLLER ---
+    if (toggleBtn && passwordField && eyeOpen && eyeClosed) {
+      toggleBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (passwordField.type === 'password') {
+          passwordField.type = 'text';
+          eyeOpen.classList.add('hidden-eye');
+          eyeClosed.classList.remove('hidden-eye');
+        } else {
+          passwordField.type = 'password';
+          eyeOpen.classList.remove('hidden-eye');
+          eyeClosed.classList.add('hidden-eye');
+        }
+      });
+    }
+
+    // --- 4. SECURE INPUT VALIDATOR & DIRECT ROLE NAVIGATION ROUTER ---
+        // --- 4. SECURE VALIDATOR & FINALISED EXACT FILE PATH ROUTER ---
+    if (loginForm && passwordField && hiddenRoleInput) {
+      loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const emailValue = document.getElementById('loginEmail').value.trim();
+        const passwordValue = passwordField.value.trim();
+        const roleValue = hiddenRoleInput.value; // Collects 'partner' or 'client'
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Base field data validations
+        if (!emailValue || !passwordValue) {
+          alert('Notification: Fill all the fields correctly.');
+          return;
+        }
+        if (!emailPattern.test(emailValue)) {
+          alert('Notification: Invalid corporate email format.');
+          return;
+        }
+        if (passwordValue.length < 6) {
+          alert('Notification: Security key must contain at least 6 characters.');
+          return;
+        }
+
+        // Authentication Success Alert Message Prompt
+        alert(`Authentication successful! Redirecting to your secure console workspace portal as [${roleValue.toUpperCase()}]...`);
+        
+        // --- FIX: PATH RE-MAPPING TO MATCH YOUR PHYSICAL FILENAMES ---
+        if (roleValue === 'partner') {
+          /* FIX: Updated path from corporate_partner.html to match your actual hard drive file corporate-partner.html */
+          window.location.href = './corporate-partner.html';
+        } 
+        else if (roleValue === 'client') {
+          /* FIX: Updated path from client_corporate.html to match your actual hard drive file corporate-client.html */
+          window.location.href = './corporate-client.html';
+        } 
+        else {
+          window.location.href = '../index.html';
+        }
+      });
+    }
+
+
+    // --- 5. THIRD-PARTY OAUTH LOADING PROVIDERS ---
+    const oauthButtons = document.querySelectorAll('.oauth-provider-btn');
+    if (oauthButtons.length > 0) {
+      oauthButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          this.textContent = 'Connecting...';
+          this.style.opacity = '0.7';
+          this.style.pointerEvents = 'none';
+          setTimeout(() => {
+            window.location.href = '404.html';
+          }, 1000);
+        });
+      });
+    }
+
+  }); // Safely closes the DOMContentLoaded listener execution block thread
+</script>
+
+
+</body>
+</html>

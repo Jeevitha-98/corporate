@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner Console Hub | Stackly Corp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-workspace-body">
+<!-- CORPORATE PARTNER MASTER CONTAINER -->
+<!-- CORPORATE PARTNER MASTER CONTAINER -->
+<div class="partner-dashboard-layout-root">
+
+  <!-- A. THE LIGHT-TRANSLUCENT VEIL SHROUD (TAP ANYWHERE OUTSIDE MENU TO CLOSE) -->
+  <div class="partner-drawer-backdrop-veil" id="mobile-drawer-overlay"></div>
+
+  <!-- B. SIDEBAR PANEL MODIFIED: COMPACT HAMBURGER DRAWER FOR MOBILE -->
+  <aside class="partner-console-sidebar" id="partner-sidebar-menu-drawer">
+    
+    
+    <div class="partner-sidebar-brand-wrapper">
+      <a href="#" class="partner-brand-anchor">
+        <span class="partner-brand-logo-text">STACKLY<span class="partner-brand-sub-tag">Partner</span></span>
+      </a>
+      
+      <!-- NEW TRIGGER: Compact Close Button (Visible inside mobile drawer viewports only) -->
+      <button class="partner-drawer-close-cross-btn" id="mobile-drawer-close-trigger" aria-label="Close Sidebar Drawer">&times;</button>
+    </div>
+
+    <!-- Central Switcher Link Pills Deck -->
+    <nav class="partner-sidebar-links-deck">
+      <button class="partner-nav-pill active-pill" data-view-target="client-overview-view">
+        <span class="partner-pill-bullet">&bull;</span> Partner Operations
+      </button>
+      <button class="partner-nav-pill" data-view-target="client-allocations-view">
+        <span class="partner-pill-bullet">&bull;</span> Joint Infrastructures
+      </button>
+      <button class="partner-nav-pill" data-view-target="client-security-view">
+        <span class="partner-pill-bullet">&bull;</span> Alliance Security
+      </button>
+      <button class="partner-nav-pill" data-view-target="client-billing-view">
+        <span class="partner-pill-bullet">&bull;</span> Settlement Ledgers
+      </button>
+    </nav>
+
+    <!-- Lower Termination Block -->
+    <div class="partner-sidebar-termination-footer">
+      <a href="login.html" class="partner-logout-action-btn">
+        <span class="partner-logout-icon-arrow">&larr;</span> Logout Session
+      </a>
+    </div>
+  </aside>
+
+  <!-- C. MAIN WORKSPACE CANVAS WITH THE RESTORED TOP NAV HEADER -->
+  <main class="partner-workspace-canvas">
+    
+    <!-- GLOBAL APPLICATION TOP NAV-HEADER FOR THE MOBILE DRAWER OPEN BUTTON -->
+    <header class="partner-global-top-header">
+      <div class="partner-header-left-breadcrumbs">
+        <!-- NEW TRIGGER: Hamburger Open Trigger Button Capsule (Visible on Mobile Only) -->
+        <button class="partner-hamburger-menu-trigger" id="mobile-drawer-open-trigger" aria-label="Open Navigation Drawer">
+          <span class="hamburger-bar-line"></span>
+          <span class="hamburger-bar-line"></span>
+          <span class="hamburger-bar-line"></span>
+        </button>
+        <span class="partner-desktop-breadcrumb-only">CONSOLE // PARTNER_ROOT // ACTIVE</span>
+      </div>
+
+      <!-- Right Action Tools Icons Rack -->
+      <div class="partner-header-right-tools-rack">
+        <div class="partner-tool-bead">
+          <svg class="partner-icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+          </svg>
+          <span class="partner-notification-alert-dot"></span>
+        </div>
+        <div class="partner-tool-bead">
+          <div class="partner-profile-initial-avatar">OP</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- DYNAMIC CORE CONTENT VIEWS DECK HULL -->
+    <div class="partner-views-central-hull">
+      <!-- Content panel views render inside this wrapper frame slot safely -->
+    </div>
+
+  </main>
+</div>
+
+<style>
+    /* ==========================================================================
+   PRODUCTION REPAIR: SLIDE-OUT LEFT NAVIGATION MENU DRAWER FOR MOBILE
+   ========================================================================== */
+
+/* Hide mobile-specific buttons and shaders on desktop layouts by default */
+.partner-hamburger-menu-trigger,
+.partner-drawer-close-cross-btn,
+.partner-drawer-backdrop-veil {
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .partner-dashboard-layout-root { flex-direction: column !important; }
+
+  /* 1. RESTORE EXCLUSIVELY PINNED TOP APP NAVIGATION HEADER ROW */
+  .partner-global-top-header {
+    display: flex !important; /* Re-establishes header presence */
+    position: fixed !important; top: 0 !important; left: 0 !important;
+    width: 100% !important; height: 64px !important;
+    background-color: #060913 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03) !important;
+    padding: 0 16px !important; box-sizing: border-box !important;
+    align-items: center !important; justify-content: space-between !important;
+    z-index: 4000 !important;
+  }
+  .partner-desktop-breadcrumb-only { display: none !important; }
+
+  /* 2. THREE-LINE HAMBURGER TRIGGER BUTTON DESIGN */
+  .partner-hamburger-menu-trigger {
+    display: flex !important; flex-direction: column !important; justify-content: space-between !important;
+    width: 22px; height: 16px; background: transparent !important; border: none !important; padding: 0 !important; cursor: pointer;
+  }
+  .hamburger-bar-line { width: 100%; height: 2px; background-color: #cbd5e1; border-radius: 4px; }
+
+  /* 3. CONVERT LEFT RAIL INTO AN INTERACTIVE SLIDE DRAWER WINDOW */
+  .partner-console-sidebar {
+    position: fixed !important; top: 0 !important; left: 0 !important;
+    width: 280px !important; height: 100vh !important; height: 100dvh !important;
+    background-color: #060913 !important; padding: 24px 20px !important; box-sizing: border-box !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.04) !important; border-bottom: none !important;
+    flex-direction: column !important; justify-content: space-between !important; align-items: stretch !important;
+    z-index: 6000 !important; /* Layers menu above the pinned header block */
+    box-shadow: 25px 0 50px rgba(0,0,0,0.6) !important;
+    
+    /* CRITICAL TRANSFORMS MODIFIER: Displaces menu off-screen left by default */
+    transform: translateX(-110%) !important;
+    will-change: transform;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  /* This active utility class is triggered by JS to slide the sidebar out */
+  .partner-console-sidebar.mobile-drawer-revealed {
+    transform: translateX(0) !important;
+  }
+
+  /* Structural alignments modifications inside open drawers */
+  .partner-sidebar-brand-wrapper { display: flex !important; align-items: center !important; justify-content: space-between !important; }
+  .partner-sidebar-links-deck { display: flex !important; flex-direction: column !important; gap: 10px !important; margin-top: 32px !important; }
+  .partner-nav-pill { width: 100% !important; padding: 14px 16px !important; font-size: 0.88rem !important; flex-direction: row !important; text-align: left !important; color: #64748b !important; }
+  .partner-pill-bullet { margin-right: 8px !important; }
+
+  /* Drawer Close Button Styling Element */
+  .partner-drawer-close-cross-btn {
+    display: inline-flex !important; background: transparent !important; border: none !important;
+    font-size: 1.8rem; color: #475569; cursor: pointer; padding: 0 !important; line-height: 1;
+  }
+  .partner-drawer-close-cross-btn:hover { color: #f43f5e; }
+
+  /* Re-stylizes the mobile logout option button within the bottom drawer footer track bounds */
+  .partner-sidebar-termination-footer { width: 100% !important; padding-top: 16px !important; border-top: 1px solid rgba(255,255,255,0.03) !important; }
+  .partner-logout-action-btn { width: 100% !important; justify-content: center !important; padding: 12px 16px !important; background-color: rgba(244,63,94,0.04) !important; border: 1px solid rgba(244,63,94,0.15) !important; border-radius: 8px !important; color: #f43f5e !important; }
+  .partner-logout-icon-arrow { display: inline-block !important; }
+
+  /* 4. BLURRED DRAWER BACKDROP VEIL */
+  .partner-drawer-backdrop-veil {
+    display: block !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important;
+    background-color: rgba(2, 5, 14, 0.5) !important; backdrop-filter: blur(4px) !important; -webkit-backdrop-filter: blur(4px) !important;
+    z-index: 5000 !important; opacity: 0; visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+  }
+  .partner-drawer-backdrop-veil.veil-active { opacity: 1; visibility: visible; }
+
+  /* 5. CANVAS MARGIN COMPENSATIONS PADDING RESET */
+  .partner-views-central-hull {
+    padding: 96px 16px 48px 16px !important; /* Space clears under fixed mobile top header bar */
+    height: 100vh !important;
+  }
+}
+
+
+
+</style>
+
+<script>
+    /**
+ * STACKLY DYNAMIC MOBILE DRAWER CONTROLLER SWITCHES
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const openDrawerButton = document.getElementById('mobile-drawer-open-trigger');
+  const closeDrawerButton = document.getElementById('mobile-drawer-close-trigger');
+  const overlayVeilCover = document.getElementById('mobile-drawer-overlay');
+  const sidebarMenuDrawer = document.getElementById('partner-sidebar-menu-drawer');
+  const menuLinkButtons = document.querySelectorAll('.partner-nav-pill');
+
+  const executeOpenMobileDrawer = () => {
+    if (sidebarMenuDrawer && overlayVeilCover) {
+      sidebarMenuDrawer.classList.add('mobile-drawer-revealed');
+      overlayVeilCover.classList.add('veil-active');
+    }
+  };
+
+  const executeCloseMobileDrawer = () => {
+    if (sidebarMenuDrawer && overlayVeilCover) {
+      sidebarMenuDrawer.classList.remove('mobile-drawer-revealed');
+      overlayVeilCover.classList.remove('veil-active');
+    }
+  };
+
+  // Bind Open, Close, and Tap-Outside overlay actions
+  if (openDrawerButton) openDrawerButton.addEventListener('click', executeOpenMobileDrawer);
+  if (closeDrawerButton) closeDrawerButton.addEventListener('click', executeCloseMobileDrawer);
+  if (overlayVeilCover) overlayVeilCover.addEventListener('click', executeCloseMobileDrawer);
+
+  // Auto-closes mobile drawer panel instantly whenever an operator switches menu tabs view pane slots
+  menuLinkButtons.forEach(pill => {
+    pill.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        executeCloseMobileDrawer();
+      }
+    });
+  });
+});
+
+</script>

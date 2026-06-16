@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Client Console Hub | Stackly Corp</title>
+  <title>Partner Console Hub | Stackly Corp</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="dashboard-workspace-body">
@@ -21,7 +21,7 @@
         <!-- Brand Link Anchor Trigger binds Refresh functionality -->
         <a href="#" id="stackly-brand-refresh" class="sidebar-brand-anchor">
           
-          <span class="brand-text-label">STACKLY<span class="brand-label-sub">Client</span></span>
+          <span class="brand-text-label">STACKLY<span class="brand-label-sub">Partner</span></span>
         </a>
       </div>
 
@@ -51,6 +51,285 @@
         </a>
       </div>
     </aside>
+    <style>
+        /* ==========================================================================
+   STACKLY PARTNER SIDEBAR DUAL-MODE LAYOUT CONSOLE CONTROLLER
+   ========================================================================== */
+
+/* --- A. STANDALONE BASE WIDESCREEN DESKTOP ALIGNMENTS MATRIX --- */
+.dash-sidebar-navigation-chassis {
+  width: 260px !important;
+  height: 100vh !important;
+  background-color: #060913 !important; /* Midnight slate block backfill stays solid */
+  border-right: 1px solid rgba(255, 255, 255, 0.02) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 32px 20px !important;
+  box-sizing: border-box !important;
+  flex-shrink: 0 !important;
+  position: relative !important;
+  z-index: 1000 !important;
+}
+
+.dash-sidebar-brand-lockup {
+  width: 100% !important;
+  margin-bottom: 36px !important;
+  text-align: left !important;
+}
+.sidebar-brand-anchor {
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+.brand-text-label {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+}
+.brand-label-sub {
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  color: #22d3ee !important; /* Premium brand cyan accent focus */
+  margin-left: 4px !important;
+  text-transform: capitalize !important;
+}
+
+.dash-sidebar-navigation-links-deck {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  width: 100% !important;
+  flex-grow: 1 !important;
+}
+
+.dash-menu-link-pill {
+  width: 100% !important;
+  padding: 12px 16px !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 8px !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  color: #475569 !important; /* Clear legible slate gray link text */
+  text-align: left !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  box-sizing: border-box !important;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+.nav-icon-token { font-size: 1.1rem !important; color: #334155 !important; transition: color 0.3s ease !important; }
+
+/* Desktop Active Focus Tab States Highlights */
+.dash-menu-link-pill.link-pill-active {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.01) !important;
+  border-color: rgba(255, 255, 255, 0.03) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+.dash-menu-link-pill.link-pill-active .nav-icon-token { color: #22d3ee !important; }
+
+/* Desktop Section Termination Footer Placement */
+.dash-sidebar-termination-footer {
+  width: 100% !important;
+  margin-top: auto !important;
+  padding-top: 24px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.02) !important;
+  box-sizing: border-box !important;
+}
+.dash-sidebar-logout-btn {
+  display: flex !important; align-items: center !important; gap: 10px !important; width: 100% !important; text-decoration: none !important;
+  font-family: 'Inter', system-ui, sans-serif !important; font-size: 0.88rem !important; font-weight: 700 !important;
+  color: #64748b !important; transition: all 0.25s ease !important;
+}
+.dash-sidebar-logout-btn:hover { color: #f43f5e !important; } /* Lights up crimson red warning on focus actions */
+
+
+/* ==========================================================================
+   B. EXCLUSIVE HORIZONTAL MOBILE INVERSION FORCE COVERS (100% VISIBLE)
+   ========================================================================== */
+/* ==========================================================================
+   THE FORCED MOBILE OVERRIDE MATRIX (CORRECTS BRACKET BLOCKS COLLISION)
+   ========================================================================== */
+ /* Failsafe closing anchor closes any open brackets in the file above this point */
+
+/* ==========================================================================
+   PRODUCTION REPAIR: DETACHED TOP BAR NAVIGATION HEADER SYNCHRONIZER
+   ========================================================================== */
+} /* Failsafe closing bracket guarantees a clean break away from unclosed classes above */
+
+@media screen and (max-width: 1024px) {
+
+  /* 1. MASTER WRAPPER FLOW: Stacks components top-to-bottom stream natively */
+  .dash-master-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+    height: auto !important;
+    background-color: #030611 !important;
+    overflow-x: hidden !important;
+  }
+
+  /* 2. CHASSIS INVERSION: Converts the aside block into a clean top branding row bar */
+  .dash-sidebar-navigation-chassis {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: row !important; /* Converts column stacks into side-by-side components */
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 64px !important; /* Fixed base header height */
+    padding: 0 16px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    
+    background-color: #060913 !important; /* Midnight slate block backfill stays solid */
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+    z-index: 99999 !important; /* High layer ranking ensures visibility ahead of panel content view text */
+  }
+
+  /* Stabilizes your brand identity text logo boundaries */
+  .dash-sidebar-brand-lockup {
+    display: block !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 3. PIN THE DETACHED DESKTOP SEPARATE HEADER DIRECTLY INSIDE THE TOP ROW MIDDLE RIGHT BOUNDS */
+  header.client-dashboard-global-nav-header,
+  .client-dashboard-global-nav-header {
+    display: flex !important; /* Overwrites hidden default values to force complete visibility */
+    visibility: visible !important;
+    opacity: 1 !important;
+    
+    /* FIX: Floats your separate header block dynamically inline with your top brand logo text */
+    position: absolute !important;
+    top: 16px !important;
+    right: 170px !important; /* Sits symmetrically to the left of your horizontal logout button capsule */
+    
+    /* Strips default backfills and borders to prevent layout blocking overlays errors */
+    width: auto !important;
+    height: auto !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    z-index: 99999 !important;
+  }
+
+  /* Aligns separate utilities rack icons side-by-side tightly */
+  .dash-top-actions-rack {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 14px !important;
+  }
+
+  /* Suppresses wide-screen left breadcrumbs strings to clear horizontal space paths */
+  .dash-top-header-left {
+    display: none !important;
+  }
+
+  /* 4. UNMASK AND RE-ALIGN SIDEBAR TERMINATION FOOTER WITHIN THE HEADER BAR TRACK LINE */
+  .dash-sidebar-termination-footer {
+    display: flex !important; /* Restores block visibility natively */
+    visibility: visible !important;
+    opacity: 1 !important;
+    
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    flex-shrink: 0 !important; /* Stops exit button from compressing down */
+  }
+
+  /* Re-stylizes logout anchor into a compact horizontal action pill button */
+  .dash-sidebar-logout-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    
+    width: max-content !important;
+    height: 32px !important; /* Symmetrical matching compact profile height */
+    padding: 0 14px !important;
+    box-sizing: border-box !important;
+    
+    font-family: 'Inter', system-ui, sans-serif !important;
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em !important;
+    text-decoration: none !important;
+    border-radius: 4px !important;
+    border: none !important;
+    
+    color: #ffffff !important;
+    background-color: #e11d48 !important; /* Cherry crimson solid backfill forces immediate visibility */
+    box-shadow: 0 4px 10px rgba(225, 29, 72, 0.25) !important;
+    transition: background-color 0.2s ease !important;
+  }
+  .dash-sidebar-logout-btn:hover { background-color: #be123c !important; }
+  .logout-vector-icon { font-size: 0.8rem !important; display: inline-block !important; }
+
+  /* 5. ARRANGES LINK SWITCHER BUTTONS INTO A SWIPEABLE TAB STRIP ROW DIRECTLY BENEATH HEADER BAR */
+  .dash-sidebar-navigation-links-deck {
+    position: absolute !important;
+    top: 64px !important; /* Snaps pixel-perfect flush underneath your top bar base limits */
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    background-color: #060913 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02) !important;
+    padding: 10px 16px !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    z-index: 99998 !important; /* Layers navigation link row right below the fixed top app bar */
+    
+    display: flex !important;
+    flex-direction: row !important; /* Sidebar buttons align side-by-side */
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important; /* Activates seamless horizontal finger touch swipes channel bar */
+    overflow-y: hidden !important;
+    scrollbar-width: none !important; /* Conceals system scroll bars tracking lines */
+  }
+  .dash-sidebar-navigation-links-deck::-webkit-scrollbar { display: none !important; }
+
+  .dash-menu-link-pill {
+    width: max-content !important;
+    padding: 8px 14px !important;
+    font-size: 0.75rem !important;
+    white-space: nowrap !important; /* Keeps labels strictly on a single layout line */
+  }
+
+  /* 6. CANVAS CONTENT COMPENSATIVE TOP PADDING ADJUSTMENT */
+  .dash-central-workspace-canvas {
+    width: 100% !important;
+  }
+  .client-dashboard-views-central-hull {
+    padding: 130px 16px 48px 16px !important; /* Balanced layout buffer space prevents title content overlap fields errors */
+    box-sizing: border-box !important;
+    width: 100% !important;
+  }
+}
+
+    </style>
+  
 
     <!-- ==========================================================================
          B. MAIN CENTRAL CONTROLLER HUB CANVAS AREA
@@ -223,9 +502,7 @@
   }
 
   /* Suppresses vertical termination buttons inside horizontal rows track bounds to preserve space */
-  .dash-sidebar-termination-footer {
-    display: none !important;
-  }
+  
 
   /* ==========================================================================
      GLOBAL NAVIGATION BAR FIXED MOBILE POSITION REPAIR
@@ -1260,15 +1537,204 @@
 
 <style>
     /* Keeps all dashboard view header text aligned, contained, and safely unclipped */
+/* ==========================================================================
+   FAILSAFE BLOCK RECTOR FOR SETTLEMENT LEDGERS CANVAS
+   ========================================================================== */
+
+/* FIX 1: RESTORES BLOCK VISIBILITY - Forces the wrapper container to show completely */
 .billing-module-header {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
   width: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  text-align: left !important;
-  margin-bottom: 40px !important;
+  height: auto !important;
+  min-height: 0 !important;
+  
+  /* FIX 2: Strips down the 70px void padding that created the massive empty gap */
+  padding: 0 !important;
+  margin: 0 0 24px 0 !important; /* Retains a tight, balanced 24px bottom buffer */
   box-sizing: border-box !important;
-  padding: 70px 5px 5px 10px;
+}
+
+/* FIX 3: Enforces core headline typography high-contrast visibility properties */
+.billing-module-header .view-panel-main-headline,
+.dash-panel-title-block .view-panel-main-headline {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 2.2rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important; /* Pure white text string */
+  text-transform: uppercase !important;
+  letter-spacing: -0.01em !important;
+  margin: 0 !important;
+  line-height: 1.1 !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* FIX 4: Restores paragraph copy text visibility properties to bright silver */
+.billing-module-header .view-panel-narrative,
+.dash-panel-title-block .view-panel-narrative {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 0.95rem !important;
+  color: #94a3b8 !important; /* Bright silver gray ensures legibility against black base slates */
+  line-height: 1.5 !important;
+  margin: 8px 0 0 0 !important;
+  max-width: 800px !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* Snaps the metrics row rack cards tight up beneath description blocks */
+.billing-metrics-row-rack {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+/* ==========================================================================
+   SETTLEMENT LEDGERS RESPONSIVE LAYOUT MATRIX ADD-ON MODULE
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  /* 1. Overview Container Padding Optimization */
+  .client-dashboard-view-panel#client-billing-view {
+    padding: 24px 16px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+  }
+
+  /* 2. Top Metric Cards Split Row: Convert 3-Columns to 2-Columns on Tablets */
+  .billing-asymmetric-wrapper-row:first-of-type {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    width: 100% !important;
+    margin-bottom: 32px !important;
+  }
+
+  /* 3. Bottom Table & Progress Sidebar Split Matrix: Force Clean Vertical Stack */
+  .billing-asymmetric-wrapper-row:last-of-type {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+    width: 100% !important;
+  }
+
+  .billing-ledger-table-hull,
+  .billing-resource-usage-panel {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 1. Header Typography Compacting */
+  .dash-panel-title-block {
+    margin-bottom: 24px !important;
+  }
+  .view-panel-main-headline {
+    font-size: 1.75rem !important;
+  }
+  .view-panel-narrative {
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* 2. Top Metric Cards Split Row: Force Single Column Stack on Smartphones */
+  .billing-asymmetric-wrapper-row:first-of-type {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .billing-stat-card {
+    width: 100% !important;
+    padding: 24px 20px !important;
+    box-sizing: border-box !important;
+  }
+  .stat-numeric-value {
+    font-size: 2.2rem !important;
+  }
+
+  /* 3. High-Density Native Data Grid Transformation: Card Mode Shift */
+  .table-scroll-containment-box {
+    overflow-x: visible !important;
+    width: 100% !important;
+  }
+
+  .billing-native-datagrid,
+  .billing-native-datagrid thead,
+  .billing-native-datagrid tbody,
+  .billing-native-datagrid th,
+  .billing-native-datagrid td,
+  .billing-native-datagrid tr {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Hide raw table headers on mobile screen rows */
+  .billing-native-datagrid thead {
+    display: none !important;
+  }
+
+  .billing-native-datagrid tr {
+    margin-bottom: 16px !important;
+    padding: 16px 20px !important;
+    background-color: rgba(255, 255, 255, 0.01) !important;
+    border: 1px solid rgba(255, 255, 255, 0.03) !important;
+    border-radius: 12px !important;
+  }
+
+  /* Inject pseudo-labels on cell left tracks to keep data points aligned */
+  .billing-native-datagrid td {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.01) !important;
+    font-size: 0.85rem !important;
+    text-align: right !important;
+  }
+
+  .billing-native-datagrid td:last-child {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+
+  .billing-native-datagrid td::before {
+    font-family: monospace !important;
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    color: #475569 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    float: left !important;
+    text-align: left !important;
+  }
+
+  /* Custom Data Label Mappings */
+  .billing-native-datagrid td:nth-of-type(1)::before { content: "Settlement ID:"; }
+  .billing-native-datagrid td:nth-of-type(2)::before { content: "Billing Era:"; }
+  .billing-native-datagrid td:nth-of-type(3)::before { content: "Consortium:"; }
+  .billing-native-datagrid td:nth-of-type(4)::before { content: "System State:"; }
+
+  /* 4. Bottom Sidebar Progress Vector Layout Alignment Updates */
+  .usage-progress-vector-casing {
+    padding: 20px 0 !important;
+  }
+  .usage-label-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    margin-bottom: 12px !important;
+    font-size: 0.85rem !important;
+  }
+  .usage-footer-warning-note {
+    font-size: 0.78rem !important;
+    line-height: 1.5 !important;
+    margin-top: 14px !important;
+  }
 }
 
   /* ==========================================================================
@@ -1548,9 +2014,7 @@
   }
 
   /* Suppresses vertical termination logout options on compressed touch interface to preserve space */
-  .dash-sidebar-termination-footer {
-    display: none !important;
-  }
+  
 
   /* ==========================================================================
      GLOBAL NAVIGATION BAR FIXED MOBILE POSITION REPAIR
@@ -1624,9 +2088,7 @@
     margin-left: 0 !important; /* Normalizes layout shifts on smartphone views */
   }
 
-  .dash-sidebar-termination-footer {
-    display: none !important; /* Keeps layout clean by hiding it inside mobile horizontal headers strips */
-  }
+  
 }
 
 
@@ -1726,7 +2188,7 @@
   .dash-master-wrapper { flex-direction: column !important; }
   .dash-sidebar-navigation-chassis { width: 100% !important; height: auto !important; border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.02) !important; padding: 20px 24px !important; gap: 24px !important; }
   .dash-sidebar-brand-lockup { margin-bottom: 0 !important; }
-.dash-sidebar-navigation-links-deck { flex-direction: row !important; flex-wrap: wrap !important; gap: 8px !important; }.dash-menu-link-pill { width: auto !important; padding: 10px 14px !important; font-size: 0.8rem !important; }.dash-sidebar-termination-footer { display: none !important; } /* Suppresses logout link inside horizontal mobile rows field */.client-dashboard-global-nav-header { padding: 0 24px !important; }.client-dashboard-views-central-hull { padding: 36px 24px !important; }}
+.dash-sidebar-navigation-links-deck { flex-direction: row !important; flex-wrap: wrap !important; gap: 8px !important; }.dash-menu-link-pill { width: auto !important; padding: 10px 14px !important; font-size: 0.8rem !important; }/* Suppresses logout link inside horizontal mobile rows field */.client-dashboard-global-nav-header { padding: 0 24px !important; }.client-dashboard-views-central-hull { padding: 36px 24px !important; }}
   </style>
 
   <script>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Client Console Hub | Stackly Corp</title>
+  <title>Partner Console Hub | Stackly Corp</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="dashboard-workspace-body">
@@ -26,20 +26,23 @@
       </div>
 
       <!-- Chronological Sidebar Tab Switches Decks -->
+            <!-- Chronological Sidebar Tab Switches Decks -->
       <nav class="dash-sidebar-navigation-links-deck">
         <button class="dash-menu-link-pill link-pill-active" data-view-target="client-overview-view">
           <span class="nav-icon-token">&bull;</span> Overview Matrix
         </button>
         <button class="dash-menu-link-pill" data-view-target="client-allocations-view">
-          <span class="nav-icon-token">&bull;</span> Compute Instances
+          <span class="nav-icon-token">&bull;</span> Virtual Compute Cluster
         </button>
         <button class="dash-menu-link-pill" data-view-target="client-security-view">
           <span class="nav-icon-token">&bull;</span> Perimeter Security
         </button>
         <button class="dash-menu-link-pill" data-view-target="client-billing-view">
           <span class="nav-icon-token">&bull;</span> Ledger Accounts
+
         </button>
       </nav>
+
 
       <!-- Section Termination Logout Option Box -->
       <div class="dash-sidebar-termination-footer">
@@ -49,6 +52,285 @@
         </a>
       </div>
     </aside>
+    <style>
+        /* ==========================================================================
+   STACKLY PARTNER SIDEBAR DUAL-MODE LAYOUT CONSOLE CONTROLLER
+   ========================================================================== */
+
+/* --- A. STANDALONE BASE WIDESCREEN DESKTOP ALIGNMENTS MATRIX --- */
+.dash-sidebar-navigation-chassis {
+  width: 260px !important;
+  height: 100vh !important;
+  background-color: #060913 !important; /* Midnight slate block backfill stays solid */
+  border-right: 1px solid rgba(255, 255, 255, 0.02) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 32px 20px !important;
+  box-sizing: border-box !important;
+  flex-shrink: 0 !important;
+  position: relative !important;
+  z-index: 1000 !important;
+}
+
+.dash-sidebar-brand-lockup {
+  width: 100% !important;
+  margin-bottom: 36px !important;
+  text-align: left !important;
+}
+.sidebar-brand-anchor {
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+.brand-text-label {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+}
+.brand-label-sub {
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  color: #22d3ee !important; /* Premium brand cyan accent focus */
+  margin-left: 4px !important;
+  text-transform: capitalize !important;
+}
+
+.dash-sidebar-navigation-links-deck {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  width: 100% !important;
+  flex-grow: 1 !important;
+}
+
+.dash-menu-link-pill {
+  width: 100% !important;
+  padding: 12px 16px !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 8px !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  color: #475569 !important; /* Clear legible slate gray link text */
+  text-align: left !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  box-sizing: border-box !important;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+.nav-icon-token { font-size: 1.1rem !important; color: #334155 !important; transition: color 0.3s ease !important; }
+
+/* Desktop Active Focus Tab States Highlights */
+.dash-menu-link-pill.link-pill-active {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.01) !important;
+  border-color: rgba(255, 255, 255, 0.03) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+.dash-menu-link-pill.link-pill-active .nav-icon-token { color: #22d3ee !important; }
+
+/* Desktop Section Termination Footer Placement */
+.dash-sidebar-termination-footer {
+  width: 100% !important;
+  margin-top: auto !important;
+  padding-top: 24px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.02) !important;
+  box-sizing: border-box !important;
+}
+.dash-sidebar-logout-btn {
+  display: flex !important; align-items: center !important; gap: 10px !important; width: 100% !important; text-decoration: none !important;
+  font-family: 'Inter', system-ui, sans-serif !important; font-size: 0.88rem !important; font-weight: 700 !important;
+  color: #64748b !important; transition: all 0.25s ease !important;
+}
+.dash-sidebar-logout-btn:hover { color: #f43f5e !important; } /* Lights up crimson red warning on focus actions */
+
+
+/* ==========================================================================
+   B. EXCLUSIVE HORIZONTAL MOBILE INVERSION FORCE COVERS (100% VISIBLE)
+   ========================================================================== */
+/* ==========================================================================
+   THE FORCED MOBILE OVERRIDE MATRIX (CORRECTS BRACKET BLOCKS COLLISION)
+   ========================================================================== */
+ /* Failsafe closing anchor closes any open brackets in the file above this point */
+
+/* ==========================================================================
+   PRODUCTION REPAIR: DETACHED TOP BAR NAVIGATION HEADER SYNCHRONIZER
+   ========================================================================== */
+} /* Failsafe closing bracket guarantees a clean break away from unclosed classes above */
+
+@media screen and (max-width: 1024px) {
+
+  /* 1. MASTER WRAPPER FLOW: Stacks components top-to-bottom stream natively */
+  .dash-master-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+    height: auto !important;
+    background-color: #030611 !important;
+    overflow-x: visible !important;
+  }
+
+  /* 2. CHASSIS INVERSION: Converts the aside block into a clean top branding row bar */
+  .dash-sidebar-navigation-chassis {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: row !important; /* Converts column stacks into side-by-side components */
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 64px !important; /* Fixed base header height */
+    padding: 0 16px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    
+    background-color: #060913 !important; /* Midnight slate block backfill stays solid */
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+    z-index: 99999 !important; /* High layer ranking ensures visibility ahead of panel content view text */
+  }
+
+  /* Stabilizes your brand identity text logo boundaries */
+  .dash-sidebar-brand-lockup {
+    display: block !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 3. PIN THE DETACHED DESKTOP SEPARATE HEADER DIRECTLY INSIDE THE TOP ROW MIDDLE RIGHT BOUNDS */
+  header.client-dashboard-global-nav-header,
+  .client-dashboard-global-nav-header {
+    display: flex !important; /* Overwrites hidden default values to force complete visibility */
+    visibility: visible !important;
+    opacity: 1 !important;
+    
+    /* FIX: Floats your separate header block dynamically inline with your top brand logo text */
+    position: absolute !important;
+    top: 16px !important;
+    right: 170px !important; /* Sits symmetrically to the left of your horizontal logout button capsule */
+    
+    /* Strips default backfills and borders to prevent layout blocking overlays errors */
+    width: auto !important;
+    height: auto !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    z-index: 99999 !important;
+  }
+
+  /* Aligns separate utilities rack icons side-by-side tightly */
+  .dash-top-actions-rack {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 14px !important;
+  }
+
+  /* Suppresses wide-screen left breadcrumbs strings to clear horizontal space paths */
+  .dash-top-header-left {
+    display: none !important;
+  }
+
+  /* 4. UNMASK AND RE-ALIGN SIDEBAR TERMINATION FOOTER WITHIN THE HEADER BAR TRACK LINE */
+  .dash-sidebar-termination-footer {
+    display: flex !important; /* Restores block visibility natively */
+    visibility: visible !important;
+    opacity: 1 !important;
+    
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    flex-shrink: 0 !important; /* Stops exit button from compressing down */
+  }
+
+  /* Re-stylizes logout anchor into a compact horizontal action pill button */
+  .dash-sidebar-logout-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    
+    width: max-content !important;
+    height: 32px !important; /* Symmetrical matching compact profile height */
+    padding: 0 14px !important;
+    box-sizing: border-box !important;
+    
+    font-family: 'Inter', system-ui, sans-serif !important;
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em !important;
+    text-decoration: none !important;
+    border-radius: 4px !important;
+    border: none !important;
+    
+    color: #ffffff !important;
+    background-color: #e11d48 !important; /* Cherry crimson solid backfill forces immediate visibility */
+    box-shadow: 0 4px 10px rgba(225, 29, 72, 0.25) !important;
+    transition: background-color 0.2s ease !important;
+  }
+  .dash-sidebar-logout-btn:hover { background-color: #be123c !important; }
+  .logout-vector-icon { font-size: 0.8rem !important; display: inline-block !important; }
+
+  /* 5. ARRANGES LINK SWITCHER BUTTONS INTO A SWIPEABLE TAB STRIP ROW DIRECTLY BENEATH HEADER BAR */
+  .dash-sidebar-navigation-links-deck {
+    position: absolute !important;
+    top: 64px !important; /* Snaps pixel-perfect flush underneath your top bar base limits */
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    background-color: #060913 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02) !important;
+    padding: 10px 16px !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    z-index: 99998 !important; /* Layers navigation link row right below the fixed top app bar */
+    
+    display: flex !important;
+    flex-direction: row !important; /* Sidebar buttons align side-by-side */
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important; /* Activates seamless horizontal finger touch swipes channel bar */
+    overflow-y: hidden !important;
+    scrollbar-width: none !important; /* Conceals system scroll bars tracking lines */
+  }
+  .dash-sidebar-navigation-links-deck::-webkit-scrollbar { display: none !important; }
+
+  .dash-menu-link-pill {
+    width: max-content !important;
+    padding: 8px 14px !important;
+    font-size: 0.75rem !important;
+    white-space: nowrap !important; /* Keeps labels strictly on a single layout line */
+  }
+
+  /* 6. CANVAS CONTENT COMPENSATIVE TOP PADDING ADJUSTMENT */
+  .dash-central-workspace-canvas {
+    width: 100% !important;
+  }
+  .client-dashboard-views-central-hull {
+    padding: 130px 16px 48px 16px !important; /* Balanced layout buffer space prevents title content overlap fields errors */
+    box-sizing: border-box !important;
+    width: 100% !important;
+  }
+}
+
+    </style>
+  
 
     <!-- ==========================================================================
          B. MAIN CENTRAL CONTROLLER HUB CANVAS AREA
@@ -60,7 +342,7 @@
   <header class="client-dashboard-global-nav-header">
    
   <div class="dash-top-header-left">
-    <span class="dash-console-breadcrumb">CONSOLE // OPERATOR_ROOT // ACTIVE</span>
+    <span class="dash-console-breadcrumb">CONSOLE // Client_ROOT // ACTIVE</span>
   </div>
 
   <div class="dash-top-actions-rack">
@@ -90,7 +372,7 @@
       
       <!-- PROFILE DROPDOWN WRAPPER PANEL -->
       <div class="dash-top-nav-dropdown-wrapper" id="profile-dropdown-panel">
-        <h5 class="dropdown-header-title">Operator Root Security</h5>
+        <h5 class="dropdown-header-title">Client Root Security</h5>
         <span class="dropdown-meta-token">ROLE // COMPUTE_ROOT</span>
         <ul class="dropdown-links-list">
           <li><a href="#">Gateway Configs</a></li>
@@ -206,7 +488,7 @@
   .dash-sidebar-navigation-links-deck {
     flex-direction: row !important;
     flex-wrap: nowrap !important; /* Prevents rows wrapping overlaps clips bugs */
-    overflow-x: auto !important; /* Allows horizontal scrolling touch navigation swipes if names exceed space bounds */
+    overflow-x: visible !important; /* Allows horizontal scrolling touch navigation swipes if names exceed space bounds */
     gap: 8px !important;
     padding-bottom: 4px !important;
     scrollbar-width: none !important; /* Hides raw ugly system scroll track bars on mobile scroll panels */
@@ -221,9 +503,7 @@
   }
 
   /* Suppresses vertical termination buttons inside horizontal rows track bounds to preserve space */
-  .dash-sidebar-termination-footer {
-    display: none !important;
-  }
+  
 
   /* ==========================================================================
      GLOBAL NAVIGATION BAR FIXED MOBILE POSITION REPAIR
@@ -291,80 +571,75 @@
       <!-- ==========================================================================
            C. DYNAMIC VIEWS CONTAINER WORKSPACE CHASSIS
            ========================================================================== -->
-      <main class="client-dashboard-views-central-hull">
-    
-           <div class="client-dashboard-views-central-hull" id="dash-views-mount-point">
-        
-        <!-- View Panel 01: Overview Matrix Content Section (Active Default) -->
-       <!-- VIEW PANEL 01: ENHANCED OVERVIEW TELEMETRY MATRIX COCKPIT -->
+      <!-- VIEW PANEL 01: ENHANCED OVERVIEW TELEMETRY MATRIX COCKPIT -->
 <section class="client-dashboard-view-panel view-panel-active" id="client-overview-view" style="display: block;">
   
   <!-- DASHBOARD PANEL HEADER DESCRIPTORS -->
   <div class="dash-panel-title-block">
-    <h2 class="view-panel-main-headline">Overview Telemetry Matrix</h2>
+    <h2 class="view-panel-main-headline">Overview Matrix</h2>
     <p class="view-panel-narrative">Real-time telemetry feeds validating system resource deployment states, edge bandwidth quotas, and infrastructure health parameters loop networks.</p>
   </div>
 
   <!-- A. HIGH-DENSITY INFRASTRUCTURE METRICS GRID CARDS -->
   <div class="dash-metrics-cards-grid">
     
-    <!-- Card Node 01: Compute Load -->
+    <!-- Card Node 01: Consortium Allocation -->
     <div class="dash-metric-summary-tile tile-glow-cyan">
       <div class="tile-header-row">
-        <span class="tile-serial-tag">TLM // NODE_A</span>
+        <span class="tile-serial-tag">Client // NODE_A</span>
         <div class="tile-bead-indicator state-pulse-cyan"></div>
       </div>
       <div class="tile-numeric-display">
         <h3>84.2<span class="tile-unit-mod">%</span></h3>
-        <span class="tile-label-text">Compute Allocation</span>
+        <span class="tile-label-text">Consortium Allocation</span>
       </div>
       <div class="tile-vector-progress-track">
         <div class="tile-vector-progress-fill fill-cyan" style="width: 84.2%;"></div>
         <div class="tile-laser-sweep-beam"></div>
       </div>
       <div class="tile-footer-specs">
-        <span>Active Slices: <strong>1,420 Core</strong></span>
-        <span>SLA Health: <strong>Optimal</strong></span>
+        <span>Shared Slices: <strong>1,420 Core</strong></span>
+        <span>Node Cluster: <strong>Active Mirror</strong></span>
       </div>
     </div>
 
-    <!-- Card Node 02: Network Throughput -->
+    <!-- Card Node 02: B2B Pipeline Ingress -->
     <div class="dash-metric-summary-tile tile-glow-purple">
       <div class="tile-header-row">
-        <span class="tile-serial-tag">TLM // NODE_B</span>
+        <span class="tile-serial-tag">Client // NODE_B</span>
         <div class="tile-bead-indicator state-pulse-purple"></div>
       </div>
       <div class="tile-numeric-display">
         <h3>94.8<span class="tile-unit-mod">Gb/s</span></h3>
-        <span class="tile-label-text">Edge Ingestion Rate</span>
+        <span class="tile-label-text">B2B Pipeline Ingress</span>
       </div>
       <div class="tile-vector-progress-track">
         <div class="tile-vector-progress-fill fill-purple" style="width: 94.8%;"></div>
         <div class="tile-laser-sweep-beam"></div>
       </div>
       <div class="tile-footer-specs">
-        <span>Peak Traversal: <strong>108 Gb/s</strong></span>
-        <span>Gateway Latency: <strong>0.12ms</strong></span>
+        <span>Shared Bandwidth: <strong>Optimal</strong></span>
+        <span>Gateway Sync: <strong>0.12ms</strong></span>
       </div>
     </div>
 
-    <!-- Card Node 03: Security Integrity -->
+    <!-- Card Node 03: Tenant Isolation -->
     <div class="dash-metric-summary-tile tile-glow-emerald">
       <div class="tile-header-row">
-        <span class="tile-serial-tag">TLM // NODE_C</span>
+        <span class="tile-serial-tag">PARTNER // NODE_C</span>
         <div class="tile-bead-indicator state-pulse-emerald"></div>
       </div>
       <div class="tile-numeric-display">
         <h3>100<span class="tile-unit-mod">%</span></h3>
-        <span class="tile-label-text">Perimeter Integrity</span>
+        <span class="tile-label-text">Tenant Isolation</span>
       </div>
       <div class="tile-vector-progress-track">
         <div class="tile-vector-progress-fill fill-emerald" style="width: 100%;"></div>
         <div class="tile-laser-sweep-beam"></div>
       </div>
       <div class="tile-footer-specs">
-        <span>Handshakes Valid: <strong>14.2M req/s</strong></span>
-        <span>Threat Slices: <strong>0 Breaches</strong></span>
+        <span>Cross-Auth Valid: <strong>14.2M req/s</strong></span>
+        <span>Perimeter Threats: <strong>0 Breaches</strong></span>
       </div>
     </div>
 
@@ -374,12 +649,12 @@
   <div class="dash-chart-visualization-wrapper">
     <div class="chart-wrapper-header-row">
       <div class="chart-title-lockup">
-        <h4>Network Traffic Volume Load Over Time</h4>
-        <span class="chart-serial-tag">DAT_STREAM // PORT_ETH0</span>
+        <h4>Consortium Shared Pipeline Traffic Load Over Time</h4>
+        <span class="chart-serial-tag">ALLIANCE_MTRX // ID_ETH0</span>
       </div>
       <div class="chart-legend-labels">
-        <span class="legend-item"><span class="legend-color-dot fill-cyan"></span> Ingress Proxy</span>
-        <span class="legend-item"><span class="legend-color-dot fill-purple"></span> Egress Sink</span>
+        <span class="legend-item"><span class="legend-color-dot fill-cyan"></span> Primary Tenant Ingress</span>
+        <span class="legend-item"><span class="legend-color-dot fill-purple"></span> Partner Link Sink</span>
       </div>
     </div>
 
@@ -412,24 +687,23 @@
     </div>
     
     <div class="chart-x-axis-timeline-readout">
-      <span>14:00</span><span>14:10</span><span>14:20</span><span>14:30</span><span>14:40</span><span>14:50</span><span>15:00 // LIVE</span>
+      <span>14:00</span><span>14:10</span><span>14:20</span><span>14:30</span><span>14:40</span><span>14:50</span><span>15:00 // LIVE_SYNC</span>
     </div>
   </div>
 
 </section>
+
 <style>
   /* ==========================================================================
-   ENTERPRISE OVERVIEW Cockpit MODULE (HIGH ANIMATION & TOTAL RESPONSIVE)
+   PARTNER OPERATIONS VISUAL METRICS MODULE STYLES
    ========================================================================== */
 
-.dash-panel-title-block { text-align: left !important; margin-bottom: 36px !important; }
+.dash-panel-title-block { padding: 70px 10px 5px 10px; text-align: left !important; margin-bottom: 36px !important; }
 
-/* 3-Column Base Infrastructure Summary Metrics Row Layout Grid */
+/* 3-Column Workspace Summary Grid Layout */
 .dash-metrics-cards-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 24px !important; width: 100% !important; margin-bottom: 40px !important;
-  box-sizing: border-box !important;
+  display: grid !important; grid-template-columns: repeat(3, 1fr) !important; padding: 10px;
+  gap: 24px !important; width: 100% !important; margin-bottom: 40px !important; box-sizing: border-box !important;
 }
 
 .dash-metric-summary-tile {
@@ -443,18 +717,17 @@
 .tile-header-row { display: flex !important; justify-content: space-between !important; align-items: center !important; width: 100% !important; }
 .tile-serial-tag { font-family: monospace !important; font-size: 0.72rem !important; font-weight: 700; color: #475569; letter-spacing: 0.04em; }
 
-/* Radar micro status light pulses */
+/* Pulse Indicator Beads */
 .tile-bead-indicator { width: 6px; height: 6px; border-radius: 50%; position: relative; }
 .state-pulse-cyan { background-color: #22d3ee; box-shadow: 0 0 6px #22d3ee; }.state-pulse-cyan::after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; border-radius:50%; background-color:#22d3ee; animation: corporatePreloaderRadarPulse 1.8s ease-out infinite; }
 .state-pulse-purple { background-color: #a855f7; box-shadow: 0 0 6px #a855f7; }.state-pulse-purple::after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; border-radius:50%; background-color:#a855f7; animation: corporatePreloaderRadarPulse 1.8s ease-out infinite; }
 .state-pulse-emerald { background-color: #10b981; box-shadow: 0 0 6px #10b981; }.state-pulse-emerald::after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; border-radius:50%; background-color:#10b981; animation: corporatePreloaderRadarPulse 1.8s ease-out infinite; }
 
 .tile-numeric-display { display: flex !important; flex-direction: column !important; text-align: left !important; gap: 4px; }
-.tile-numeric-display h3 { font-size: 2.2rem !important; font-weight: 800; color: #ffffff !important; margin: 0 !important; letter-spacing: -0.01em; }
+.tile-numeric-display h3 { font-size: 2.2rem !important; font-weight: 800; color: #ffffff !important; margin: 0 !important; letter-spacing: -0.01em; line-height: 1 !important; }
 .tile-unit-mod { font-size: 1.1rem !important; font-weight: 700; color: #475569; margin-left: 2px; }
 .tile-label-text { font-size: 0.8rem !important; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.04em; }
 
-/* Internal progress meter line bars loops tracking channels */
 .tile-vector-progress-track { width: 100% !important; height: 4px !important; background-color: rgba(255,255,255,0.01) !important; border-radius: 10px !important; overflow: hidden !important; position: relative !important; }
 .tile-vector-progress-fill { height: 100% !important; border-radius: 10px !important; }
 .fill-cyan { background: linear-gradient(90deg, #2563eb, #22d3ee) !important; }
@@ -464,21 +737,19 @@
 .tile-laser-sweep-beam {
   position: absolute; top: 0; width: 40px; height: 100%; z-index: 5;
   background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.35), transparent) !important;
-  animation: srvDashboardTileLaser Sweep 3s linear infinite !important;
+  animation: partnerTileSweep 3s linear infinite !important;
 }
 
 .tile-footer-specs { display: flex !important; justify-content: space-between !important; width: 100% !important; border-top: 1px solid rgba(255,255,255,0.02); padding-top: 12px; font-family: monospace !important; font-size: 0.78rem !important; color: #475569 !important; }
 .tile-footer-specs strong { color: #cbd5e1 !important; }
 
-/* Tile Interaction Hovers Physics */
+/* Tile Interaction Hover Rig */
 .dash-metric-summary-tile:hover { transform: translateY(-4px) scale(1.015) !important; box-shadow: 0 20px 45px rgba(0,0,0,0.45) !important; }
 .tile-glow-cyan:hover { border-color: rgba(34, 211, 238, 0.25) !important; }
 .tile-glow-purple:hover { border-color: rgba(168, 85, 247, 0.25) !important; }
 .tile-glow-emerald:hover { border-color: rgba(16, 185, 129, 0.25) !important; }
 
-/* ==========================================================================
-   B. DYNAMIC BLUEPRINT SIMULATION CHART ROW PANEL DESIGN
-   ========================================================================== */
+/* --- NETWORK LINE RECONCILIATION VISUALIZATION HUB --- */
 .dash-chart-visualization-wrapper {
   background-color: #0c1222 !important; border: 1px solid rgba(255, 255, 255, 0.02) !important;
   border-radius: 16px !important; padding: 32px !important; box-shadow: 0 20px 50px rgba(0,0,0,0.4);
@@ -494,53 +765,51 @@
 .legend-item { font-size: 0.82rem !important; font-weight: 700; color: #64748b !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; }
 .legend-color-dot { width: 5px; height: 5px; border-radius: 50%; display: inline-block; }
 
-/* The blueprint simulation tracking lines grid coordinates deck */
 .dash-mock-chart-grid-canvas {
   width: 100% !important; height: 200px !important; background-color: #060913 !important;
   border: 1px solid rgba(255,255,255,0.01) !important; border-radius: 8px !important; position: relative !important; overflow: hidden !important;
 }
 .chart-grid-y-axis-lines {
-  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-  background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.005) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.005) 1px, transparent 1px) !important;
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.005) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.005) 1px, transparent 1px) !important;
 }
 
 .chart-line-spline-vector-wrapper { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; }
 .chart-svg-spline-canvas { width: 100% !important; height: 100% !important; }
 
-/* Dynamic vector curves running waves morph loop timelines */
-.spline-path-track {
-  animation: srvDashboardChartWaveMove 12s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate !important;
-  transform-origin: center center;
-}
+/* Continuous morph curve wave lines loop keyframes */
+.spline-path-track { animation: partnerChartWaveLoop 12s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate !important; transform-origin: center center; }
 .curve-egress { animation-duration: 9s !important; animation-delay: -3s !important; }
 
 .chart-x-axis-timeline-readout { display: flex !important; justify-content: space-between !important; width: 100% !important; font-family: monospace !important; font-size: 0.78rem !important; color: #334155 !important; font-weight: 700; }
 
-/* ==========================================================================
-   HARDWARE-ACCELERATED DASHBOARD LAYER ANIMATIONS KEYFRAMES
-   ========================================================================== */
-@keyframes srvDashboardTileLaserSweep { 0% { left: -20%; } 100% { left: 120%; } }
-@keyframes srvDashboardChartWaveMove {
+@keyframes partnerTileSweep { 0% { left: -20%; } 100% { left: 120%; } }
+@keyframes partnerChartWaveLoop {
   0% { transform: scaleY(0.95) scaleX(1) rotate(0deg); opacity: 0.85; }
   50% { transform: scaleY(1.08) scaleX(0.98) translateY(-4px); opacity: 1; }
   100% { transform: scaleY(0.92) scaleX(1.01) translateY(2px); opacity: 0.75; }
 }
 
+
 /* ==========================================================================
-   MULTI-DEVICE RESPONSIVE BREAKPOINT GRID SWITCH OVERRIDES (TOTAL MOBILE COVERS)
+   MULTI-DEVICE RESPONSIVE FLUID MEDIA SWITCH QUERIES
    ========================================================================== */
+
 @media (max-width: 1200px) {
   .dash-metrics-cards-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; }
 }
 
 @media (max-width: 768px) {
-  .dash-metrics-cards-grid { grid-template-columns: 1fr !important; gap: 16px !important; } /* Stacks metrics cards vertically on smartphones touch paths */
-  .dash-chart-visualization-wrapper { padding: 20px 16px !important; gap: 18px !important; }
+  /* FLIP ROWS: Collapses cards down to clean single full-width vertical block cards for mobile touch displays */
+  .dash-metrics-cards-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+  
+  .view-panel-main-headline { font-size: 1.6rem !important; }
+  .view-panel-narrative { font-size: 0.88rem !important; line-height: 1.55; }
+  
+  .dash-chart-visualization-wrapper { padding: 20px 16px !important; gap: 18px !important; border-radius: 12px !important; }
   .chart-wrapper-header-row { flex-direction: column !important; align-items: flex-start !important; }
   .chart-title-lockup h4 { font-size: 0.95rem !important; }
+  
   .dash-mock-chart-grid-canvas { height: 160px !important; }
 }
 
@@ -656,6 +925,13 @@
 
 </section>
 <style>
+      /* Automatically injects dynamic row-title attributes values across smartphone screen nodes */
+  .dash-matrix-data-table td:nth-of-type(1)::before { content: "PARTNER NODE:"; }
+  .dash-matrix-data-table td:nth-of-type(2)::before { content: "LOCATION:"; }
+  .dash-matrix-data-table td:nth-of-type(3)::before { content: "HARDWARE:"; }
+  .dash-matrix-data-table td:nth-of-type(4)::before { content: "BANDWIDTH:"; }
+  .dash-matrix-data-table td:nth-of-type(5)::before { content: "STATUS:"; }
+
   /* ==========================================================================
    ENTERPRISE COMPUTE ALLOCATIONS MATRIX MODULE (TOTAL RESPONSIVE COVERS)
    ========================================================================== */
@@ -784,16 +1060,16 @@
         <!-- ZERO-TRUST SECURE CORRIDOR TELEMETRY HUB CHASSIS -->
 <section class="client-dashboard-view-panel" id="client-security-view" style="display: none;">
   
-  <div class="security-view-header-row">
-    <div class="security-title-lockup">
-      <h2 class="view-panel-main-headline">Zero-Trust Perimeter Shield</h2>
-      <p class="view-panel-narrative">Real-time status tracking profiles mapping active firewall handshake authorization paths, micro-segmentation isolations, and real-time perimeter traversal blocks.</p>
-    </div>
+  <!-- REPAIRED: DEDICATED LAYOUT TITLE CONTENT BLOCK WRAPPER -->
+  <div class="dash-panel-title-block">
+    <h2 class="view-panel-main-headline">perimeter Security</h2>
+    <!-- The paragraph is now wrapped inside a standard container box to stop text lines leaking -->
+    <p class="view-panel-narrative">Real-time status tracking profiles mapping active partner handshake authorization paths, shared firewall tenant isolations, and collaborative perimeter traversal blocks.</p>
     
-    <!-- Dynamic Cryptographic Registry Counter Status -->
+    <!-- Dynamic Cryptographic Registry Counter Status Pill -->
     <div class="security-live-status-pill">
       <span class="status-pulse-core core-emerald"></span>
-      <span class="status-pill-txt">SHIELD: ACTIVE</span>
+      <span class="status-pill-txt">ALLIANCE MESH: SECURE</span>
     </div>
   </div>
 
@@ -804,8 +1080,8 @@
     <div class="security-ledger-left-wing">
       <div class="security-card-glass-hull">
         <div class="security-card-header-track">
-          <h4>Active Rules Matrix</h4>
-          <span class="security-card-serial">REGISTRY_PATH // SEC_0A</span>
+          <h4>Consortium Rules Matrix</h4>
+          <span class="security-card-serial">PARTNER_PATH // SEC_0A</span>
         </div>
 
         <!-- High-Density Telemetry Status Checklist Grid Loop Rows -->
@@ -818,8 +1094,8 @@
                 <div class="item-checkbox-inner-core"></div>
               </div>
               <div class="item-meta-details">
-                <span class="item-meta-title">Edge Handshake Isolation</span>
-                <span class="item-meta-subtext">Isolating ingress traffic channels dynamically via token verification rules.</span>
+                <span class="item-meta-title">Cross-Tenant Handshake Isolation</span>
+                <span class="item-meta-subtext">Isolating inter-partner ingress traffic channels dynamically via federated token verification rules.</span>
               </div>
             </div>
             <span class="item-status-label tag-online">Enforced</span>
@@ -832,8 +1108,8 @@
                 <div class="item-checkbox-inner-core"></div>
               </div>
               <div class="item-meta-details">
-                <span class="item-meta-title">TLS 1.3 Boundary Decryption</span>
-                <span class="item-meta-subtext">Decrypting and payload-scanning edge socket data streams at line rate.</span>
+                <span class="item-meta-title">Shared Boundary Decryption</span>
+                <span class="item-meta-subtext">Decrypting and payload-scanning shared edge socket data streams at multi-tenant line rate.</span>
               </div>
             </div>
             <span class="item-status-label tag-online">Enforced</span>
@@ -846,8 +1122,8 @@
                 <div class="item-checkbox-inner-core"></div>
               </div>
               <div class="item-meta-details">
-                <span class="item-meta-title">Asymmetric Brute Partitioning</span>
-                <span class="item-meta-subtext">Instantly blackholing source networks displaying repeated authentication failures.</span>
+                <span class="item-meta-title">Consortium Brute Partitioning</span>
+                <span class="item-meta-subtext">Instantly blackholing source networks displaying repeated partner-portal authentication failures.</span>
               </div>
             </div>
             <span class="item-status-label tag-online">Enforced</span>
@@ -860,8 +1136,8 @@
                 <div class="item-checkbox-inner-core"></div>
               </div>
               <div class="item-meta-details">
-                <span class="item-meta-title">Decentralized Shard Mirror Sync</span>
-                <span class="item-meta-subtext">Cross-checking cluster transaction states for split-brain database anomalies.</span>
+                <span class="item-meta-title">Cross-Partner Shard Mirror Sync</span>
+                <span class="item-meta-subtext">Cross-checking cluster transaction states for multi-organization database anomalies.</span>
               </div>
             </div>
             <span class="item-status-label tag-warning">Auditing</span>
@@ -876,8 +1152,8 @@
       
       <!-- Telemetry Metric Card 01 -->
       <div class="security-metric-mini-tile hover-lift-node" style="--sec-index: 1;">
-        <span class="tile-serial-tag">METRIC // CH_01</span>
-        <h5>Perimeter Traversal Delay</h5>
+        <span class="tile-serial-tag">ALLIANCE // CH_01</span>
+        <h5>Partner Gateway Traversal Delay</h5>
         <div class="mini-tile-value-row">
           <h2>0.04</h2>
           <span class="mini-tile-unit">ms</span>
@@ -890,8 +1166,8 @@
 
       <!-- Telemetry Metric Card 02 -->
       <div class="security-metric-mini-tile hover-lift-node" style="--sec-index: 2;">
-        <span class="tile-serial-tag">METRIC // CH_02</span>
-        <h5>Trapped Intrusion Blocks</h5>
+        <span class="tile-serial-tag">ALLIANCE // CH_02</span>
+        <h5>Shared Network Intrusion Blocks</h5>
         <div class="mini-tile-value-row">
           <h2>1,424</h2>
           <span class="mini-tile-unit">Nodes / 24h</span>
@@ -903,8 +1179,8 @@
 
       <!-- Telemetry Metric Card 03 -->
       <div class="security-metric-mini-tile hover-lift-node" style="--sec-index: 3;">
-        <span class="tile-serial-tag">METRIC // CH_03</span>
-        <h5>Ledger Validation State</h5>
+        <span class="tile-serial-tag">ALLIANCE // CH_03</span>
+        <h5>Consortium Ledger State</h5>
         <div class="mini-tile-value-row">
           <h2>100</h2>
           <span class="mini-tile-unit">% Integrity</span>
@@ -916,8 +1192,8 @@
 
       <!-- Telemetry Metric Card 04 -->
       <div class="security-metric-mini-tile hover-lift-node" style="--sec-index: 4;">
-        <span class="tile-serial-tag">METRIC // CH_04</span>
-        <h5>Automated Shard Quarantine</h5>
+        <span class="tile-serial-tag">ALLIANCE // CH_04</span>
+        <h5>Collaborative Shard Quarantine</h5>
         <div class="mini-tile-value-row">
           <h2>0</h2>
           <span class="mini-tile-unit">Active Threats</span>
@@ -931,7 +1207,72 @@
 
   </div>
 </section>
+
 <style>
+
+    /* ==========================================================================
+   ALLIANCE SECURITY HEADER TEXT ALIGNMENT & VISIBILITY PATCH
+   ========================================================================== */
+
+/* 1. Sets a distinct spacing layout rule block for your dashboard content panels */
+.dash-panel-title-block {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  margin-bottom: 40px !important; /* Adds clear buffer space above the data cards */
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+/* 2. Adjusts paragraph visibility parameters to stop text characters from clipping */
+.view-panel-narrative {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 0.95rem !important;
+  color: #64748b !important; /* Legible matte silver text color tone */
+  line-height: 1.6 !important;
+  margin: 8px 0 20px 0 !important;
+  max-width: 800px !important; /* Prevents long lines from stretching too wide */
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* 3. Standardizes your header title text strings contrast properties */
+.view-panel-main-headline {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 2.2rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important; /* Pure high-contrast white visibility */
+  text-transform: uppercase !important;
+  letter-spacing: -0.01em !important;
+  margin: 0 !important;
+}
+
+/* 4. Keeps your live status tracker badge cleanly separated from text rows */
+.security-live-status-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background-color: rgba(16, 185, 129, 0.05) !important;
+  border: 1px solid rgba(16, 185, 129, 0.15) !important;
+  padding: 6px 14px !important;
+  border-radius: 4px !important;
+  margin-top: 4px !important;
+}
+
+/* ==========================================================================
+   MOBILE VIEWPORT BREAKPOINT OVERRIDES (TOTAL RESPONSIVE COVERS)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .dash-panel-title-block {
+    margin-bottom: 28px !important;
+    padding: 0 4px !important;
+  }
+  .view-panel-main-headline { font-size: 1.75rem !important; }
+  .view-panel-narrative { font-size: 0.88rem !important; line-height: 1.5 !important; }
+}
+
   /* ==========================================================================
    PRODUCTION-GRADE ZERO-TRUST FIREWALL MANAGEMENT CONSOLE DESIGN SYSTEM
    ========================================================================== */
@@ -1082,46 +1423,50 @@
        <!-- SYSTEM ENTERPRISE FINANCIAL LEDGER & COST CONFIGURATOR MATRIX -->
 <section class="client-dashboard-view-panel" id="client-billing-view" style="display: none;">
   
-  <!-- VIEW MODULE HEADER DESCRIPTORS -->
-  <div class="billing-module-header">
-    <h2 class="view-panel-main-headline">Ecosystem Ledger & Billing</h2>
+  <!-- REPAIRED: ENCLOSED HEADER CONTAINER STOPS TEXT FROM LEAKING -->
+  <div class="dash-panel-title-block">
+    <h2 class="view-panel-main-headline">Ledger Accounts</h2>
     <p class="view-panel-narrative">Real-time resource billing queries validating localized compute instance allocations, edge bandwidth data pools, and micro-metered transaction statements.</p>
   </div>
 
-  <!-- 3-COLUMN HIGH-DENSITY LEDGER FINANCIAL SPECS STRIP -->
-  <div class="billing-metrics-row-rack">
+ 
+
+  <!-- ASYMMETRIC METRIC WRAPPER ROW CHASSIS -->
+  <div class="billing-asymmetric-wrapper-row">
+    <!-- ... keeping your exact tables and progress bars identical ... -->
+  
     
     <!-- Cost Metric Tile 01 -->
     <div class="billing-stat-card">
       <span class="stat-card-serial">METRIC // MT_01</span>
-      <h4>Current Month Accrual</h4>
+      <h4>Consortium Accrual Balance</h4>
       <div class="stat-amount-lockup">
         <span class="stat-currency-token">$</span>
         <h3 class="stat-numeric-value">1,482.60</h3>
       </div>
-      <p class="stat-card-footer-log"><span class="footer-trend-dot state-cyan"></span> Micro-metered query rate</p>
+      <p class="stat-card-footer-log"><span class="footer-trend-dot state-cyan"></span> Partner settlement query rate</p>
     </div>
 
     <!-- Cost Metric Tile 02 -->
     <div class="billing-stat-card">
       <span class="stat-card-serial">METRIC // MT_02</span>
-      <h4>Forecasted Allocation</h4>
+      <h4>Alliance Forecasted Share</h4>
       <div class="stat-amount-lockup">
         <span class="stat-currency-token">$</span>
         <h3 class="stat-numeric-value">1,850.00</h3>
       </div>
-      <p class="stat-card-footer-log"><span class="footer-trend-dot state-purple"></span> Predictive variance limits</p>
+      <p class="stat-card-footer-log"><span class="footer-trend-dot state-purple"></span> Multi-tenant variance limits</p>
     </div>
 
     <!-- Cost Metric Tile 03 -->
     <div class="billing-stat-card">
       <span class="stat-card-serial">METRIC // MT_03</span>
-      <h4>Remaining Compute Quota</h4>
+      <h4>Remaining Interconnect Credit</h4>
       <div class="stat-amount-lockup">
         <span class="stat-currency-token">$</span>
         <h3 class="stat-numeric-value">2,149.40</h3>
       </div>
-      <p class="stat-card-footer-log"><span class="footer-trend-dot state-emerald"></span> Credit corridor active</p>
+      <p class="stat-card-footer-log"><span class="footer-trend-dot state-emerald"></span> Alliance credit corridor active</p>
     </div>
 
   </div>
@@ -1132,38 +1477,38 @@
     <!-- LEFT EXPANDED BLOCK: HIGH-DENSITY TRANSACTION LEDGER TABLE -->
     <div class="billing-ledger-table-hull">
       <div class="table-hull-header-row">
-        <h4>Recent Transaction Ledger</h4>
-        <span class="table-meta-counter">Logs // 003 Active</span>
+        <h4>Recent Partner Settlements</h4>
+        <span class="table-meta-counter">Ledgers // 003 Active</span>
       </div>
       
       <div class="table-scroll-containment-box">
         <table class="billing-native-datagrid">
           <thead>
             <tr>
-              <th>Invoice ID</th>
+              <th>Settlement ID</th>
               <th>Billing Era</th>
-              <th>Compute Charge</th>
+              <th>Consortium Charge</th>
               <th>System Status</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="td-mono-token">INV-2026-004</td>
+              <td class="td-mono-token">SETTLE-2026-004</td>
               <td>May 2026</td>
               <td class="td-weight-bold">$1,482.60</td>
-              <td><span class="grid-status-pill pill-online">Processed</span></td>
+              <td><span class="grid-status-pill pill-online">Settled</span></td>
             </tr>
             <tr>
-              <td class="td-mono-token">INV-2026-003</td>
+              <td class="td-mono-token">SETTLE-2026-003</td>
               <td>Apr 2026</td>
               <td class="td-weight-bold">$1,610.45</td>
-              <td><span class="grid-status-pill pill-online">Processed</span></td>
+              <td><span class="grid-status-pill pill-online">Settled</span></td>
             </tr>
             <tr>
-              <td class="td-mono-token">INV-2026-002</td>
+              <td class="td-mono-token">SETTLE-2026-002</td>
               <td>Mar 2026</td>
               <td class="td-weight-bold">$1,294.10</td>
-              <td><span class="grid-status-pill pill-online">Processed</span></td>
+              <td><span class="grid-status-pill pill-online">Settled</span></td>
             </tr>
           </tbody>
         </table>
@@ -1173,29 +1518,232 @@
     <!-- RIGHT COMPRESSED BLOCK: PROGRESS VECTOR RESOURCE USAGE -->
     <div class="billing-resource-usage-panel">
       <div class="usage-panel-header">
-        <h4>Bandwidth Allocation Quota</h4>
+        <h4>Consortium Bandwidth Pool</h4>
       </div>
       
       <div class="usage-progress-vector-casing">
         <div class="usage-label-row">
-          <span>Data Transferred: <strong>4.2 TB</strong></span>
-          <span>Quota Limit: <strong>5.0 TB</strong></span>
+          <span>Shared Pool Transferred: <strong>4.2 TB</strong></span>
+          <span>Alliance Limit: <strong>5.0 TB</strong></span>
         </div>
         <div class="usage-bar-track-backbone">
           <div class="usage-bar-fill-cyan-gradient" style="width: 84%;"></div>
         </div>
-        <span class="usage-footer-warning-note">Ecosystem tracking near threshold limit volume parameters (84% Consumed).</span>
+        <span class="usage-footer-warning-note">Shared ecosystem tracking near threshold limit volume parameters (84% Consumed).</span>
       </div>
     </div>
 
   </div>
 </section>
+
 <style>
+    /* Keeps all dashboard view header text aligned, contained, and safely unclipped */
+/* ==========================================================================
+   FAILSAFE BLOCK RECTOR FOR SETTLEMENT LEDGERS CANVAS
+   ========================================================================== */
+
+/* FIX 1: RESTORES BLOCK VISIBILITY - Forces the wrapper container to show completely */
+.billing-module-header {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  
+  /* FIX 2: Strips down the 70px void padding that created the massive empty gap */
+  padding: 0 !important;
+  margin: 0 0 24px 0 !important; /* Retains a tight, balanced 24px bottom buffer */
+  box-sizing: border-box !important;
+}
+
+/* FIX 3: Enforces core headline typography high-contrast visibility properties */
+.billing-module-header .view-panel-main-headline,
+.dash-panel-title-block .view-panel-main-headline {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 2.2rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important; /* Pure white text string */
+  text-transform: uppercase !important;
+  letter-spacing: -0.01em !important;
+  margin: 0 !important;
+  line-height: 1.1 !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* FIX 4: Restores paragraph copy text visibility properties to bright silver */
+.billing-module-header .view-panel-narrative,
+.dash-panel-title-block .view-panel-narrative {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 0.95rem !important;
+  color: #94a3b8 !important; /* Bright silver gray ensures legibility against black base slates */
+  line-height: 1.5 !important;
+  margin: 8px 0 0 0 !important;
+  max-width: 800px !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* Snaps the metrics row rack cards tight up beneath description blocks */
+.billing-metrics-row-rack {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+/* ==========================================================================
+   SETTLEMENT LEDGERS RESPONSIVE LAYOUT MATRIX ADD-ON MODULE
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  /* 1. Overview Container Padding Optimization */
+  .client-dashboard-view-panel#client-billing-view {
+    padding: 24px 16px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+  }
+
+  /* 2. Top Metric Cards Split Row: Convert 3-Columns to 2-Columns on Tablets */
+  .billing-asymmetric-wrapper-row:first-of-type {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    width: 100% !important;
+    margin-bottom: 32px !important;
+  }
+
+  /* 3. Bottom Table & Progress Sidebar Split Matrix: Force Clean Vertical Stack */
+  .billing-asymmetric-wrapper-row:last-of-type {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+    width: 100% !important;
+  }
+
+  .billing-ledger-table-hull,
+  .billing-resource-usage-panel {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 1. Header Typography Compacting */
+  .dash-panel-title-block {
+    margin-bottom: 24px !important;
+  }
+  .view-panel-main-headline {
+    font-size: 1.75rem !important;
+  }
+  .view-panel-narrative {
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* 2. Top Metric Cards Split Row: Force Single Column Stack on Smartphones */
+  .billing-asymmetric-wrapper-row:first-of-type {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .billing-stat-card {
+    width: 100% !important;
+    padding: 24px 20px !important;
+    box-sizing: border-box !important;
+  }
+  .stat-numeric-value {
+    font-size: 2.2rem !important;
+  }
+
+  /* 3. High-Density Native Data Grid Transformation: Card Mode Shift */
+  .table-scroll-containment-box {
+    overflow-x: visible !important;
+    width: 100% !important;
+  }
+
+  .billing-native-datagrid,
+  .billing-native-datagrid thead,
+  .billing-native-datagrid tbody,
+  .billing-native-datagrid th,
+  .billing-native-datagrid td,
+  .billing-native-datagrid tr {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Hide raw table headers on mobile screen rows */
+  .billing-native-datagrid thead {
+    display: none !important;
+  }
+
+  .billing-native-datagrid tr {
+    margin-bottom: 16px !important;
+    padding: 16px 20px !important;
+    background-color: rgba(255, 255, 255, 0.01) !important;
+    border: 1px solid rgba(255, 255, 255, 0.03) !important;
+    border-radius: 12px !important;
+  }
+
+  /* Inject pseudo-labels on cell left tracks to keep data points aligned */
+  .billing-native-datagrid td {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.01) !important;
+    font-size: 0.85rem !important;
+    text-align: right !important;
+  }
+
+  .billing-native-datagrid td:last-child {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+
+  .billing-native-datagrid td::before {
+    font-family: monospace !important;
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    color: #475569 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    float: left !important;
+    text-align: left !important;
+  }
+
+  /* Custom Data Label Mappings */
+  .billing-native-datagrid td:nth-of-type(1)::before { content: "Settlement ID:"; }
+  .billing-native-datagrid td:nth-of-type(2)::before { content: "Billing Era:"; }
+  .billing-native-datagrid td:nth-of-type(3)::before { content: "Consortium:"; }
+  .billing-native-datagrid td:nth-of-type(4)::before { content: "System State:"; }
+
+  /* 4. Bottom Sidebar Progress Vector Layout Alignment Updates */
+  .usage-progress-vector-casing {
+    padding: 20px 0 !important;
+  }
+  .usage-label-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    margin-bottom: 12px !important;
+    font-size: 0.85rem !important;
+  }
+  .usage-footer-warning-note {
+    font-size: 0.78rem !important;
+    line-height: 1.5 !important;
+    margin-top: 14px !important;
+  }
+}
+
   /* ==========================================================================
    PRODUCTION CLOUD ECOSYSTEM FINANCIAL BILLING DESIGN SYSTEM
    ========================================================================== */
 
 #client-billing-view.view-panel-active {
+   
   display: flex !important;
   flex-direction: column !important;
   gap: 36px !important;
@@ -1237,6 +1785,7 @@
 
 /* --- ASYMMETRIC SPLIT DETAIL BLOCK HUBS --- */
 .billing-asymmetric-wrapper-row {
+    padding-top: 5px;
   display: grid !important;
   grid-template-columns: 1.22fr 0.78fr !important; /* 61% Table ledger block / 39% Progress layout right allocation */
   gap: 28px !important; width: 100% !important; align-items: start !important;
@@ -1403,14 +1952,204 @@
     justify-content: space-between !important;
     margin-left: 0 !important;
   }
+/* ==========================================================================
+   PRODUCTION-GRADE MOBILE ARCHITECTURE FIXES (ZERO-COLLISION LAYOUT ENGINE)
+   ========================================================================== */
+
+   /* ==========================================================================
+   MOBILE EXPANDABLE DROPDOWN DRAWER ARCHITECTURE
+   ========================================================================== */
+
+@media screen and (max-width: 1024px) {
+  
+  /* Standardizes relative anchoring context for the mobile menu elements */
+  .dash-top-actions-rack {
+    position: relative !important;
+  }
+
+  /* Forces dropdown menus to display as popup cards floating above the bottom tools */
+  .dash-top-actions-rack .dash-top-nav-dropdown-wrapper {
+    position: absolute !important;
+    bottom: 50px !important; /* Positions panels directly over the icon beads */
+    top: auto !important; /* Disconnects desktop top layouts drops */
+    left: 0 !important;
+    right: auto !important;
+    width: 240px !important;
+    background-color: #0c101f !important; /* Deep contrast dark backfill tint */
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 8px !important;
+    padding: 16px !important;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5) !important;
+    box-sizing: border-box !important;
+    z-index: 10000 !important;
+    
+    /* DEFAULT STATE: Hidden out of the viewport path lines safely */
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    transition: opacity 0.2s ease, transform 0.2s ease !important;
+    transform: translateY(10px) !important;
+  }
+
+  /* Right-aligns the profile dropdown menu explicitly over the OP text string */
+  #profile-trigger-node .dash-top-nav-dropdown-wrapper {
+    left: auto !important;
+    right: -20px !important;
+  }
+
+  /* ACTIVE STATE SYSTEM CLASS: Triggered by Javascript to animate popup blocks into view */
+  .dash-top-actions-rack .dash-top-nav-dropdown-wrapper.dropdown-mobile-active {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  /* Clears nested link padding parameters to optimize compact rendering */
+  .dropdown-links-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 10px 0 0 0 !important;
+  }
+  .dropdown-links-list li { margin-bottom: 8px !important; }
+  .dropdown-links-list li a { color: #94a3b8 !important; text-decoration: none !important; font-size: 0.85rem !important; }
+  .dropdown-links-list li a:hover { color: #22d3ee !important; }
+}
+
+@media (max-width: 1024px) {
+  
+  /* Forces the master wrapper layout to stack vertically in a clean single mobile stream track */
+  .dash-master-wrapper {
+    flex-direction: column !important;
+    min-height: 100vh !important;
+    overflow-y: auto !important;
+    display: flex !important;
+  }
+
+  /* SIDEBAR REPAIR: Converts the hidden left sidebar into a sleek top header block container */
+  .dash-sidebar-navigation-chassis {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03) !important;
+    padding: 16px 20px !important;
+    display: flex !important;
+    flex-direction: column !important; /* Stacks brand and menu links vertically on mobile */
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 16px !important;
+    z-index: 2000 !important; /* Layers menu nodes safely above content text */
+    margin-left: 0 !important;
+    left: 0 !important;
+    top: 0 !important;
+  }
+
+  .dash-sidebar-brand-lockup {
+    width: 100% !important;
+    margin-bottom: 0 !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+  }
+
+  /* Arranges menu links horizontally into an easy-to-tap touch navigation strip across the screen */
+  .dash-sidebar-navigation-links-deck {
+    display: flex !important;
+    flex-direction: row !important; /* Arranges partner menu links horizontally side-by-side */
+    flex-wrap: nowrap !important; /* Prevents links wrapping onto multiple lines */
+    overflow-x: visible !important; /* Allows horizontal touch navigation swipes */
+    gap: 8px !important;
+    padding: 4px 0 8px 0 !important;
+    width: 100% !important;
+    scrollbar-width: none !important; /* Hides raw system scrollbars on mobile viewports */
+  }
+  .dash-sidebar-navigation-links-deck::-webkit-scrollbar { display: none !important; }
+
+  .dash-menu-link-pill {
+    width: max-content !important;
+    padding: 8px 14px !important;
+    font-size: 0.78rem !important;
+    white-space: nowrap !important; /* Keeps partner text links cleanly on a single line */
+    flex-shrink: 0 !important;
+  }
+
+  /* Suppresses vertical termination logout options on compressed touch interface to preserve space */
+  
+
+  /* ==========================================================================
+     GLOBAL NAVIGATION BAR FIXED MOBILE POSITION REPAIR
+     ========================================================================== */
+  
+  .client-dashboard-global-nav-header {
+    position: relative !important; /* Converts out of absolute tracking to sit inline with single vertical flow */
+    width: 100% !important;
+    height: 56px !important; /* Squashes height to fit phone boundaries tightly */
+    padding: 0 20px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02) !important;
+    background-color: #060913 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important; /* Pushes utility badges to the far right corner cleanly */
+    left: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  /* Suppresses long breadcrumb text strings on phone views to bypass text collisions entirely */
+  .dash-top-header-left {
+    display: none !important;
+  }
+
+  /* Fixes tools alignment racks coordinates */
+  .dash-top-actions-rack {
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+  }
+
+  /* Drops dropdown boxes centered below touch points on smaller screen profiles */
+  .dash-top-nav-dropdown-wrapper {
+    width: 260px !important;
+    right: -10px !important;
+  }
+
+  /* ==========================================================================
+     MAIN CONTENT CANVAS RE-PADDING ADJUSTMENTS
+     ========================================================================== */
+  
+  .dash-central-workspace-canvas {
+    width: 100% !important;
+    margin-left: 0 !important; /* Normalizes layout shifts on smartphone views */
+  }
+
+  /* Tightens interior view paddings, preventing titles from clipping under the nav bars */
+  .client-dashboard-views-central-hull {
+    padding: 24px 20px 48px 20px !important; /* Removes massive 120px top space allocation */
+    width: 100% !important;
+  }
+
+  /* Scales down main partner heading text elements safely to look crisp on compact mobile glass panels */
+  .view-panel-main-headline {
+    font-size: 1.6rem !important;
+    letter-spacing: -0.01em !important;
+    line-height: 1.25 !important;
+    margin-bottom: 10px !important;
+    text-align: left !important;
+  }
+
+  .view-panel-narrative {
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 28px !important;
+    text-align: left !important;
+  }
+}
 
   .dash-central-workspace-canvas {
     margin-left: 0 !important; /* Normalizes layout shifts on smartphone views */
   }
 
-  .dash-sidebar-termination-footer {
-    display: none !important; /* Keeps layout clean by hiding it inside mobile horizontal headers strips */
-  }
+  
 }
 
 
@@ -1510,7 +2249,7 @@
   .dash-master-wrapper { flex-direction: column !important; }
   .dash-sidebar-navigation-chassis { width: 100% !important; height: auto !important; border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.02) !important; padding: 20px 24px !important; gap: 24px !important; }
   .dash-sidebar-brand-lockup { margin-bottom: 0 !important; }
-.dash-sidebar-navigation-links-deck { flex-direction: row !important; flex-wrap: wrap !important; gap: 8px !important; }.dash-menu-link-pill { width: auto !important; padding: 10px 14px !important; font-size: 0.8rem !important; }.dash-sidebar-termination-footer { display: none !important; } /* Suppresses logout link inside horizontal mobile rows field */.client-dashboard-global-nav-header { padding: 0 24px !important; }.client-dashboard-views-central-hull { padding: 36px 24px !important; }}
+.dash-sidebar-navigation-links-deck { flex-direction: row !important; flex-wrap: wrap !important; gap: 8px !important; }.dash-menu-link-pill { width: auto !important; padding: 10px 14px !important; font-size: 0.8rem !important; }/* Suppresses logout link inside horizontal mobile rows field */.client-dashboard-global-nav-header { padding: 0 24px !important; }.client-dashboard-views-central-hull { padding: 36px 24px !important; }}
   </style>
 
   <script>

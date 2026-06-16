@@ -141,3 +141,2776 @@
       }, 1800);
     });
   </script>
+
+  <!-- PREMIUM ENTERPRISE PORTFOLIO CONSOLE HERO WITH PERSISTENT INTERACTIVE HOVER TRACKS -->
+<section class="projects-hero-header-section interactive-hover-field">
+  
+  <!-- LIVING PHOTO BACKDROP & BLUEPRINT GRID LAYER -->
+  <div class="projects-hero-bg-canvas">
+    <img src="./Assests/home/3rd-home.webp" alt="Global Telemetry Support Backdrop Grid" class="projects-hero-bg-media" onerror="this.src='https://unsplash.com';">
+    <div class="projects-hero-dark-shroud"></div>
+    <div class="projects-blueprint-grid-mesh"></div>
+    <div class="projects-ambient-cyan-glow"></div>
+  </div>
+
+  <!-- VIEWPORT FOREGROUND CONTROLLER HUB CONTAINER -->
+  <div class="projects-hero-master-container content-hover-target">
+    
+    <!-- Magnetic Status Badge -->
+    <div class="projects-badge-motion-wrapper">
+      <span class="metrics-section-badge projects-hero-badge">
+        <span class="section-badge-dot projects-cyan-radar-node"></span> Architecture Portfolio
+      </span>
+    </div>
+
+    <!-- Parallax Depth Title Header Block -->
+    <h1 class="projects-hero-main-title">
+      <span class="title-primary-line">Architecting Secure</span>
+      <span class="projects-spectral-text">Global Deployments</span>
+    </h1>
+
+    <!-- Kinetic Narrative Lead Description Block -->
+    <p class="projects-hero-narrative-lead">
+      Explore our matrix registry of production-verified multi-cloud blueprints, automated big data ingestion nodes, and zero-trust perimeter containment boundaries built for massive scale.
+    </p>
+
+    <!-- Scroll Down Visual Anchor Link Indicator -->
+    <div class="projects-scroll-indicator-arrow">
+      <span class="scroll-arrow-text">Explore Systems Matrix</span>
+      <div class="scroll-arrow-mouse-element">
+        <div class="scroll-mouse-wheel-dot"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* ==========================================================================
+   INTERACTIVE PORTFOLIO HERO HOVER SYSTEM DESIGN VALUES
+   ========================================================================== */
+
+.projects-hero-header-section {
+  position: relative !important;
+  width: 100% !important;
+  min-height: 85vh !important;
+  padding: 180px 24px 100px 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  background-color: #030712 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* --- THE KINETIC PARALLAX HOVER CANVAS BACKGROUND LAYERS --- */
+.projects-hero-bg-canvas {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;
+}
+
+.projects-hero-bg-media {
+  position: absolute; top: 0; left: 0;
+  width: 100% !important; height: 100% !important;
+  object-fit: cover !important; object-position: center !important;
+  opacity: 0.12 !important;
+  filter: brightness(0.4) contrast(1.1);
+  will-change: transform;
+  animation: projectHeroMediaPan 30s ease-in-out infinite alternate !important;
+  /* Premium 0.8s transition easing controls camera depth shifts smoothly on hovers tracking */
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.projects-hero-dark-shroud {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(180deg, #030712 0%, rgba(3, 7, 18, 0.5) 60%, #030712 100%) !important;
+  z-index: 2;
+}
+
+.projects-blueprint-grid-mesh {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 3;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px) !important;
+  transition: transform 0.6s ease !important;
+}
+
+.projects-ambient-cyan-glow {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 3;
+  width: 800px; height: 400px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.04) 0%, transparent 70%); filter: blur(45px);
+  transition: opacity 0.5s ease, transform 0.5s ease !important;
+}
+
+/* --- FOREGROUND CONTENT CONTAINERS HOOKS --- */
+.projects-hero-master-container {
+  position: relative !important; z-index: 10 !important;
+  max-width: 900px !important; margin: 0 auto !important;
+  display: flex; flex-direction: column; align-items: center;
+  /* Prepares foreground contents for smooth kinetic mouse-hover weight shifts */
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* 1. Animated Badge Capsule */
+.projects-badge-motion-wrapper {
+  opacity: 0; transform: translateY(20px);
+  animation: projectContentLiftReveal 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
+  animation-delay: 0.3s !important;
+}
+.projects-hero-badge {
+  display: inline-flex !important; align-items: center !important; gap: 8px !important;
+  background-color: rgba(6, 182, 212, 0.05) !important; border: 1px solid rgba(34, 211, 238, 0.15) !important;
+  padding: 6px 14px !important; border-radius: 30px !important;
+  font-size: 0.72rem !important; font-weight: 700 !important; letter-spacing: 0.08em !important; text-transform: uppercase !important; color: #ffffff !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+.projects-cyan-radar-node { width: 6px; height: 6px; background-color: #22d3ee; border-radius: 50%; position: relative; box-shadow: 0 0 8px #22d3ee; }
+.projects-cyan-radar-node::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; background-color: #22d3ee; animation: corporatePreloaderRadarPulse 2s ease-out infinite; }
+
+/* 2. Main Typography Heading with display-flex parameters to prevent clips bugs */
+.projects-hero-main-title {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 3.85rem !important; font-weight: 800 !important; color: #ffffff !important;
+  letter-spacing: -0.02em !important; line-height: 1.15 !important;
+  margin: 28px 0 24px 0 !important; text-transform: uppercase !important;
+  display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important;
+  opacity: 0; transform: translateY(25px);
+  animation: projectContentLiftReveal 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
+  animation-delay: 0.5s !important;
+  /* Smoothly animates depth shadows and text-glows profiles on cursors tracking */
+  transition: text-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s ease !important;
+}
+.title-primary-line { display: block !important; color: #ffffff !important; width: 100% !important; }
+
+.projects-spectral-text {
+  display: inline-block !important; width: max-content !important; max-width: 100% !important;
+  background: linear-gradient(90deg, #3b82f6 0%, #22d3ee 100%) !important;
+  -webkit-background-clip: text !important; background-clip: text !important; -webkit-text-fill-color: transparent !important;
+  transform: translateZ(0);
+}
+
+/* 3. Animated Paragraph Description */
+.projects-hero-narrative-lead {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 1.15rem !important; color: #64748b !important; line-height: 1.7 !important;
+  max-width: 720px !important; margin: 0 0 48px 0 !important;
+  opacity: 0; transform: translateY(20px);
+  animation: projectContentLiftReveal 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
+  animation-delay: 0.68s !important;
+  transition: color 0.35s ease !important;
+}
+
+/* 4. Decorative Scroll Down Mouse Indicator */
+.projects-scroll-indicator-arrow {
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  opacity: 0; animation: projectScrollIndicatorFade 1s ease-out 1.4s forwards !important;
+  transition: transform 0.3s ease, opacity 0.3s ease !important;
+}
+.scroll-arrow-text { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #334155; }
+.scroll-arrow-mouse-element { width: 20px; height: 32px; border: 2px solid rgba(255,255,255,0.08); border-radius: 12px; position: relative; }
+.scroll-mouse-wheel-dot { width: 4px; height: 4px; background-color: #22d3ee; border-radius: 50%; position: absolute; top: 6px; left: 50%; transform: translateX(-50%); animation: projectMouseScrollWheelSlide 1.6s ease-in-out infinite; box-shadow: 0 0 6px #22d3ee; }
+
+
+/* ==========================================================================
+   ADVANCED HOVER LOGIC CHANNELS MAPPING
+   ========================================================================== */
+
+/* A. Narrative Lead gets beautiful high contrast readability shift on hovers context focus [Example 4] */
+.interactive-hover-field:hover .projects-hero-narrative-lead {
+  color: #94a3b8 !important;
+}
+
+/* B. Main Title text develops deep system shadow offset glows look */
+.interactive-hover-field:hover .projects-hero-main-title {
+  text-shadow: 0 0 30px rgba(34, 211, 238, 0.15), 0 10px 40px rgba(0,0,0,0.5) !important;
+}
+
+/* C. Accelerates background image camera drift panning on user interaction tracking */
+.interactive-hover-field:hover .projects-hero-bg-media {
+  opacity: 0.16 !important; /* Raises background details focus footprints inside section */
+}
+
+/* D. Status Badge glows smoothly in platform cyan outlines colors */
+.interactive-hover-field:hover .projects-hero-badge {
+  background-color: rgba(6, 182, 212, 0.1) !important;
+  border-color: #22d3ee !important;
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.25) !important;
+}
+
+/* E. Nudges scroll indicators downward out of foreground sight lanes */
+.interactive-hover-field:hover .projects-scroll-indicator-arrow {
+  transform: translateY(8px);
+  opacity: 0.4;
+}
+
+
+/* ==========================================================================
+   ANIMATION KEYFRAMES TIMELINES
+   ========================================================================== */
+@keyframes projectHeroMediaPan {
+  0% { transform: scale(1.08) translate(0, 0); }
+  50% { transform: scale(1.03) translate(0.5%, -0.5%); }
+  100% { transform: scale(1.06) translate(-0.5%, 0.5%); }
+}
+@keyframes projectContentLiftReveal { to { opacity: 1; transform: translateY(0); } }
+@keyframes projectScrollIndicatorFade { to { opacity: 1; } }
+@keyframes projectMouseScrollWheelSlide { 0% { top: 6px; opacity: 1; } 80% { top: 20px; opacity: 0; } 100% { top: 6px; opacity: 0; } }
+
+/* ==========================================================================
+   MULTI-DEVICE RESPONSIVE BREAKPOINT SWITCH OVERRIDES
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .projects-hero-header-section { min-height: auto !important; padding: 160px 24px 80px 24px !important; }
+  .projects-hero-main-title { font-size: 3rem !important; margin: 24px 0 20px 0 !important; }
+  .projects-hero-narrative-lead { font-size: 1.05rem !important; line-height: 1.65 !important; }
+}
+
+@media (max-width: 640px) {
+  .projects-hero-header-section { padding: 140px 16px 60px 16px !important; }
+  .projects-hero-main-title { font-size: 2.15rem !important; letter-spacing: -0.01em !important; line-height: 1.2 !important; }
+  .projects-hero-narrative-lead { font-size: 0.95rem !important; line-height: 1.55 !important; margin-bottom: 36px !important; }
+  .projects-scroll-indicator-arrow { display: none !important; }
+}
+
+
+/* ==========================================================================
+   PROJECTS HERO TEXT-CLIP RESPONSIVE FINETUNES (TOTAL COVERS)
+   ========================================================================== */
+
+/* --- 1. TABLET AND WORKSPACE CANVAS RESETS (MAX-WIDTH: 1024px SCREEN METRICS) --- */
+@media (max-width: 1024px) {
+  .projects-hero-header-section {
+    min-height: auto !important;
+    padding: 160px 24px 80px 24px !important; /* Tightens padding tracks on tablet layers */
+  }
+
+  /* Compresses title lines neatly to fit medium tablets display panels */
+  .projects-hero-main-title {
+    font-size: 3rem !important;
+    margin: 24px 0 18px 0 !important;
+  }
+
+  /* Downscales description text size slightly to secure reading ratio symmetry */
+  .projects-hero-narrative-lead {
+    font-size: 1.05rem !important;
+    line-height: 1.65 !important;
+    margin-bottom: 36px !important;
+  }
+}
+
+/* --- 2. REGULAR MOBILE VIEWPOT COMPRESSIONS (MAX-WIDTH: 768px SCREEN METRICS) --- */
+@media (max-width: 768px) {
+  /* Retracts ambient radial backgrounds flare slightly to optimize mobile graphics loads */
+  .projects-ambient-cyan-glow {
+    width: 100% !important;
+    height: 300px !important;
+  }
+
+  /* Shrinks coordinates track gap footprints slightly */
+  .projects-blueprint-grid-mesh {
+    background-size: 32px 32px;
+  }
+}
+
+/* --- 3. SMARTPHONE TARGET TOUCH SCREEN SCALING CONTROLS (MAX-WIDTH: 640px) --- */
+@media (max-width: 640px) {
+  .projects-hero-header-section {
+    padding: 140px 16px 60px 16px !important; /* Maximizes vertical space for phones content blocks */
+  }
+
+  /* Prevents font sizes from spilling past screen edges or forcing horizontal scroll parameters */
+  .projects-hero-main-title {
+    font-size: 2.15rem !important;
+    letter-spacing: -0.01em !important;
+    line-height: 1.2 !important;
+    margin: 20px 0 16px 0 !important;
+  }
+
+  /* Enforces absolute text-clip container constraints to lock the gradient box width down */
+  .projects-spectral-text {
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important; /* Lets long titles wrap gracefully if needed on tiny screens */
+  }
+
+  /* Optimizes narrative content layout block spacing for smartphone screens data density */
+  .projects-hero-narrative-lead {
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 32px !important;
+  }
+
+  /* Hides tiny aesthetic scroll arrows to preserve single vertical phone scroll canvas fields */
+  .projects-scroll-indicator-arrow {
+    display: none !important;
+  }
+}
+
+/* --- 4. EXTREME COMPRESSION SMARTPHONE FIXES (MAX-WIDTH: 380px VIEWPORTS) --- */
+@media (max-width: 380px) {
+  .projects-hero-main-title {
+    font-size: 1.85rem !important;
+  }
+  
+  .projects-hero-badge {
+    font-size: 0.65rem !important;
+    padding: 4px 10px !important;
+  }
+}
+
+</style>
+</section>
+
+
+
+
+<!-- GLOBAL PROJECTS MATRIX & DOMAIN PORTFOLIO SHOWCASE -->
+<section class="portfolio-showcase-section" id="projects-showcase-matrix">
+  
+  <!-- LIVING BACKGROUND CANVAS (TEXTURE DETAILS REMAIN CLEARLY VISIBLE) -->
+  <div class="portfolio-showcase-canvas-bg">
+    <!-- TARGET MEDIA IMAGE: Tracks matching blueprint aesthetics perfectly -->
+    <img src="./Assests/home/home-hero.webp" alt="Cloud Network Topography Grid Mesh" class="portfolio-showcase-native-bg-img" onerror="this.onerror=null; this.src='https://unsplash.com';">
+    <div class="portfolio-showcase-matte-shroud"></div>
+    <div class="portfolio-showcase-coordinate-grid"></div>
+  </div>
+
+  <div class="portfolio-showcase-master-container">
+    
+    <!-- INTERACTIVE DOMAIN FILTER BLADE RUNNER -->
+    <div class="portfolio-filter-blade-row">
+      <button class="filter-blade-pill active-blade-pill" data-domain-target="all">
+        <span class="pill-badge-dot b-cyan"></span> All Systems
+      </button>
+      <button class="filter-blade-pill" data-domain-target="cloud">
+        <span class="pill-badge-dot b-purple"></span> Zero-Trust Cloud
+      </button>
+      <button class="filter-blade-pill" data-domain-target="telemetry">
+        <span class="pill-badge-dot b-emerald"></span> Core Telemetry
+      </button>
+      <button class="filter-blade-pill" data-domain-target="sec">
+        <span class="pill-badge-dot b-amber"></span> Perimeter Shield
+      </button>
+    </div>
+
+    <!-- 3-COLUMN MONOLITHIC PERSPECTIVE ARCHITECTURE CARDS GRID -->
+    <div class="portfolio-grid-matrix-container">
+      
+      <!-- Project Card 01: Cloud Sharding instance -->
+      <div class="portfolio-obsidian-card" data-domain-type="cloud">
+        <div class="portfolio-card-lens-flare"></div>
+        <div class="portfolio-card-top-row">
+          <span class="portfolio-card-tag font-neon-cyan">Cloud Infrastructure</span>
+          <span class="portfolio-sys-code">DEPL_NODE // ALPHA</span>
+        </div>
+        
+        <h3 class="portfolio-card-title">Hyper-Scale Multi-Region Cluster Ingestion</h3>
+        <p class="portfolio-card-narrative">Engineered a bare-metal Kubernetes architecture mirror balancing continuous ingestion processing layers safely across multi-zone infrastructure nodes.</p>
+        
+        <!-- Interactive Horizontal Scanning Progress Vector Tracker -->
+        <div class="portfolio-metric-track">
+          <div class="portfolio-metric-fill fill-gradient-cyan" style="width: 94%;"></div>
+          <div class="portfolio-laser-sweep-line"></div>
+        </div>
+
+        <div class="portfolio-card-metadata-footer">
+          <div class="meta-data-chip"><span>Throughput:</span> <strong>98.4 Gb/s</strong></div>
+          <div class="meta-data-chip"><span>Global Shard SLA:</span> <strong class="text-glow-cyan">99.999%</strong></div>
+        </div>
+      </div>
+
+      <!-- Project Card 02: Telemetry Lake instance -->
+      <div class="portfolio-obsidian-card" data-domain-type="telemetry">
+        <div class="portfolio-card-lens-flare"></div>
+        <div class="portfolio-card-top-row">
+          <span class="portfolio-card-tag font-neon-purple">Telemetry Node</span>
+          <span class="portfolio-sys-code">DEPL_NODE // BETA</span>
+        </div>
+        
+        <h3 class="portfolio-card-title">Real-Time Event Stream Analytics Warehouse</h3>
+        <p class="portfolio-card-narrative">Constructed an isolated telemetry pipeline schema extracting compressed system hardware diagnostic matrix logs at sub-millisecond query intervals.</p>
+        
+        <!-- Interactive Horizontal Scanning Progress Vector Tracker -->
+        <div class="portfolio-metric-track">
+          <div class="portfolio-metric-fill fill-gradient-purple" style="width: 82%;"></div>
+          <div class="portfolio-laser-sweep-line"></div>
+        </div>
+
+        <div class="portfolio-card-metadata-footer">
+          <div class="meta-data-chip"><span>Data Rate:</span> <strong>4.2M req/s</strong></div>
+          <div class="meta-data-chip"><span>Query Latency:</span> <strong class="text-glow-purple">0.12 ms</strong></div>
+        </div>
+      </div>
+
+      <!-- Project Card 03: Perimeter Shield instance -->
+      <div class="portfolio-obsidian-card" data-domain-type="sec">
+        <div class="portfolio-card-lens-flare"></div>
+        <div class="portfolio-card-top-row">
+          <span class="portfolio-card-tag font-neon-amber">Security Perimeter</span>
+          <span class="portfolio-sys-code">DEPL_NODE // OMEGA</span>
+        </div>
+        
+        <h3 class="portfolio-card-title">Zero-Trust Network Perimeter Cryptography</h3>
+        <p class="portfolio-card-narrative">Deployed cryptographically secured, automated micro-segmentation routing rules to instantly trap and partition anomalous traffic profiles on edge firewalls.</p>
+        
+        <!-- Interactive Horizontal Scanning Progress Vector Tracker -->
+        <div class="portfolio-metric-track">
+          <div class="portfolio-metric-fill fill-gradient-amber" style="width: 89%;"></div>
+          <div class="portfolio-laser-sweep-line"></div>
+        </div>
+
+        <div class="portfolio-card-metadata-footer">
+          <div class="meta-data-chip"><span>Traversal Delay:</span> <strong>0.04 ms</strong></div>
+          <div class="meta-data-chip"><span>Containment Vector:</span> <strong class="text-glow-amber">Automated</strong></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ==========================================================================
+   PRODUCTION CORE DOMAIN PROJECTS PORTFOLIO SHOWCASE GRID (TOTAL RESPONSIVE)
+   ========================================================================== */
+
+.portfolio-showcase-section {
+  position: relative !important;
+  padding: 30px 40px 140px 40px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02) !important;
+  
+  /* Clears base dark blocks to guarantee absolute background image passes through cleanly */
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* ==========================================================================
+   FIXED STACK ORDER EXTENSIONS UNBARRING BACKGROUND VISIBILITY
+   ========================================================================== */
+
+.portfolio-showcase-section {
+  position: relative !important;
+  padding: 30px 40px 140px 40px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02) !important;
+  
+  /* OVERRIDE 1: Forces structural background completely transparent to break parent paint color barriers */
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* --- THE VISIBILITY REPAIR FORWARD TRACK CANVAS WRAPPER --- */
+.portfolio-showcase-canvas-bg {
+  position: absolute !important; 
+  top: 0 !important; 
+  left: 0 !important; 
+  width: 100% !important; 
+  height: 100% !important;
+  pointer-events: none !important;
+  
+  /* OVERRIDE 2: Moves the absolute block back behind the text container but ahead of the main body layer */
+  z-index: 1 !important; 
+  
+  /* OVERRIDE 3: Relocates your deep charcoal slate black foundation color directly inside this envelope */
+  background-color: #030611 !important; 
+}
+
+.portfolio-showcase-native-bg-img {
+  position: absolute !important; 
+  top: 0 !important; 
+  left: 0 !important; 
+  width: 100% !important; 
+  height: 100% !important;
+  object-fit: cover !important; 
+  object-position: center !important;
+  
+  /* OVERRIDE 4: Boosted visibility opacity to ensure the network topography details show clearly */
+  opacity: 0.35 !important; 
+  
+  filter: brightness(0.5) contrast(1.15) saturate(0.8) !important;
+  animation: portfolioBgPanSystem 32s ease-in-out infinite alternate !important;
+}
+
+/* --- THE MASTER FOREGROUND CONTENT WRAPPER HUB --- */
+.portfolio-showcase-master-container {
+  position: relative !important;
+  
+  /* OVERRIDE 5: Forces the content text container up into high view tracking stack layers */
+  z-index: 5 !important; 
+  
+  max-width: 1280px; 
+  margin: 0 auto; 
+  width: 100%;
+  display: flex; 
+  flex-direction: column; 
+  gap: 64px;
+}
+
+
+.portfolio-showcase-matte-shroud {
+  position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; z-index: 1 !important;
+  background: linear-gradient(180deg, #030611 0%, rgba(3, 6, 17, 0.45) 50%, #030611 100%) !important;
+}
+
+.portfolio-showcase-coordinate-grid {
+  position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; z-index: 2 !important;
+  background-size: 40px 40px !important;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.005) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.005) 1px, transparent 1px) !important;
+}
+
+/* Foreground Layout Container Box */
+.portfolio-showcase-master-container {
+  position: relative !important; z-index: 10 !important; max-width: 1280px; margin: 0 auto; width: 100%;
+  display: flex; flex-direction: column; gap: 64px;
+}
+
+/* --- DYNAMIC FILTER BLADE PANEL RUNNER --- */
+.portfolio-filter-blade-row {
+  display: flex !important; align-items: center !important; justify-content: center !important; gap: 14px !important; flex-wrap: wrap !important;
+  width: 100% !important;
+}
+
+.filter-blade-pill {
+  background-color: rgba(255, 255, 255, 0.005) !important; border: 1px solid rgba(255, 255, 255, 0.04) !important;
+  padding: 10px 20px !important; border-radius: 30px !important; color: #64748b !important;
+  font-family: 'Inter', system-ui, sans-serif !important; font-size: 0.8rem !important; font-weight: 700 !important;
+  text-transform: uppercase !important; letter-spacing: 0.04em !important; cursor: pointer !important;
+  display: inline-flex !important; align-items: center !important; gap: 8px !important;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.pill-badge-dot { width: 5px; height: 5px; border-radius: 50%; display: inline-block; }
+.b-cyan { background-color: #22d3ee; box-shadow: 0 0 6px #22d3ee; }
+.b-purple { background-color: #a855f7; box-shadow: 0 0 6px #a855f7; }
+.b-emerald { background-color: #10b981; box-shadow: 0 0 6px #10b981; }
+.b-amber { background-color: #f59e0b; box-shadow: 0 0 6px #f59e0b; }
+
+/* Filter Pill Hover & Activated States Modification Rules */
+.filter-blade-pill:hover {
+  border-color: rgba(255, 255, 255, 0.1) !important; color: #cbd5e1 !important; transform: translateY(-2px) scale(1.02) !important;
+}
+.filter-blade-pill.active-blade-pill {
+  background-color: rgba(6, 182, 212, 0.06) !important; border-color: rgba(34, 211, 238, 0.25) !important; color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.1) !important;
+}
+
+/* 3-Column Grid Arrangement Matrix */
+.portfolio-grid-matrix-container {
+  display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 32px !important; width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* --- THE OBSIDIAN ACRYLIC GLASSMORPHISM PORTFOLIO CARDS --- */
+.portfolio-obsidian-card {
+  background: rgba(10, 16, 28, 0.4) !important;
+  backdrop-filter: blur(14px) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(1.1) !important;
+  
+  border: 1px solid rgba(255, 255, 255, 0.03) !important; border-radius: 16px !important;
+  padding: 40px 32px !important; box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box !important; display: flex !important; flex-direction: column !important; gap: 24px !important;
+  position: relative !important; overflow: hidden !important; text-align: left !important;
+}
+
+.portfolio-card-top-row { display: flex !important; justify-content: space-between !important; align-items: center !important; width: 100% !important; }
+
+.portfolio-card-tag { font-size: 0.72rem !important; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+.font-neon-cyan { color: #22d3ee !important; }
+.font-neon-purple { color: #c084fc !important; }
+.font-neon-amber { color: #f59e0b !important; }
+
+.portfolio-sys-code { font-family: monospace !important; font-size: 0.72rem !important; font-weight: 700; color: #475569; }
+
+.portfolio-card-title { font-size: 1.35rem !important; font-weight: 700; color: #ffffff !important; margin: 0 !important; line-height: 1.3 !important; }
+.portfolio-card-narrative { font-size: 0.9rem !important; color: #64748b !important; line-height: 1.6.5 !important; margin: 0 !important; min-height: 72px; }
+
+/* Internal Horizontal Laser Scanning Pipeline Widget */
+.portfolio-metric-track { width: 100% !important; height: 5px !important; background-color: rgba(255,255,255,0.01) !important; border-radius: 10px !important; overflow: hidden !important; position: relative !important; }
+.portfolio-metric-fill { height: 100% !important; border-radius: 10px !important; }
+.fill-gradient-cyan { background: linear-gradient(90deg, #2563eb, #22d3ee) !important; }
+.fill-gradient-purple { background: linear-gradient(90deg, #6366f1, #a855f7) !important; }
+.fill-gradient-amber { background: linear-gradient(90deg, #d97706, #f59e0b) !important; }
+
+.portfolio-laser-sweep-line {
+  position: absolute; top: 0; width: 50px; height: 100%; z-index: 5;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.35), transparent) !important;
+  animation: portfolioLaserLineScan 3.5s linear infinite !important;
+}
+
+/* Dual Column Metrics Data Footer */
+.portfolio-card-metadata-footer { display: flex !important; flex-direction: column !important; gap: 10px !important; width: 100% !important; border-top: 1px solid rgba(255,255,255,0.02); padding-top: 20px; }
+.meta-data-chip { display: flex !important; justify-content: space-between !important; font-size: 0.85rem !important; font-weight: 600; }
+.meta-data-chip span { color: #334155 !important; }
+.meta-data-chip strong { color: #cbd5e1 !important; }
+
+.text-glow-cyan { color: #22d3ee !important; text-shadow: 0 0 10px rgba(34, 211, 238, 0.3); }
+.text-glow-purple { color: #c084fc !important; text-shadow: 0 0 10px rgba(192, 132, 252, 0.3); }
+.text-glow-amber { color: #f59e0b !important; text-shadow: 0 0 10px rgba(245, 158, 11, 0.3); }
+
+/* Decorative Card Corner Laser Flare Ambient Hub */
+.portfolio-card-lens-flare {
+  position: absolute; top: 0; right: 0; width: 120px; height: 120px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.015) 0%, transparent 70%); pointer-events: none; z-index: 1;
+}
+
+/* ==========================================================================
+   INTERACTIVE ADVANCED HOVER STRETCHES AND 3D KINETIC DISTORTIONS
+   ========================================================================== */
+
+.portfolio-obsidian-card { transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.45s ease, background 0.45s ease, box-shadow 0.45s ease !important; }
+
+/* HOVER: Elevates card out of screen matrix planes and glows the frame boundaries */
+.portfolio-obsidian-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  border-color: rgba(34, 211, 238, 0.25) !important;
+  background: rgba(14, 22, 38, 0.6) !important; /* Thickens glass overlay backing on user focus */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 20px rgba(34, 211, 238, 0.04) !important;
+}
+
+.portfolio-obsidian-card:hover .portfolio-card-title { color: #22d3ee !important; transition: color 0.25s ease !important; }
+.portfolio-obsidian-card:hover .portfolio-card-narrative { color: #cbd5e1 !important; transition: color 0.25s ease !important; }
+
+/* HOVER: Speds up progress tracking laser vector lines for quick interactive responses */
+.portfolio-obsidian-card:hover .portfolio-laser-sweep-line {
+  animation: portfolioLaserLineScan 1.5s linear infinite !important;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.6), transparent) !important;
+}
+
+/* ==========================================================================
+   HARDWARE-ACCELERATED TRANSITION TIMELINE RUNTIMES
+   ========================================================================== */
+@keyframes portfolioLaserLineScan { 0% { left: -30%; } 100% { left: 130%; } }
+@keyframes portfolioBgPanSystem { 0% { transform: scale(1.06) translate(0, 0); } 100% { transform: scale(1.02) translate(-0.5%, 0.5%); } }
+
+@media (max-width: 1024px) {.portfolio-grid-matrix-container { grid-template-columns: repeat(2, 1fr) !important; gap: 24px !important; }.portfolio-showcase-section { padding: 80px 24px !important; }}@media (max-width: 768px) {.portfolio-grid-matrix-container { grid-template-columns: 1fr !important; gap: 20px !important; }.portfolio-filter-blade-row { gap: 10px !important; }.filter-blade-pill { padding: 8px 16px !important; font-size: 0.75rem !important; }.portfolio-showcase-section { padding: 60px 16px 100px 16px !important; }.portfolio-obsidian-card { padding: 32px 24px !important; border-radius: 12px !important; }.portfolio-card-narrative { min-height: auto !important; }}
+
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const filterButtons = document.querySelectorAll('.filter-blade-pill');
+  const portfolioCards = document.querySelectorAll('.portfolio-obsidian-card');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // 1. Swap active style variables across filter links
+      document.querySelector('.active-blade-pill')?.classList.remove('active-blade-pill');
+      button.classList.add('active-blade-pill');
+
+      // 2. Filter display views dynamically
+      const targetDomain = button.getAttribute('data-domain-target');
+      
+      portfolioCards.forEach(card => {
+        const cardDomain = card.getAttribute('data-domain-type');
+        if (targetDomain === 'all' || cardDomain === targetDomain) {
+          card.style.display = 'flex';
+          card.style.opacity = '1';
+        } else {
+          card.style.display = 'none';
+          card.style.opacity = '0';
+        }
+      });
+    });
+  });
+});
+</script>
+
+
+<!-- ASYMMETRIC ELASTIC COMPUTE BLUEPRINT ACCORDION MATRIX -->
+<section class="proj-accordion-matrix-section" id="interactive-blueprint-accordion">
+  
+  <!-- LIVING BACKDROP PHOTO & MESH DECK INTERCONNECTS (FORCED CLEAR VISIBILITY) -->
+  <div class="proj-accordion-canvas-bg">
+    <!-- TARGET ARCHITECTURE IMAGE: Verify this filename links perfectly onto your assets folder -->
+    <img src="./Assests/home/home-hero.webp" alt="Parametric Massing Wireframe Synthesis" class="proj-accordion-native-bg-img" onerror="this.onerror=null; this.src='https://unsplash.com';">
+    <div class="proj-accordion-matte-shroud"></div>
+    <div class="proj-accordion-blueprint-coordinates"></div>
+    <div class="proj-accordion-ambient-flare-ring"></div>
+  </div>
+
+  <div class="proj-accordion-master-container">
+    
+    <!-- GRID SECTION INTRO HEADERS -->
+    <div class="proj-accordion-section-header">
+      <span class="vault-neon-metric-badge" style="background-color: rgba(6, 182, 212, 0.05); border-color: rgba(6, 182, 212, 0.25); color: #22d3ee;"><span class="vault-radar-core-pulse"></span> Matrix // Synthesis</span>
+      <h2>System Shell Synthesis</h2>
+      <p class="proj-accordion-section-lead">Hover your cursor over the active vector tiles below to dynamically deconstruct our computational volume blueprints, material layerings, and localized mesh densities on-the-fly.</p>
+      <div class="proj-accordion-gradient-divider"></div>
+    </div>
+
+    <!-- THE ELASTIC VERTICAL TRACK PANEL COMPASS HUBS ACCORDION GRIDS -->
+    <div class="proj-elastic-accordion-chassis">
+
+      <!-- Accordion Panel Card 01 -->
+      <div class="proj-accordion-panel panel-active-default" style="--panel-theme-color: #22d3ee;">
+        <!-- Backdrop asset slice hidden container -->
+        <div class="panel-image-slice-wrapper">
+          <img src="./Assests/about.webp" alt="Lumina Shell Tessellation Grid" class="panel-slice-img" onerror="this.src='https://unsplash.com';">
+          <div class="panel-slice-gradient-overlay"></div>
+        </div>
+        
+        <!-- Closed indicator layout tracking row lines labels -->
+        <div class="panel-collapsed-indicator-strip">
+          <span class="collapsed-serial-log">NODE // 01</span>
+          <h4 class="collapsed-vertical-title">LUMINA SHELL TESSELLATION</h4>
+        </div>
+
+        <!-- Open state rich data details panels elements -->
+        <div class="panel-expanded-content-chassis">
+          <span class="expanded-meta-tag">Parametric Surface Analysis</span>
+          <h3>THE LUMINA GLASS PAVILION</h3>
+          <p>Generating highly optimized triangular mesh facets mathematically to minimize geometric surface load stress variances across long-span concrete composite supports networks.</p>
+          <div class="panel-spec-readout-row">
+            <div class="spec-capsule"><span>Optimization:</span> <strong>94.2%</strong></div>
+            <div class="spec-capsule"><span>Load Limit:</span> <strong>12.4K N/m²</strong></div>
+          </div>
+          <div class="panel-action-link-bed">
+            <a href="404.html" class="blog-read-more-link">Deconstruct Mesh Core &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion Panel Card 02 -->
+      <div class="proj-accordion-panel" style="--panel-theme-color: #a855f7;">
+        <!-- Backdrop asset slice hidden container -->
+        <div class="panel-image-slice-wrapper">
+          <img src="./Assests/blog/AI-blog.webp" alt="Timber Framework Orientation Core" class="panel-slice-img" onerror="this.src='https://unsplash.com';">
+          <div class="panel-slice-gradient-overlay"></div>
+        </div>
+        
+        <!-- Closed indicator layout tracking row lines labels -->
+        <div class="panel-collapsed-indicator-strip">
+          <span class="collapsed-serial-log">NODE // 02</span>
+          <h4 class="collapsed-vertical-title">TIMBER CORE GEOMETRY</h4>
+        </div>
+
+        <!-- Open state rich data details panels elements -->
+        <div class="panel-expanded-content-chassis">
+          <span class="expanded-meta-tag" style="color:#c084fc; border-color:rgba(168,85,247,0.25);">Regenerative Materials</span>
+          <h3>THE TIMBER MASSING HUB</h3>
+          <p>Architecting multi-axis interlocking timber framework columns combined with self-healing biocement base cores to establish carbon-negative industrial infrastructures layout.</p>
+          <div class="panel-spec-readout-row">
+            <div class="spec-capsule"><span>Carbon Rate:</span> <strong style="color:#c084fc;">-28% Net</strong></div>
+            <div class="spec-capsule"><span>Span Depth:</span> <strong>42.8 Meters</strong></div>
+          </div>
+          <div class="panel-action-link-bed">
+            <a href="404.html" class="blog-read-more-link" style="color:#c084fc;">Deconstruct Material &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion Panel Card 03 -->
+      <div class="proj-accordion-panel" style="--panel-theme-color: #10b981;">
+        <!-- Backdrop asset slice hidden container -->
+        <div class="panel-image-slice-wrapper">
+          <img src="./Assests/home/3rd-home.webp" alt="Acoustic Topology Attenuation Hub" class="panel-slice-img" onerror="this.src='https://unsplash.com';">
+          <div class="panel-slice-gradient-overlay"></div>
+        </div>
+        
+        <!-- Closed indicator layout tracking row lines labels -->
+        <div class="panel-collapsed-indicator-strip">
+          <span class="collapsed-serial-log">NODE // 03</span>
+          <h4 class="collapsed-vertical-title">ACOUSTIC TOPOLOGY WAVE</h4>
+        </div>
+
+        <!-- Open state rich data details panels elements -->
+        <div class="panel-expanded-content-chassis">
+          <span class="expanded-meta-tag" style="color:#34d399; border-color:rgba(16,185,129,0.25);">Sonic Attenuation Topology</span>
+          <h3>THE APEX REVERB CORE</h3>
+          <p>Modulating continuous internal ceiling cavity curves layout models mathematically to disperse, diffuse, or isolate complex decibel echo wave propagation pathways natively.</p>
+          <div class="panel-spec-readout-row">
+            <div class="spec-capsule"><span>Attenuation:</span> <strong style="color:#34d399;">-18dB Low</strong></div>
+            <div class="spec-capsule"><span>Node Points:</span> <strong>4,810 Slices</strong></div>
+          </div>
+          <div class="panel-action-link-bed">
+            <a href="404.html" class="blog-read-more-link" style="color:#34d399;">Deconstruct Waves &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+  /* ==========================================================================
+   PRODUCTION ELASTIC TIMELINE ACCORDION CONSOLE CHASSIS (TOTAL RESPONSIVE)
+   ========================================================================== */
+
+.proj-accordion-matrix-section {
+  position: relative !important;
+  padding: 20px 40px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02) !important;
+  background-color: transparent !important;
+}
+
+/* --- THE CANVAS BACKDROP HOUSINGS LAYERS (FORCED DISTINCT TEXTURE VISIBILITY) --- */
+.proj-accordion-canvas-bg {
+  position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important;
+  z-index: 0 !important; /* Layers backdrop asset cleanly behind accordion decks levels */
+  background-color: #03050c !important; /* Deep carbon black solid canvas ground backing block */
+  pointer-events: none !important;
+}
+
+.proj-accordion-native-bg-img {
+  position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important;
+  object-fit: cover !important; object-position: center !important;
+  
+  /* OVERRIDE: Raised opacity up to 0.36 guarantees wireframe detail lines remain clear and distinct */
+  opacity: 0.36 !important; 
+  filter: brightness(0.42) contrast(1.2) saturate(0.8);
+  animation: projAccordionBgPan 30s ease-in-out infinite alternate !important;
+}
+
+.proj-accordion-matte-shroud {
+  position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; z-index: 1 !important;
+  background: linear-gradient(180deg, #03050c 0%, rgba(3, 5, 12, 0.5) 50%, #03050c 100%) !important;
+}
+
+.proj-accordion-blueprint-coordinates {
+  position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; z-index: 2 !important;
+  background-size: 40px 40px !important;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.005) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.005) 1px, transparent 1px) !important;
+}
+
+.proj-accordion-ambient-flare-ring {
+  position: absolute !important; top: -30% !important; right: -10% !important; z-index: 2 !important;
+  width: 850px; height: 550px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.03) 0%, rgba(168, 85, 247, 0.01) 60%, transparent 70%) !important;
+  filter: blur(75px);
+}
+
+/* Foreground Content Module Container */
+.proj-accordion-master-container {
+  position: relative !important; z-index: 10 !important; max-width: 1280px; margin: 0 auto; width: 100%;
+}
+
+.proj-accordion-section-header {
+  display: flex; flex-direction: column; align-items: flex-start; text-align: left; max-width: 800px; margin-bottom: 64px;
+}
+.proj-accordion-section-header h2 {
+  font-family: 'Inter', system-ui, sans-serif; font-size: 2.6rem; font-weight: 800; color: #ffffff !important;
+  letter-spacing: -0.02em; line-height: 1.2; margin: 16px 0 !important; text-transform: uppercase;
+}
+.proj-accordion-section-lead { font-size: 1.1rem; color: #56657a; line-height: 1.65; margin: 0 0 24px 0; }
+.proj-accordion-gradient-divider { width: 60px; height: 2px; background: linear-gradient(90deg, #22d3ee, #a855f7); border-radius: 2px; }
+
+/* --- THE HIGH-ANIMATION ELASTIC TIMELINE ACCORDION DECK CHASSIS --- */
+.proj-elastic-accordion-chassis {
+  display: flex !important; flex-direction: row !important;
+  width: 100% !important; height: 500px !important; /* Fixed structural frame depth constraints handles expansions */
+  gap: 16px !important; overflow: hidden !important; box-sizing: border-box !important;
+}
+
+.proj-accordion-panel {
+  position: relative !important; flex: 0.6 !important; /* Closed default column compression weight scaling indicator */
+  background-color: #0c1222 !important; border: 1px solid rgba(255, 255, 255, 0.02) !important; border-radius: 20px !important; overflow: hidden !important;
+  display: flex !important; flex-direction: row !important; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  
+  /* Premium 0.65s dynamic Bezier curves drives the smooth widening transitions track flawlessly */
+  transition: flex 0.65s cubic-bezier(0.25, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease !important;
+}
+
+/* Hidden internal image background layer configurations */
+.panel-image-slice-wrapper {
+  position: absolute !important; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.15;
+  transition: opacity 0.5s ease !important;
+}
+.panel-slice-img { width: 100% !important; height: 100% !important; object-fit: cover !important; object-position: center !important; filter: brightness(0.4) contrast(1.15) grayscale(0.5); transition: transform 0.6s ease !important; }
+.panel-slice-gradient-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, #0c1222 20%, transparent 100%) !important; }
+
+/* 1. Closed State Vertical Tracking Typography Rows Line Labels */
+.panel-collapsed-indicator-strip {
+  position: absolute !important; top: 0; left: 0; width: 80px !important; height: 100% !important; z-index: 5;
+  display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: space-between !important;
+  padding: 36px 0 !important; box-sizing: border-box !important; pointer-events: none !important;
+  transition: opacity 0.3s ease, transform 0.3s ease !important;
+}
+.collapsed-serial-log { font-family: monospace !important; font-size: 0.75rem !important; font-weight: 700; color: #475569; letter-spacing: 0.05em; }
+.collapsed-vertical-title {
+  font-family: 'Inter', system-ui, sans-serif !important; font-size: 0.85rem !important; font-weight: 800 !important; color: #64748b !important;
+  text-transform: uppercase !important; letter-spacing: 0.08em !important; white-space: nowrap !important;
+  transform: rotate(-90deg) translate(-50%, 0) !important; transform-origin: left center !important;
+}
+
+/* 2. Open State Rich Data Description Details Blocks */
+.panel-expanded-content-chassis {
+  padding: 52px 48px 52px 100px !important; /* 100px Left indentation padding prevents overlap on closed vertical bars */
+  display: flex !important; flex-direction: column !important; align-items: flex-start !important; text-align: left !important;
+  width: 100% !important; box-sizing: border-box !important; z-index: 10 !important;
+  opacity: 0; transform: translateX(20px); will-change: transform, opacity;
+  transition: opacity 0.4s ease 0.15s, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) 0.15s !important;
+}
+
+.expanded-meta-tag {
+  display: inline-flex !important; align-items: center !important;
+  font-family: monospace !important; font-size: 0.7rem !important; font-weight: 700 !important; color: var(--panel-theme-color) !important;
+  border: 1px solid rgba(255,255,255,0.03) !important; padding: 4px 10px !important; border-radius: 4px !important; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 24px;
+}
+.panel-expanded-content-chassis h3 { font-size: 1.85rem !important; font-weight: 800; color: #ffffff !important; margin: 0 0 16px 0 !important; text-transform: uppercase; letter-spacing: -0.01em; }
+.panel-expanded-content-chassis p { font-size: 0.95rem !important; color: #56657a !important; line-height: 1.65 !important; max-width: 580px !important; margin: 0 0 36px 0 !important; }
+
+.panel-spec-readout-row { display: flex !important; gap: 24px !important; margin-bottom: 40px !important; }
+.spec-capsule { font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; color: #475569 !important; font-weight: 600; }
+.spec-capsule strong { color: #cbd5e1 !important; font-family: monospace !important; font-size: 0.95rem !important; margin-left: 4px; }
+
+.panel-action-link-bed { width: 100% !important; text-align: left !important; }
+.blog-read-more-link { color: var(--panel-theme-color) !important; text-decoration: none !important; font-size: 0.88rem !important; font-weight: 700 !important; text-transform: uppercase; letter-spacing: 0.04em; transition: transform 0.2s ease; display: inline-block; }
+
+/* ==========================================================================
+   DYNAMIC INTERACTION DRIVERS MATHEMATICAL WEIGHT SWITCH SWAPPING
+   ========================================================================== */
+
+/* HOVER INTERACTION: Spreads panel open wide while compressing closed vertical items out of view lanes */
+.proj-accordion-panel:hover,
+.proj-accordion-panel.panel-active-default {
+  flex: 4.5 !important; /* Widens column container bounds massively */
+  border-color: rgba(34, 211, 238, 0.15) !important;
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Transitions opacity scales to reveal inner data content blocks smoothly */
+.proj-accordion-panel:hover .panel-expanded-content-chassis,
+.proj-accordion-panel.panel-active-default .panel-expanded-content-chassis {
+  opacity: 1 !important; transform: translateX(0) !important;
+}
+
+/* Hides vertical closed labels on open expansion panels */
+.proj-accordion-panel:hover .panel-collapsed-indicator-strip,
+.proj-accordion-panel.panel-active-default .panel-collapsed-indicator-strip {
+  opacity: 0 !important; transform: translateY(-10px) !important; pointer-events: none !important;
+}
+
+/* Raises back image thumbnail transparency presence during full active focus */
+.proj-accordion-panel:hover .panel-image-slice-wrapper,
+.proj-accordion-panel.panel-active-default .panel-image-slice-wrapper {
+  opacity: 0.35 !important;
+}
+.proj-accordion-panel:hover .panel-slice-img { transform: scale(1.04) !important; }
+.proj-accordion-panel:hover .blog-read-more-link { transform: translateX(4px); }
+
+@keyframes projAccordionBgPan { 0% { transform: scale(1.05) translate(0, 0); } 100% { transform: scale(1.01) translate(-0.5%, 0.5%); } }
+/* ==========================================================================
+   MULTI-DEVICE RESPONSIVE BREAKPOINT SWITCH OVERRIDES (TOTAL MOBILE COVERS)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .proj-accordion-matrix-section { padding: 80px 24px !important; }
+  .proj-accordion-section-header h2 { font-size: 2.25rem; }
+  
+  /* RESPONSIVE RESET: Converts horizontal accordion frames row into a single full-width vertical cards list column on tablets */
+  .proj-elastic-accordion-chassis {
+    display: flex !important; flex-direction: column !important;
+    height: auto !important; gap: 24px !important;
+  }
+  
+  .proj-accordion-panel {
+    flex: 1 1 auto !important; width: 100% !important; flex-direction: column !important;
+  }
+  
+  /* Clears closed elements vertical tracking strip variables on mobile scales safety fields */
+  .panel-collapsed-indicator-strip { display: none !important; }
+  
+  .panel-expanded-content-chassis {
+    padding: 36px 28px !important; opacity: 1 !important; transform: none !important;
+  }
+  
+  .panel-image-slice-wrapper { opacity: 0.25 !important; }
+  .panel-slice-gradient-overlay { background: linear-gradient(180deg, #0c1222 40%, transparent 100%) !important; }
+  .panel-expanded-content-chassis h3 { font-size: 1.5rem !important; }
+}
+
+@media (max-width: 640px) {
+  .proj-accordion-section-header h2 { font-size: 1.85rem; }
+  .proj-accordion-section-lead { font-size: 0.95rem; line-height: 1.55; margin-bottom: 40px !important; }
+  .proj-accordion-matrix-section { padding: 60px 16px 80px 16px !important; }
+  .panel-expanded-content-chassis { padding: 28px 20px !important; }
+  .panel-spec-readout-row { flex-direction: column !important; gap: 12px !important; margin-bottom: 28px !important; }
+}
+
+</style>
+
+<script>
+  /**
+ * STACKLY PARAMETRIC BLUEPRINT ACCORDION MATRIX ENGINE
+ * Manages default highlights fallback cycles during mouse pointer context leaves
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const accordionContainer = document.querySelector('.proj-elastic-accordion-chassis');
+  const individualPanelsList = document.querySelectorAll('.proj-accordion-panel');
+
+  if (accordionContainer && individualPanelsList.length > 0) {
+    
+    // Bind hover tracking entry loops to strip baseline classes on manual cursor tracking entries
+    individualPanelsList.forEach(panelCard => {
+      panelCard.addEventListener('mouseenter', () => {
+        individualPanelsList.forEach(card => card.classList.remove('panel-active-default'));
+      });
+    });
+
+    // Reset default first card state indicators when cursor fully exits parent chassis bounding tracks
+    accordionContainer.addEventListener('mouseleave', () => {
+      individualPanelsList.forEach(card => card.classList.remove('panel-active-default'));
+      individualPanelsList[0].classList.add('panel-active-default');
+    });
+  }
+});
+
+</script>
+<!-- DYNAMIC FLOATING PORTFOLIO DEPLOYMENT CTA ARCHITECTURE -->
+<section class="proj-cta-floating-canvas" id="portfolio-termination-cta">
+  
+  <!-- INTERACTIVE GLASS-MORPHISM CHASSIS CONTAINER -->
+  <div class="proj-cta-gloss-hull-container proj-animate-float-loop">
+    
+    <!-- GRAPHICAL BACKDROP GRID ACCENTS -->
+    <div class="proj-cta-canvas-layer">
+      <div class="proj-cta-matrix-grid"></div>
+      <div class="proj-cta-radial-neon-flare"></div>
+    </div>
+
+    <!-- LEFT CORNER DATA PACK FIELD CONTENT -->
+    <div class="proj-cta-content-column">
+      <span class="proj-cta-micro-badge">
+        <span class="proj-cta-live-pulse-dot"></span> System Terminal Ready
+      </span>
+      <h2>Have a Blueprint to Initialize?</h2>
+      <p>Initialize communication parameters with our platform core nodes to design, prototype, and build your custom computational shell matrix architectures.</p>
+    </div>
+
+    <!-- RIGHT CORNER INTERACTIVE TRIGGER CAPSLUE BUTTON -->
+    <div class="proj-cta-action-column">
+      <a href="contact.html" class="proj-cta-liquid-capsule-btn" aria-label="Initialize Pipeline Link with Devops Core">
+        <span class="proj-cta-btn-text">Initialize Pipeline</span>
+        <svg class="proj-cta-arrow-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* ==========================================================================
+   HIGH-ANIMATION CYBERNETIC FLOATING CTA OVERLAY SECTION DESIGN
+   ========================================================================== */
+
+.proj-cta-floating-canvas {
+  width: 100% !important;
+  padding: 80px 40px 120px 40px !important;
+  background-color: #03050c !important; /* Deep cosmic theme base alignment */
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+/* --- THE FLOATING GLASS-MORPHISM CONTAINER BRACE --- */
+.proj-cta-gloss-hull-container {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 1100px !important;
+  background: rgba(14, 21, 38, 0.4) !important; /* Semi-translucent obsidian base texture */
+  border: 1px solid rgba(255, 255, 255, 0.03) !important;
+  border-radius: 20px !important;
+  padding: 56px 64px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 40px !important;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5) !important;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease !important;
+}
+
+/* --- GRAPHICAL INTEGRATIONS BACKDROP LAYERS --- */
+.proj-cta-canvas-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; overflow: hidden; border-radius: 20px; }
+.proj-cta-matrix-grid { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: 32px 32px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0.005) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.005) 1px, transparent 1px) !important; }
+.proj-cta-radial-neon-flare { position: absolute; top: -50%; right: -20%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(34, 211, 238, 0.04) 0%, transparent 70%); filter: blur(40px); }
+
+/* --- LEFT SIDE DATA PACK FIELD CONTROLS --- */
+.proj-cta-content-column {
+  position: relative;
+  z-index: 5;
+  flex: 1;
+  text-align: left !important;
+}
+
+.proj-cta-micro-badge {
+  display: inline-flex !important; align-items: center !important; gap: 8px !important;
+  background-color: rgba(34, 211, 238, 0.05) !important; border: 1px solid rgba(34, 211, 238, 0.15) !important;
+  padding: 4px 12px !important; border-radius: 30px !important;
+  font-family: 'Inter', system-ui, sans-serif !important; font-size: 0.7rem !important; font-weight: 700 !important; letter-spacing: 0.06em !important; text-transform: uppercase !important; color: #22d3ee !important;
+}
+.proj-cta-live-pulse-dot { width: 5px; height: 5px; background-color: #22d3ee; border-radius: 50%; box-shadow: 0 0 6px #22d3ee; animation: corporatePreloaderRadarPulse 1.6s ease-out infinite; }
+
+.proj-cta-content-column h2 {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 2.4rem !important; font-weight: 800 !important; color: #ffffff !important;
+  line-height: 1.25 !important; margin: 18px 0 12px 0 !important; text-transform: uppercase !important;
+  letter-spacing: -0.01em !important;
+}
+
+.proj-cta-content-column p {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 1.05rem !important; color: #475569 !important; line-height: 1.6 !important;
+  max-width: 620px !important; margin: 0 !important;
+  transition: color 0.3s ease !important;
+}
+
+/* --- RIGHT SIDE LIQUID CAPSULE TRIGGER BUTTON --- */
+.proj-cta-action-column {
+  position: relative;
+  z-index: 5;
+  flex-shrink: 0;
+}
+
+.proj-cta-liquid-capsule-btn {
+  display: inline-flex !important; align-items: center !important; gap: 12px !important;
+  text-decoration: none !important; outline: none;
+  background: linear-gradient(90deg, #2563eb 0%, #22d3ee 100%) !important; /* Blue-to-cyan gradient fluid mask */
+  padding: 16px 36px !important; border-radius: 40px !important;
+  box-shadow: 0 10px 25px rgba(6, 182, 212, 0.15) !important;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              box-shadow 0.3s ease !important;
+}
+
+.proj-cta-btn-text { font-family: 'Inter', system-ui, sans-serif; font-size: 0.92rem; font-weight: 700; color: #ffffff !important; text-transform: uppercase; letter-spacing: 0.02em; }
+.proj-cta-arrow-svg { width: 16px; height: 16px; color: #ffffff; transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important; }
+
+/* ==========================================================================
+   PREMIUM HOVER PHYSICS FLUID RESPONSES OVERRIDES
+   ========================================================================== */
+
+/* CONTAINER HOVER: Box elevates from the floor plane and flashes cyber-cyan edges */
+.proj-cta-gloss-hull-container:hover {
+  border-color: rgba(34, 211, 238, 0.25) !important;
+  background: rgba(14, 21, 38, 0.55) !important;
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.75), 0 0 25px rgba(34, 211, 238, 0.04) !important;
+}
+.proj-cta-gloss-hull-container:hover .proj-cta-content-column p { color: #94a3b8 !important; }
+
+/* BUTTON HOVER: Capsule button scales outwards and throws an expanded neon ambient bloom */
+.proj-cta-liquid-capsule-btn:hover {
+  transform: scale(1.04) translateY(-2px) !important;
+  box-shadow: 0 15px 35px rgba(6, 182, 212, 0.35), 0 0 20px rgba(37, 99, 235, 0.2) !important;
+}
+.proj-cta-liquid-capsule-btn:hover .proj-cta-arrow-svg {
+  transform: translateX(4px) !important; /* Tactical push forward arrow gesture */
+}
+
+/* ==========================================================================
+   HARDWARE-ACCELERATED FLOATING MOTION TIMELINES KEYFRAMES
+   ========================================================================== */
+.proj-animate-float-loop {
+  animation: projCtaFloatingBobbing 6s ease-in-out infinite alternate !important;
+  will-change: transform;
+}
+
+@keyframes projCtaFloatingBobbing {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-12px); } /* Smooth continuous floating height shift path */
+}
+
+/* ==========================================================================
+   MULTI-DEVICE RESPONSIVE BREAKPOINT GRID OVERRIDES (TOTAL ADAPTIVE COVERS)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .proj-cta-floating-canvas { padding: 60px 24px 80px 24px !important; }
+  .proj-cta-gloss-hull-container { padding: 44px 48px !important; gap: 32px !important; }
+  .proj-cta-content-column h2 { font-size: 2rem !important; }
+}
+
+@media (max-width: 768px) {
+  /* FLIP DIRECTION: Collapses asymmetric split columns horizontally onto small touch devices to prevent layout clipping */
+  .proj-cta-gloss-hull-container {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: center !important;
+    padding: 40px 32px !important;
+    gap: 36px !important;
+  }
+  
+  .proj-cta-content-column { text-align: center !important; display: flex; flex-direction: column; align-items: center; }
+  .proj-cta-content-column h2 { font-size: 1.65rem !important; margin: 14px 0 !important; }
+  .proj-cta-content-column p { font-size: 0.95rem !important; line-height: 1.55 !important; }
+  
+  .proj-cta-action-column { width: 100% !important; display: flex; justify-content: center; }
+  .proj-cta-liquid-capsule-btn { width: 100% !important; justify-content: center !important; box-sizing: border-box !important; padding: 16px 24px !important; }
+  
+  /* Disable continuous floating bobbing animation on smart phones for scroll rendering optimization safety */
+  .proj-animate-float-loop { animation: none !important; }
+}
+
+</style>
+
+<!-- DYNAMIC GLOBAL FABRIC INFRASTRUCTURE REGISTRY MODULE -->
+<!-- DYNAMIC GLOBAL FABRIC INFRASTRUCTURE REGISTRY MODULE -->
+<section class="proj-ecosystem-registry-section" id="platform-interconnect-mesh">
+  
+  <!-- REPAIRED VISIBILITY: FORCED VISIBILITY BACKGROUND LAYER FRAME CHASSIS -->
+  <div class="proj-ecosystem-canvas-bg">
+    <!-- CORE SYSTEM IMAGE: Change path 'src' to your actual local file path link -->
+    <img src="./Assests/home/4th-home.webp" alt="Global Distributed Infrastructure Node Grid" class="proj-ecosystem-native-bg-img" onerror="this.src='https://unsplash.com';">
+    <div class="proj-ecosystem-matte-shroud"></div>
+    <div class="proj-ecosystem-blueprint-mesh-track"></div>
+    
+    <!-- SCANNING RADAR OVERLAY ELEMENTS -->
+    <div class="proj-ecosystem-radar-laser-sweep"></div>
+    <div class="proj-ecosystem-pulse-radial-nebula"></div>
+  </div>
+
+  <!-- MASTER FOREGROUND CONTENT WRAPPER HUB -->
+  <div class="proj-ecosystem-master-container">
+    
+    <!-- GRID SECTION INTRO HEADLINES -->
+        <!-- GRID SECTION INTRO HEADLINES (FIXED TYPOGRAPHY RENDERING) -->
+    <div class="proj-ecosystem-section-header">
+      <span class="vault-neon-metric-badge" style="background-color: rgba(34, 211, 238, 0.05); border-color: rgba(34, 211, 238, 0.25); color: #22d3ee;"><span class="vault-radar-core-pulse"></span> Fabric Operations</span>
+      
+      <!-- FIX: Added 'fixed-white-main-title' class for crisp white text -->
+      <h2 class="fixed-white-main-title">Cross-Cloud Interconnect Mesh</h2>
+      
+      <!-- FIX: Added 'fixed-bright-silver-lead' class for clear silver narrative text -->
+      <p class="fixed-bright-silver-lead">Operating low-latency node routing corridors that bridge core hybrid clouds, multi-region computing clusters, and decentralized analytical processing streams.</p>
+      
+      <div class="proj-ecosystem-gradient-divider"></div>
+    </div>
+
+
+    <!-- 3-COLUMN ULTRA-KINETIC TERMINAL TILES GRID CHANNELS -->
+    <div class="proj-ecosystem-showcase-layout">
+
+      <!-- Hub Tile 01 -->
+      <div class="proj-ecosystem-hub-tile proj-float-node-1">
+        <div class="hub-tile-header">
+          <span class="hub-node-idx">MESH // AMER-WEST-04</span>
+          <div class="hub-status-bead state-cyan"></div>
+        </div>
+        <div class="hub-title-block">
+          <h3>Transit Gateway Hub</h3>
+          <p>Orchestrating up to 400 Gb/s serverless traffic packet ingress natively through software-defined edge proxy containment structures.</p>
+        </div>
+        <div class="hub-specs-data-footer">
+          <div class="hub-spec-row"><span>Local Link Latency:</span> <strong>0.04ms</strong></div>
+          <div class="hub-spec-row"><span>Available Capacity:</span> <strong class="text-glow-cyan">Optimal (94%)</strong></div>
+        </div>
+        <div class="hub-internal-laser-beam"></div>
+      </div>
+
+      <!-- Hub Tile 02 -->
+      <div class="proj-ecosystem-hub-tile proj-float-node-2">
+        <div class="hub-tile-header">
+          <span class="hub-node-idx">MESH // EMEA-CENTRAL-02</span>
+          <div class="hub-status-bead state-purple"></div>
+        </div>
+        <div class="hub-title-block">
+          <h3>Ledger Synced Warehouses</h3>
+          <p>Aggregating compressed global server diagnostic streams dynamically into multi-zone decentralized data storage vaults.</p>
+        </div>
+        <div class="hub-specs-data-footer">
+          <div class="hub-spec-row"><span>Cross-Lake Replication:</span> <strong>0.11ms</strong></div>
+          <div class="hub-spec-row"><span>Ingestion Pipeline:</span> <strong class="text-glow-purple">Active Loops</strong></div>
+        </div>
+        <div class="hub-internal-laser-beam"></div>
+      </div>
+
+      <!-- Hub Tile 03 -->
+      <div class="proj-ecosystem-hub-tile proj-float-node-3">
+        <div class="hub-tile-header">
+          <span class="hub-node-idx">MESH // APAC-EAST-01</span>
+          <div class="hub-status-bead state-emerald"></div>
+        </div>
+        <div class="hub-title-block">
+          <h3>Autonomous Shield Core</h3>
+          <p>Running automated traffic micro-segmentation models on perimeter load firewalls to partition and quarantine threat metrics.</p>
+        </div>
+        <div class="hub-specs-data-footer">
+          <div class="hub-spec-row"><span>Traversal Isolation:</span> <strong>Instant (0ms)</strong></div>
+          <div class="hub-spec-row"><span>Containment Vector:</span> <strong class="text-glow-emerald">100% Secure</strong></div>
+        </div>
+        <div class="hub-internal-laser-beam"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+ /* ==========================================================================
+   BULLETPROOF BACKGROUND REPAIR SYSTEM FOR INFRASTRUCTURE DECK SERVICE CARD
+   ========================================================================== */
+/* ==========================================================================
+   HIGH-CONTRAST HEADERS FIX FOR PORTFOLIO INTERCONNECT MESH
+   ========================================================================== */
+
+/* Enforces a left-aligned typography engine structure as requested */
+.proj-ecosystem-section-header {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  max-width: 800px !important;
+  margin-bottom: 56px !important;
+}
+
+/* FIX: Forces the main h2 into a solid, crisp, ultra-legible corporate white */
+.fixed-white-main-title {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 2.6rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important; /* Maximum high-contrast white balance */
+  text-transform: uppercase !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.2 !important;
+  margin: 16px 0 12px 0 !important;
+}
+
+/* FIX: Forces the paragraph lead text into a highly legible bright silver slate */
+.fixed-bright-silver-lead {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 1.1rem !important;
+  color: #94a3b8 !important; /* Premium silver text tint bypasses dark transparency masks */
+  line-height: 1.65 !important;
+  margin: 0 0 20px 0 !important;
+}
+
+/* Ensures the divider bar stretches cleanly beneath left-aligned text fields */
+.proj-ecosystem-gradient-divider {
+  width: 60px !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, #22d3ee, #a855f7) !important;
+  border-radius: 2px !important;
+}
+
+/* Responsive updates preserve text padding rules on compact touch screens */
+@media (max-width: 768px) {
+  .fixed-white-main-title { font-size: 1.85rem !important; }
+  .fixed-bright-silver-lead { font-size: 0.95rem !important; line-height: 1.55 !important; }
+}
+
+
+
+.proj-ecosystem-registry-section {
+  position: relative !important;
+  padding: 50px 40px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02) !important;
+  
+  /* OVERRIDE 1: Wipe parent background color parameters completely to allow the visibility stack to clear */
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* --- THE CANVAS BACKDROP HOUSINGS LAYERS (FORCED DISTINCT TEXTURE VISIBILITY) --- */
+.proj-ecosystem-canvas-bg {
+  position: absolute !important; 
+  top: 0 !important; 
+  left: 0 !important; 
+  width: 100% !important; 
+  height: 100% !important;
+  pointer-events: none !important;
+  
+  /* OVERRIDE 2: Locked index to zero. Drops element completely behind text content blocks */
+  z-index: 0 !important; 
+  
+  /* OVERRIDE 3: Relocates your deep charcoal cosmic black background color straight into this canvas */
+  background-color: #03050c !important; 
+}
+
+.proj-ecosystem-native-bg-img {
+  position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important;
+  object-fit: cover !important; object-position: center !important;
+  
+  /* OVERRIDE 4: Boosted opacity visibility profile up to 0.40 to guarantee the texture design shows clearly */
+  opacity: 0.40 !important; 
+  
+  filter: brightness(0.5) contrast(1.2) grayscale(0.1) !important;
+  animation: projEcosystemBgPanZoom 32s ease-in-out infinite alternate !important;
+}
+
+/* Linear gradient shroud layer protects text bounds legibility safely */
+.proj-ecosystem-matte-shroud {
+  position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; 
+  z-index: 1 !important; /* Layers directly above raw picture tracking line */
+  background: linear-gradient(180deg, #03050c 0%, rgba(3, 5, 12, 0.4) 50%, #03050c 100%) !important;
+}
+
+.proj-ecosystem-blueprint-mesh-track {
+  position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; 
+  z-index: 2 !important; /* Layers above the shroud overlay */
+  background-size: 40px 40px !important;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px) !important;
+}
+
+/* --- OVERRIDE 5: FOREGROUND CONTENT CONTAINER DRIVEN TO HIGHEST VIEW TRACKING STACK LAYER --- */
+.proj-ecosystem-master-container {
+  position: relative !important; 
+  
+  /* Forces content ahead of zero-index canvas layers so it stays completely clickable and visible */
+  z-index: 5 !important; 
+  
+  max-width: 1280px; margin: 0 auto; width: 100%;
+}
+
+/* --- THE CYBERNETIC INTEGRATED MESH HUB CARD TILE --- */
+.proj-ecosystem-hub-tile {
+  background-color: #0c1222 !important; /* Solid block shields any transparent data text bleeding variable bugs */
+  border: 1px solid rgba(255, 255, 255, 0.02) !important; border-radius: 16px !important;
+  padding: 36px 28px !important; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box !important; display: flex !important; flex-direction: column !important; gap: 24px !important;
+  position: relative !important; overflow: hidden !important;
+}
+
+.hub-tile-header { display: flex !important; justify-content: space-between !important; align-items: center !important; width: 100% !important; }
+.hub-node-idx { font-family: monospace !important; font-size: 0.72rem !important; font-weight: 700; color: #475569; letter-spacing: 0.05em; }
+
+/* Pulse beads */
+.hub-status-bead { width: 6px; height: 6px; border-radius: 50%; position: relative; }
+.state-cyan { background-color: #22d3ee; box-shadow: 0 0 8px #22d3ee; }.state-cyan::after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; border-radius:50%; background-color:#22d3ee; animation: corporatePreloaderRadarPulse 1.8s ease-out infinite; }
+.state-purple { background-color: #a855f7; box-shadow: 0 0 8px #a855f7; }.state-purple::after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; border-radius:50%; background-color:#a855f7; animation: corporatePreloaderRadarPulse 1.8s ease-out infinite; }
+.state-emerald { background-color: #10b981; box-shadow: 0 0 8px #10b981; }.state-emerald::after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; border-radius:50%; background-color:#10b981; animation: corporatePreloaderRadarPulse 1.8s ease-out infinite; }
+
+.hub-title-block { display: flex !important; flex-direction: column !important; gap: 10px !important; text-align: left !important; }
+.hub-title-block h3 { font-size: 1.35rem !important; font-weight: 700; color: #ffffff !important; margin: 0 !important; text-transform: uppercase; letter-spacing: -0.01em; }
+.hub-title-block p { font-size: 0.9rem !important; color: #56657a; line-height: 1.6; margin: 0 !important; min-height: 66px; transition: color 0.3s ease; }
+
+.hub-specs-data-footer { display: flex !important; flex-direction: column !important; gap: 12px !important; width: 100% !important; border-top: 1px solid rgba(255,255,255,0.02); padding-top: 18px; text-align: left !important; }
+.hub-spec-row { display: flex !important; justify-content: space-between !important; font-size: 0.85rem !important; color: #475569 !important; font-weight: 600; }
+.hub-spec-row span { color: #334155 !important; }
+.hub-spec-row strong { color: #cbd5e1 !important; }
+
+.text-glow-cyan { color: #22d3ee !important; text-shadow: 0 0 10px rgba(34, 211, 238, 0.35); }
+.text-glow-purple { color: #c084fc !important; text-shadow: 0 0 10px rgba(192, 132, 252, 0.35); }
+.text-glow-emerald { color: #34d399 !important; text-shadow: 0 0 10px rgba(52, 211, 153, 0.35); }
+
+/* Moving radar rays scan beam loop */
+.proj-ecosystem-radar-laser-sweep {
+  position: absolute !important; left: 0 !important; width: 100% !important; height: 2px !important;
+  background: linear-gradient(90deg, transparent 0%, rgba(34, 211, 238, 0.2) 30%, rgba(168, 85, 247, 0.4) 50%, rgba(34, 211, 238, 0.2) 70%, transparent 100% ) !important;
+  z-index: 3 !important; box-shadow: 0 0 15px rgba(34, 211, 238, 0.25); animation: projEcosystemRadarSweepLine 7s linear infinite !important; will-change: top;
+}
+.proj-ecosystem-pulse-radial-nebula { position: absolute !important; top: -20% !important; right: -10% !important; z-index: 2 !important; width: 850px; height: 550px; background: radial-gradient(circle, rgba(34, 211, 238, 0.04) 0%, rgba(168, 85, 247, 0.02) 60%, transparent 70%) !important; filter: blur(75px); animation: projEcosystemNebulaHueLoop 14s linear infinite alternate !important; }
+.proj-ecosystem-showcase-layout { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 32px !important; width: 100% !important; }
+.hub-internal-laser-beam { position: absolute; top: 0; width: 50px; height: 100%; z-index: 5; background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.35), transparent) !important; animation: projEcosystemLaserSweep 3.2s linear infinite !important; will-change: left; }
+
+.proj-float-node-1 { animation: projEcosystemTileFloat 6.5s ease-in-out infinite alternate !important; }
+.proj-float-node-2 { animation: projEcosystemTileFloat 6.5s ease-in-out infinite alternate -2.2s !important; }
+.proj-float-node-3 { animation: projEcosystemTileFloat 6.5s ease-in-out infinite alternate -4.4s !important; }
+
+/* Micro hovers */
+.proj-ecosystem-hub-tile:hover { transform: translateY(-8px) scale(1.02) !important; border-color: rgba(34, 211, 238, 0.25) !important; box-shadow: 0 25px 55px rgba(0, 0, 0, 0.55), 0 0 15px rgba(34, 211, 238, 0.04) !important; }
+.proj-ecosystem-hub-tile:hover .hub-title-block h3 { color: #22d3ee !important; }
+.proj-ecosystem-hub-tile:hover .hub-title-block p { color: #cbd5e1 !important; }
+.proj-ecosystem-hub-tile:hover .hub-internal-laser-beam { animation: projEcosystemLaserSweep 1.6s linear infinite !important; background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.55), transparent) !important; }
+
+@keyframes projEcosystemRadarSweepLine { 0% { top: -5%; } 50% { top: 105%; } 100% { top: -5%; } }
+@keyframes projEcosystemLaserSweep { 0% { left: -20%; } 100% { left: 120%; } }
+@keyframes projEcosystemTileFloat { 0% { transform: translateY(0); } 100% { transform: translateY(-8px); } }
+@keyframes projEcosystemBgPanZoom { 0% { transform: scale(1.05) translate(0, 0); } 100% { transform: scale(1.02) translate(-0.5%, 0.5%); } }
+@keyframes projEcosystemNebulaHueLoop { 0% { transform: scale(1) rotate(0deg); } 100% { transform: scale(1.05) rotate(12deg); } }
+
+/* Mobile down-scale responsive fine-tunes */
+@media (max-width: 1024px) {
+  .proj-ecosystem-showcase-layout { grid-template-columns: repeat(2, 1fr) !important; gap: 24px !important; }
+  .proj-ecosystem-registry-section { padding: 80px 24px !important; }
+  .proj-float-node-1, .proj-float-node-2, .proj-float-node-3 { animation: none !important; }
+}
+@media (max-width: 768px) {
+  .proj-ecosystem-showcase-layout { grid-template-columns: 1fr !important; gap: 20px !important; }
+  .proj-ecosystem-section-header h2 { font-size: 1.85rem; }
+  .proj-ecosystem-section-lead { font-size: 0.95rem; line-height: 1.55; }
+  .proj-ecosystem-registry-section { padding: 60px 16px 80px 16px !important; }
+  .proj-ecosystem-hub-tile { padding: 28px 20px !important; border-radius: 12px !important; }
+}
+</style>
+
+</section>
+
+
+<!-- SHORT CENTEERED ENTERPRISE TESTIMONIAL PANEL -->
+<section class="corporate-testimonials-section center-variant" id="testimonials">
+  
+  <!-- SYSTEMS BACKGROUND GRAPHICAL VECTOR MATRICES -->
+  <div class="testimonials-section-bg">
+    <!-- FIX: Background Image with 404 Fallback Handler Included -->
+    <img src="./Assests/home/3rd-home.webp" alt="Global Operations Analytics Map" class="testimonials-custom-bg-img" 
+         onerror="this.onerror=null; this.src='https://unsplash.com';" />
+    <div class="testimonials-dark-shroud"></div>
+    <div class="corporate-blueprint-grid"></div>
+    <div class="corporate-radial-glow"></div>
+  </div>
+
+  <div class="testimonials-center-container">
+    
+    <!-- SHORT TRANSITIONAL TYPOGRAPHY HEADER -->
+    <div class="testimonials-center-header hover-text-trigger">
+      <span class="metrics-section-badge"><span class="section-badge-dot"></span> Ecosystem Trust</span>
+      <h2>Client Validation</h2>
+      <div class="metrics-text-divider"></div>
+    </div>
+
+    <!-- CAROUSEL CARD SLIDER COMPONENT BOX -->
+    <div class="testimonials-right-slider-column">
+      <div class="testimonials-viewport-wrapper">
+        <div class="testimonials-track" id="testimonialTrack">
+          
+          <!-- Case Review Node 01 -->
+          <div class="testimonial-card-node">
+            <div class="testimonial-quote-vector">“</div>
+            <p class="testimonial-narrative-copy">
+              Transitioning our distributed infrastructure onto Stackly's Zero-Trust micro-segmentation grid eliminated perimeter validation latency. Their serverless cloud telemetry matrix isolates localized cluster vulnerabilities instantly before they can affect our client-facing operations.
+            </p>
+            <div class="testimonial-profile-footer">
+              <div class="profile-avatar-wrapper">
+                <img src="./Assests/home/Testimonial 1.webp" alt="Marcus Kaelen Headshot" class="profile-avatar-img" onerror="this.style.display='none';">
+              </div>
+              <div class="profile-details-box">
+                <h4>Marcus Kaelen</h4>
+                <p>Principal Infrastructure Systems Specialist, ApexSystems</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Review Node 02 -->
+          <div class="testimonial-card-node">
+            <div class="testimonial-quote-vector">“</div>
+            <p class="testimonial-narrative-copy">
+              Maintaining persistent SOC 2 Type II and GDPR regulatory compliance across fragmented multi-cloud networks used to require endless manual configuration audits. Stackly's automated infrastructure nodes handled optimization and compliance security on the fly.
+            </p>
+            <div class="testimonial-profile-footer">
+              <div class="profile-avatar-wrapper">
+                <img src="./Assests/home/Testimonial 2.webp" alt="Sarah Jenkins Headshot" class="profile-avatar-img" onerror="this.style.display='none';">
+              </div>
+              <div class="profile-details-box">
+                <h4>Sarah Jenkins</h4>
+                <p>VP of Global Cloud Operations, NexusCorp</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Review Node 03 -->
+          <div class="testimonial-card-node">
+            <div class="testimonial-quote-vector">“</div>
+            <p class="testimonial-narrative-copy">
+              Securing low-latency, high-frequency account ledger data across three international continents was a massive bottleneck for our engineering team. Stackly's fault-tolerant database pipelines scaled to support our multi-currency assets with 99.99% system availability.
+            </p>
+            <div class="testimonial-profile-footer">
+              <div class="profile-avatar-wrapper">
+                <img src="./Assests/home/Testimonial 3.webp" alt="David Vance Headshot" class="profile-avatar-img" onerror="this.style.display='none';">
+              </div>
+              <div class="profile-details-box">
+                <h4>David Vance</h4>
+                <p>Chief Technical Architect, QuantumData</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PREMIUM ASYMMETRIC STYLISH CONTROLS FOOTER -->
+      <div class="testimonials-navigation-panel">
+        <div class="testimonials-indicator-panel" id="testimonialIndicatorPanel"></div>
+        <div class="testimonials-arrow-controls">
+          <button class="testimonial-arrow-btn" id="tPrevBtn" aria-label="Previous Slide">&lsaquo;</button>
+          <button class="testimonial-arrow-btn" id="tNextBtn" aria-label="Next Slide">&rsaquo;</button>
+        </div>
+      </div>
+
+    </div>
+     <div class="island-cta-floating-container hover-cta-box">
+      <div class="island-cta-bg-layers">
+        <div class="island-cta-blueprint-grid"></div>
+        <div class="island-cta-radial-neon-glow"></div>
+      </div>
+      <div class="island-cta-content-alignment">
+        <div class="island-cta-text-column">
+          <h2 class="island-cta-headline">Ready to Upgrade to <span class="island-cta-gradient-glow">Next-Gen Cloud Networks?</span></h2>
+        </div>
+        <div class="island-cta-action-column">
+          <div class="island-cta-ripple-wrapper">
+            <div class="island-cta-ripple-ring"></div>
+            <a href="contact.html" class="island-cta-btn-gradient">Get Started Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+</section>
+
+<style>
+    /* ==========================================================================
+   INTERACTIVE CENTERED TESTIMONIALS SLIDER CONFIGURATION
+   ========================================================================== */
+
+   /* ==========================================================================
+   CENTERED TESTIMONIALS ANIMATED BACKGROUND ARCHITECTURE (FIXED)
+   ========================================================================== */
+/* ==========================================================================
+   INTEGRATED INLINE NESTED FLOATING CTA ISLAND PARAMETERS
+   ========================================================================== */
+
+   /* --- UPDATED TRANSITIONAL ISLAND WITH CORPORATE ROAMING EFFECT --- */
+.island-cta-floating-container {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  margin-top: 80px !important;
+  margin-bottom: 0 !important;
+  padding: 36px 44px !important;
+  background-color: #0b111e !important;
+  border-radius: 40px !important;
+  border: 1px solid rgba(255, 255, 255, 0.04) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4) !important;
+  overflow: hidden;
+  box-sizing: border-box;
+  
+  /* FIX: Promotes layer tracking onto dynamic independent hardware rendering paths for smooth 60fps loops */
+  will-change: transform;
+  
+  /* FIX: Fires a continuous multi-axis roaming float loop that moves beautifully over your office background */
+  animation: corporateIslandRoaming 10s ease-in-out infinite !important;
+}
+
+/* --- THE MULTI-AXIS ROAMING FLOATING KEYFRAMES --- */
+@keyframes corporateIslandRoaming {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    /* Subtle shift top-right */
+    transform: translate(4px, -3px);
+  }
+  50% {
+    /* Smooth drift top-left */
+    transform: translate(-3px, -6px);
+  }
+  75% {
+    /* Dynamic loop around bottom-left perimeter boundaries */
+    transform: translate(-5px, 2px);
+  }
+  100% {
+    /* Fluid loop wrap right back to resting baseline coordinates */
+    transform: translate(0, 0);
+  }
+}
+
+/* ==========================================================================
+   MOBILE INTERFACES PERFORMANCE RENDERING LOCKS
+   ========================================================================== */
+@media (max-width: 768px) {
+  .island-cta-floating-container {
+    margin-top: 50px !important;
+    padding: 32px 24px !important;
+    border-radius: 20px !important;
+    
+    /* FIX: Completely freezes the floating movement loop on phone screens to save processor threads */
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+
+
+/* FIX: Removes any collision styles from old sections to let the component sit inside the carousel container */
+.island-cta-floating-container {
+  position: relative;
+  width: 100%;
+  max-width: 950px;              /* FIX: Matches the width of your testimonial slider cards for perfect visual alignment */
+  margin-top: 80px !important;    /* Creates an explicit top spacing gap below your slide arrow keys bar row */
+  margin-bottom: 0 !important;
+  padding: 36px 44px !important;  /* Compact padding built for internal section flow placement balances */
+  
+  /* Enforces your dark corporate card color profile natively */
+  background-color: #0b111e !important; 
+  border-radius: 40px !important; 
+  border: 1px solid rgba(255, 255, 255, 0.04) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4) !important;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* --- INNER LAYOUT CONTROLLER MATRICES --- */
+.island-cta-bg-layers {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.island-cta-blueprint-grid {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+}
+
+.island-cta-radial-neon-glow {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; height: 250px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.08) 0%, transparent 70%);
+  filter: blur(15px);
+  animation: islandCtaAmbientPulse 6s ease-in-out infinite alternate;
+}
+
+.island-cta-content-alignment {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.island-cta-text-column { text-align: left; flex-grow: 1; }
+
+.island-cta-headline {
+  font-size: 1.45rem !important; /* Scaled text size slightly for a cleaner fit inside the module row */
+  font-weight: 800;
+  color: #ffffff !important;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin-bottom: 0 !important;
+}
+
+.island-cta-gradient-glow {
+  background: linear-gradient(135deg, #06b6d4 0%, #22d3ee 50%, #3b82f6 100%);
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block;
+}
+
+.island-cta-action-column { flex-shrink: 0; }
+.island-cta-ripple-wrapper { position: relative; display: inline-flex; }
+
+.island-cta-ripple-ring {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  border-radius: 30px; border: 2px solid #22d3ee;
+  pointer-events: none; z-index: 1;
+  animation: islandButtonRipple 2s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+
+.island-cta-btn-gradient {
+  background: linear-gradient(135deg, #06b6d4 0%, #22d3ee 50%, #3b82f6 100%) !important;
+  color: #ffffff !important; border: none !important;
+  font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05rem;
+  padding: 12px 28px !important; border-radius: 30px;
+  display: inline-flex; align-items: center; justify-content: center; height: 42px;
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.25) !important;
+  background-size: 200% auto !important; transition: all 0.4s ease !important;
+  text-decoration: none;
+}
+
+/* --- THE HOVER ACTION LOGIC DRIVERS --- */
+.hover-cta-box:hover .island-cta-headline { transform: translateX(4px); }
+.hover-cta-box:hover .island-cta-gradient-glow { filter: drop-shadow(0 0 12px rgba(34, 211, 238, 0.5)); }
+.island-cta-btn-gradient:hover { background-position: right center !important; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(34, 211, 238, 0.45) !important; }
+
+@keyframes islandCtaAmbientPulse { 0% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); } 100% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); } }
+@keyframes islandButtonRipple { 0% { transform: scale(1); opacity: 0.5; } 100% { transform: scale(1.08, 1.25); opacity: 0; } }
+
+/* ==========================================================================
+   NESTED TRANSITIONAL ISLAND RESPONSIVE BREAKPOINT MATRICES
+   ========================================================================== */
+@media (max-width: 992px) {
+  .island-cta-floating-container {
+    padding: 32px 32px !important;
+    border-radius: 24px !important; /* Scales rounded contours down smoothly on small display rows */
+  }
+  .island-cta-headline { font-size: 1.25rem !important; }
+}
+
+@media (max-width: 768px) {
+  .island-cta-floating-container {
+    margin-top: 50px !important;
+    padding: 32px 24px !important;
+    border-radius: 20px !important;
+  }
+  
+  /* Stacks side-by-side contents elements vertically on portrait mobile phones viewports */
+  .island-cta-content-alignment {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 20px !important;
+  }
+  .island-cta-text-column { text-align: center !important; }
+  .hover-cta-box:hover .island-cta-headline { transform: none !important; }
+  
+  .island-cta-action-column, .island-cta-ripple-wrapper, .island-cta-btn-gradient {
+    width: 100% !important; /* Spans full size blocks for easier thumb taps targets */
+  }
+  .island-cta-btn-gradient { justify-content: center !important; }
+  .island-cta-ripple-ring { display: none !important; }
+}
+
+
+
+
+
+
+.corporate-testimonials-section.center-variant {
+  position: relative !important;
+  background-color: #060913 !important; /* Establishes a rich deep baseline background canvas */
+  padding: 100px 24px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.testimonials-section-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1 !important; /* Safely locks background graphics at the base layout layer */
+  pointer-events: none;
+}
+
+
+/* --- MOVING BACKGROUND IMAGE ENGINE --- */
+.testimonials-custom-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  
+  /* FIX: Lowers the image opacity from full to a subtle 0.08 to maximize foreground text contrast */
+  opacity: 0.08 !important; 
+  
+  z-index: 1;
+  will-change: transform;
+  /* Triggers a continuous, hardware-accelerated slow panoramic loop motion layer */
+  animation: corporateTestimonialsKenBurns 32s ease-in-out infinite alternate !important;
+}
+
+/* --- FIX: RE-BUILT INTENSE DARK GRADIENT REVEAL OVERLAY SHROUD --- */
+.testimonials-dark-shroud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* FIX: Drastically deepened alpha transparency parameters to block bright office illumination leaks */
+  background: linear-gradient(180deg, 
+    #060913 0%, 
+    rgba(6, 9, 19, 0.85) 50%, 
+    #060913 100__
+  ) !important;
+  z-index: 2;
+}
+
+/* Precise digital corporate network matrix grid blueprint background overlay */
+.testimonials-section-bg .corporate-blueprint-grid {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-size: 50px 50px !important;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px) !important;
+  z-index: 3;
+}
+
+/* Vibrant centered underlying cyan/blue ambient light pool glow node */
+.testimonials-section-bg .corporate-radial-glow {
+  position: absolute;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 700px !important;
+  height: 500px !important;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.04) 0%, rgba(37, 99, 235, 0.02) 50%, transparent 70%) !important;
+  filter: blur(40px);
+  z-index: 4;
+  animation: corporateTestimonialsPulseGlow 8s ease-in-out infinite alternate !important;
+}
+
+/* --- FOREGROUND CONTENT STRUCTURES --- */
+.testimonials-center-container {
+  position: relative !important;
+  z-index: 10 !important; /* Pulls cards, author details, and text safely forward over background grids */
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==========================================================================
+   CINEMATIC BACKGROUND KEYFRAMES RUNTIMES
+   ========================================================================== */
+@keyframes corporateTestimonialsKenBurns {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.05) translate(-1%, 1%); }
+  100% { transform: scale(1.02) translate(1%, -1%); }
+}
+
+@keyframes corporateTestimonialsPulseGlow {
+  0% { opacity: 0.6; transform: translate(-50%, -50%) scale(0.9); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+
+
+
+
+.corporate-testimonials-section.center-variant {
+  position: relative;
+  background-color: #080c14; /* Aligns with dark mode sections palette */
+  padding: 100px 24px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.testimonials-section-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.testimonials-center-container {
+  position: relative;
+  z-index: 5;
+  max-width: 850px; /* Tight container layout optimizes readability tracking */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- SHORT CENTEERED HEADER SUITE --- */
+.testimonials-center-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 48px;
+  max-width: 600px;
+}
+
+.testimonials-center-header h2 {
+  font-size: 2.5rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.2 !important;
+  margin-bottom: 16px !important;
+  transition: transform 0.4s ease, color 0.4s ease !important;
+  display: inline-block;
+}
+
+.hover-text-trigger:hover h2 {
+  transform: scale(1.02);
+  color: #22d3ee !important; /* Title pops in signature cyan */
+}
+
+/* --- SLIDING VIEWPORT PLATFORM COMPONENTS --- */
+.testimonials-right-slider-column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.testimonials-viewport-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.testimonials-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+/* Centralized Data Card Module Blueprint */
+/* ==========================================================================
+   FRAMELESS FLOATING TESTIMONIAL LAYOUT ARCHITECTURE
+   ========================================================================== */
+
+.testimonial-card-node {
+  min-width: 100%;
+  /* FIX: Clears the rigid rectangle background box and solid border parameters */
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  
+  /* FIX: Prepares subtle text shadows for premium depth layer separation */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Adds a sleek tech floating glow element directly behind the active text copy panel */
+.testimonial-card-node::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  width: 100%;
+  height: 90%;
+  /* Creates a soft, circular neon cloud underlying the text strings */
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.04) 0%, transparent 75%);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* --- THE ACTIVE INTERACTIVE MOUSE CONTROLS HOVER REACTIONS --- */
+.testimonial-card-node:hover {
+  transform: translateY(-4px); /* Professional microscopic lift */
+}
+
+/* Illuminates the neon background light layer when the user targets a card option */
+.testimonial-card-node:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.testimonial-quote-vector {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11rem; /* Slightly enlarged quote mark for premium typographic art layer */
+  font-family: serif;
+  color: rgba(34, 211, 238, 0.035) !important;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+.testimonial-narrative-copy {
+  font-size: 1.2rem; /* Enhanced font sizing drives cleaner reading rhythms */
+  color: #ffffff !important; /* Pure crisp high-contrast white visibility */
+  line-height: 1.75;
+  font-style: italic;
+  font-weight: 500;
+  max-width: 740px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 5; /* Keeps text layers on top of ambient glass fills */
+}
+
+/* Lights up the quote text to your signature cyan tone when targeted */
+.testimonial-card-node:hover .testimonial-narrative-copy {
+  color: #22d3ee !important;
+  transition: color 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Profile Footer Base parameters overrides */
+.testimonial-profile-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  /* FIX: Clears the full horizontal cut dividing line for a lighter presentation */
+  border-top: none !important; 
+  padding-top: 0;
+  position: relative;
+  z-index: 5;
+}
+
+/* Custom mini graphic underline bar replacing the bulky full divider card split line */
+.testimonial-profile-footer::before {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #06b6d4, #2563eb);
+  border-radius: 1px;
+  margin-bottom: 12px;
+  transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.testimonial-card-node:hover .testimonial-profile-footer::before {
+  width: 80px; /* Expands line width intelligently upon mouse interactions */
+}
+
+
+/* Premium Gradient-Rimed Avatar Rings */
+.profile-avatar-wrapper {
+  position: relative;
+  width: 54px; height: 54px;
+  border-radius: 50%; padding: 2px;
+  background: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%) !important;
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.25);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.profile-avatar-img {
+  width: 100%; height: 100%;
+  object-fit: cover; border-radius: 50%;
+  border: 2px solid #0e1420; /* Dark safety spacing boundary gap */
+  background-color: #111827;
+}
+
+.testimonial-card-node:hover .profile-avatar-wrapper {
+  transform: scale(1.1) rotate(4deg); /* Fluid microscopic spring physics on card hovers */
+  box-shadow: 0 6px 20px rgba(34, 211, 238, 0.4);
+}
+
+.profile-details-box { text-align: center; }
+.profile-details-box h4 { font-size: 1.05rem; color: #ffffff; margin-bottom: 4px; font-weight: 600; }
+.profile-details-box p { font-size: 0.85rem; color: #94a3b8; }
+
+/* --- RE-ARCHITECTED STYLISH NAV SYSTEM BAR PANEL --- */
+.testimonials-navigation-panel {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important; /* Groups dots to left edge, pops arrows onto right */
+  width: 100% !important;
+  margin-top: 20px !important;
+  padding: 0 8px !important;
+  box-sizing: border-box !important;
+}
+
+.testimonials-indicator-panel {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.testimonials-arrow-controls {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+.testimonial-arrow-btn {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50% !important;
+  background-color: #111827 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  font-size: 1.75rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  outline: none !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+  transform: translateY(0) scale(1) !important;
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.testimonial-arrow-btn:hover {
+  background: linear-gradient(135deg, #06b6d4 0%, #22d3ee 50%, #3b82f6 100%) !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+  transform: translateY(-4px) scale(1.08) !important; /* Premium lift expansion */
+  box-shadow: 0 12px 24px rgba(6, 182, 212, 0.35) !important; /* Cyan neon glow bloom burst */
+}
+
+.testimonial-arrow-btn:active {
+  transform: translateY(-1px) scale(0.96) !important;
+  transition-duration: 0.1s !important;
+}
+
+/* ==========================================================================
+   CENTRALIZED SLIDER RESPONSIVE BREAKPOINT INTERFACES
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .corporate-testimonials-section.center-variant { padding: 80px 20px; }
+  .testimonials-center-header h2 { font-size: 2.1rem; }
+  .testimonial-card-node { padding: 40px 24px; }
+  .testimonial-narrative-copy { font-size: 1rem; line-height: 1.6; margin-bottom: 28px; }
+  
+  .testimonial-arrow-btn {
+    width: 46px !important;
+    height: 46px !important;
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .corporate-testimonials-section.center-variant { padding: 60px 16px; }
+  .testimonials-center-header h2 { font-size: 1.75rem; }
+  .testimonial-card-node { padding: 36px 16px; }
+  .profile-details-box h4 { font-size: 0.95rem; }
+  .profile-details-box p { font-size: 0.8rem; }
+  
+  .testimonials-navigation-panel {
+    flex-direction: column !important; /* Stacks navigation targets vertically on ultra small mobile frames */
+    gap: 20px !important;
+    align-items: center !important;
+  }
+}
+
+
+
+</style>
+
+<script>
+    // --- CENTRALIZED ENTERPRISE TESTIMONIALS SLIDER ENGINE CONTROLLER ---
+const tTrack = document.getElementById('testimonialTrack');
+const tPrevBtn = document.getElementById('tPrevBtn');
+const tNextBtn = document.getElementById('tNextBtn');
+const tIndicatorPanel = document.getElementById('testimonialIndicatorPanel');
+const tCards = document.querySelectorAll('.testimonial-card-node');
+
+if (tTrack && tPrevBtn && tNextBtn && tIndicatorPanel && tCards.length > 0) {
+  let tCurrentIndex = 0;
+  let tAutoplayTimer = null;
+
+  // Generates tracking pagination index dots cleanly
+  function buildTestimonialDots() {
+    tIndicatorPanel.innerHTML = '';
+    tCards.forEach((_, idx) => {
+      const dot = document.createElement('div');
+      dot.classList.add('indicator-dot'); // Automatically connects with your timeline indicator dots style mappings
+      if (idx === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => tJumpToSlide(idx));
+      tIndicatorPanel.appendChild(dot);
+    });
+  }
+
+  // Animates track layout translation offsets seamlessly
+  function updateTestimonialView() {
+    const offsetWidth = tTrack.parentElement.offsetWidth;
+    const translateOffset = tCurrentIndex * offsetWidth;
+    tTrack.style.transform = `translateX(-${translateOffset}px)`;
+
+    // Sync active tracker indicator bar states classes
+    const dots = tIndicatorPanel.querySelectorAll('.indicator-dot');
+    dots.forEach((dot, idx) => {
+      if (idx === tCurrentIndex) dot.classList.add('active');
+      else dot.classList.remove('active');
+    });
+  }
+
+  function tJumpToSlide(index) {
+    tCurrentIndex = index;
+    updateTestimonialView();
+    resetTestimonialAutoplay();
+  }
+
+  function tNextSlide() {
+    if (tCurrentIndex >= tCards.length - 1) {
+      tCurrentIndex = 0; // Infinite roll loop back to slide card index 1
+    } else {
+      tCurrentIndex++;
+    }
+    updateTestimonialView();
+  }
+
+  function tPrevSlide() {
+    if (tCurrentIndex <= 0) {
+      tCurrentIndex = tCards.length - 1; // Loops around back to final array limit
+    } else {
+      tCurrentIndex--;
+    }
+    updateTestimonialView();
+  }
+
+  // Automatic Timeline Loops Rotation Control Threads
+  function startTestimonialAutoplay() {
+    tAutoplayTimer = setInterval(tNextSlide, 2000); // Transitions slide every 5.0 seconds
+  }
+
+  function stopTestimonialAutoplay() {
+    clearInterval(tAutoplayTimer);
+  }
+
+  function resetTestimonialAutoplay() {
+    stopTestimonialAutoplay();
+    startTestimonialAutoplay();
+  }
+
+  // Route click handler operations
+  tNextBtn.addEventListener('click', () => { tNextSlide(); resetTestimonialAutoplay(); });
+  tPrevBtn.addEventListener('click', () => { tPrevSlide(); resetTestimonialAutoplay(); });
+
+  // Freezes carousel looping whenever visitor cursor hovers over text reading spaces
+  tTrack.addEventListener('mouseenter', stopTestimonialAutoplay);
+  tTrack.addEventListener('mouseleave', startTestimonialAutoplay);
+
+  // Recalculates canvas widths metrics dynamically on screen windows resizing actions
+  window.addEventListener('resize', updateTestimonialView);
+
+  // Initialize initial runtime execution triggers
+  buildTestimonialDots();
+  startTestimonialAutoplay();
+}
+
+</script>
+</section>
+
+<footer class="corporate-site-footer">
+  <div class="footer-master-container">
+    <div class="footer-grid-layout">
+      
+      <!-- 1. BRAND COLUMN -->
+      <div class="footer-brand-column">
+        <a class="footer-logo-anchor" title="Return to Top">
+          <img src="./Assests/home/stackly-logo-cyan (1).png" alt="STACKLY" class="footer-brand-img" 
+               onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span style="display:none; font-size:1.35rem; font-weight:800; color:#fff; letter-spacing:-0.03em;">STACKLY</span>
+        </a>
+        <p class="footer-brand-desc">
+          Transforming businesses with intelligent automation and cutting-edge AI infrastructure.
+        </p>
+        <div class="footer-social-media-row">
+          <a href="404.html" class="social-icon-btn" title="X (Twitter)">
+            <svg class="social-svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="404.html" class="social-icon-btn" title="LinkedIn">
+            <svg class="social-svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="404.html" class="social-icon-btn" title="GitHub">
+            <svg class="social-svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. PRODUCT LINKS -->
+      <div class="footer-links-column">
+        <h4>Product</h4>
+        <ul class="footer-links-list">
+          <li><a href="404.html">Features</a></li>
+          <li><a href="404.html">Integrations</a></li>
+          <li><a href="404.html">Pricing</a></li>
+          <li><a href="404.html">Changelog</a></li>
+          <li><a href="404.html">Roadmap</a></li>
+        </ul>
+      </div>
+
+      <!-- 3. COMPANY LINKS -->
+      <div class="footer-links-column">
+        <h4>Company</h4>
+        <ul class="footer-links-list">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="404.html">Careers</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- 4. RESOURCES LINKS -->
+      <div class="footer-links-column">
+        <h4>Resources</h4>
+        <ul class="footer-links-list">
+          <li><a href="404.html">Documentation</a></li>
+          <li><a href="404.html">API Reference</a></li>
+          <li><a href="404.html">Community</a></li>
+          <li><a href="404.html">Status</a></li>
+          <li><a href="404.html">Support</a></li>
+        </ul>
+      </div>
+
+      <!-- 5. NEWSLETTER INLINE SYSTEM -->
+      <div class="footer-newsletter-column">
+        <h4>Newsletter</h4>
+        <p class="newsletter-caption-text">
+          Get AI insights & product updates weekly.
+        </p>
+        <form class="newsletter-form-container" onsubmit="event.preventDefault(); alert('Subscription Registered Successfully.');">
+          <input type="email" class="newsletter-input-field" placeholder="your@email.com" required autocomplete="off">
+          <button type="submit" class="newsletter-submit-btn">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM LEGAL FOOTER BAR -->
+    <div class="footer-bottom-row">
+      <p class="copyright-text">&copy; 2026 Stackly. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Terms of Service</a>
+        <a href="404.html">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP ACTIVE ICON SEGMENT -->
+<button id="scrollToTopBtn" class="scroll-to-top-trigger" aria-label="Scroll Back to Top">
+  &uarr;
+</button>
+
+<style>
+    /* ==========================================================================
+   EXACT MATCH DESIGN SYSTEM FOR STACKLY FOOTER
+   ========================================================================== */
+.corporate-site-footer {
+  position: relative;
+  background-color: #030712; 
+  padding: 80px 40px 40px 40px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.corporate-site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 1px;
+  background: linear-gradient(90deg, transparent, #2563eb, transparent);
+}
+
+.footer-master-container {
+  position: relative;
+  z-index: 5;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.footer-grid-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 0.8fr 0.8fr 1.3fr;
+  gap: 48px;
+  padding-bottom: 60px;
+}
+
+.footer-brand-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footer-logo-anchor {
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 24px;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo-anchor:hover {
+  transform: scale(1.02);
+}
+
+.footer-brand-img {
+  height: 32px; 
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-brand-desc {
+  font-size: 0.9rem;
+  color: #64748b; 
+  line-height: 1.6;
+  max-width: 290px;
+  margin-bottom: 24px;
+}
+
+.footer-social-media-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.social-svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.social-icon-btn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.footer-links-column h4 {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-links-list a {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.footer-links-list a:hover {
+  color: #ffffff !important;
+  transform: translateX(2px);
+}
+
+.footer-newsletter-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footer-newsletter-column h4 {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.newsletter-caption-text {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  max-width: 260px;
+}
+
+.newsletter-form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.newsletter-input-field {
+  width: 100%;
+  height: 42px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 0 16px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.newsletter-input-field:focus {
+  border-color: #22d3ee;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.newsletter-input-field::placeholder {
+  color: #334155;
+}
+
+.newsletter-submit-btn {
+  width: 100%;
+  height: 42px;
+  background: linear-gradient(135deg, #06b6d4 0%, #22d3ee 50%, #3b82f6 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+  background-size: 200% auto !important;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.newsletter-submit-btn:hover {
+  background-position: right center !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(34, 211, 238, 0.35) !important;
+}
+
+.footer-bottom-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.copyright-text {
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.footer-legal-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-legal-links a {
+  color: #475569;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.footer-legal-links a:hover {
+  color: #94a3b8;
+}
+
+.scroll-to-top-trigger {
+  position: fixed;
+  bottom: 32px;
+  right: 40px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #3b82f6; 
+  border: none !important;
+  color: #ffffff !important;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: background 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.scroll-to-top-trigger.visible-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top-trigger:hover {
+  background: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(6, 182, 212, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .footer-grid-layout { grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  .footer-brand-column, .footer-newsletter-column { grid-column: span 3; max-width: 100%; }
+  .footer-brand-desc, .newsletter-caption-text { max-width: 100%; }
+}
+
+@media (max-width: 640px) {
+  .corporate-site-footer { padding: 60px 20px 30px 20px; }
+  .footer-grid-layout { grid-template-columns: 1fr; gap: 36px; padding-bottom: 40px; }
+  .footer-brand-column, .footer-newsletter-column { grid-column: span 1; }
+  .footer-brand-column { border-bottom: 1px solid rgba(255, 255, 255, 0.04); padding-bottom: 32px; }
+  .footer-bottom-row { flex-direction: column-reverse; gap: 16px; text-align: center; padding-top: 24px; }
+  .footer-legal-links { gap: 16px; }
+  .scroll-to-top-trigger { bottom: 20px; right: 20px; }
+}
+
+</style>
+
+<script>
+    <!-- SELF-CONTAINED FUNCTIONALITY ENGINE FOR INTERNAL FOOTER INJECTIONS -->
+
+  (() => {
+    // 1. Target elements using a local window context safety wrapper
+    const parentDoc = window.parent.document;
+    const cornerUpArrowBtn = parentDoc.getElementById("scrollToTopBtn");
+
+    if (cornerUpArrowBtn) {
+      // 2. Track scrolling window depth across the parent container
+      window.parent.addEventListener("scroll", () => {
+        if (window.parent.scrollY > 300) {
+          cornerUpArrowBtn.classList.add("visible-active");
+        } else {
+          cornerUpArrowBtn.classList.remove("visible-active");
+        }
+      });
+
+      // 3. Attach standard touchscreen tap listeners directly to your corner button shape
+      cornerUpArrowBtn.addEventListener("click", () => {
+        window.parent.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    }
+
+    // 4. Attach click listener tracking directly to your left logo anchor
+    const logoAnchorButton = parentDoc.querySelector(".footer-logo-anchor");
+    if (logoAnchorButton) {
+      logoAnchorButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        window.parent.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

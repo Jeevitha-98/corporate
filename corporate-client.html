@@ -2,14 +2,1604 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Corporate Client Portal | Stackly Corp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Console Hub | Stackly Corp</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: #030712; color: #fff; font-family: sans-serif; padding: 60px;">
-  <div style="max-width: 800px; margin: 0 auto; border: 1px solid #3b82f6; padding: 40px; border-radius: 12px; background: rgba(255,255,255,0.01);">
-    <h1 style="color: #3b82f6;">Client Corporate Portal</h1>
-    <p style="color: #64748b; margin: 16px 0 32px 0;">Welcome back to your enterprise account billing and secure telemetry node panel.</p>
-    <a href="index.html" style="color: #fff; background: #2563eb; padding: 10px 20px; border-radius: 30px; text-decoration: none;">Return Home</a>
+<body class="dashboard-workspace-body">
+
+  <!-- MASTER CLIENT CONSOLE CONTAINER HUBS CHASSIS -->
+  <div class="dash-master-wrapper">
+
+    <!-- ==========================================================================
+         A. SIDEBAR NAVIGATION CONTROLLER BAR (LEFT RADIUS PANEL)
+         ========================================================================== -->
+    <aside class="dash-sidebar-navigation-chassis">
+      
+      
+      <div class="dash-sidebar-brand-lockup">
+        <!-- Brand Link Anchor Trigger binds Refresh functionality -->
+        <a href="#" id="stackly-brand-refresh" class="sidebar-brand-anchor">
+          
+          <span class="brand-text-label">STACKLY<span class="brand-label-sub">Client</span></span>
+        </a>
+      </div>
+
+      <!-- Chronological Sidebar Tab Switches Decks -->
+      <nav class="dash-sidebar-navigation-links-deck">
+        <button class="dash-menu-link-pill link-pill-active" data-view-target="client-overview-view">
+          <span class="nav-icon-token">&bull;</span> Overview Matrix
+        </button>
+        <button class="dash-menu-link-pill" data-view-target="client-allocations-view">
+          <span class="nav-icon-token">&bull;</span> Compute Instances
+        </button>
+        <button class="dash-menu-link-pill" data-view-target="client-security-view">
+          <span class="nav-icon-token">&bull;</span> Perimeter Security
+        </button>
+        <button class="dash-menu-link-pill" data-view-target="client-billing-view">
+          <span class="nav-icon-token">&bull;</span> Ledger Accounts
+        </button>
+      </nav>
+
+      <!-- Section Termination Logout Option Box -->
+      <div class="dash-sidebar-termination-footer">
+        <!-- Logout anchor routes back to login screen node view natively -->
+        <a href="login.html" class="dash-sidebar-logout-btn">
+          <span class="logout-vector-icon">&larr;</span> Logout Session
+        </a>
+      </div>
+    </aside>
+
+    <!-- ==========================================================================
+         B. MAIN CENTRAL CONTROLLER HUB CANVAS AREA
+         ========================================================================== -->
+    <!-- CENTRAL HUB GLOBAL APPLICATION FIXED TOP BAR NAVIGATION HEADER -->
+<div class="dash-central-workspace-canvas">
+
+  <!-- TOP GLOBAL HEADER BAR PANEL COMPONENT -->
+  <header class="client-dashboard-global-nav-header">
+   
+  <div class="dash-top-header-left">
+    <span class="dash-console-breadcrumb">CONSOLE // OPERATOR_ROOT // ACTIVE</span>
   </div>
+
+  <div class="dash-top-actions-rack">
+    
+    <!-- Bell Alert Trigger Box Container -->
+    <div class="top-action-icon-bead" id="alerts-trigger-node">
+      <svg class="action-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+      </svg>
+      <span class="alerts-notification-bead-dot"></span>
+      
+      <!-- ALERT DROPDOWN WRAPPER PANEL -->
+      <div class="dash-top-nav-dropdown-wrapper" id="alerts-dropdown-panel">
+        <h5 class="dropdown-header-title">System Activity Logs</h5>
+        <div class="dropdown-log-line">
+          <span class="log-status-dot status-ok"></span> Node_Group_Alpha synced nominal.
+        </div>
+        <div class="dropdown-log-line">
+          <span class="log-status-dot status-alert"></span> Compute load allocation spike at 14:02.
+        </div>
+      </div>
+    </div>
+
+    <!-- REPAIRED PROFILE ICON POD: Built with an explicit high-contrast vector bead -->
+    <div class="top-action-icon-bead" id="profile-trigger-node">
+      <div class="top-profile-vector-avatar-bead">OP</div>
+      
+      <!-- PROFILE DROPDOWN WRAPPER PANEL -->
+      <div class="dash-top-nav-dropdown-wrapper" id="profile-dropdown-panel">
+        <h5 class="dropdown-header-title">Operator Root Security</h5>
+        <span class="dropdown-meta-token">ROLE // COMPUTE_ROOT</span>
+        <ul class="dropdown-links-list">
+          <li><a href="#">Gateway Configs</a></li>
+          <li><a href="#">Access Key Tokens</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<style>
+  /* ==========================================================================
+   FIXED VIEWPORT ALIGNMENT SYSTEM PATCH (CLEARS HEADER OVERLAPS)
+   ========================================================================== */
+
+/* The master flex container holding the sidebar and the main content canvas area */
+.dash-master-wrapper {
+  display: flex !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  background-color: #030611 !important;
+  overflow: hidden !important;
+}
+
+/* The right-side workspace area canvas node next to your sidebar */
+.dash-central-workspace-canvas {
+  position: relative !important;
+  flex-grow: 1 !important;
+  min-width: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background-color: #030611 !important;
+}
+
+/* FIX: This inner container holds your text content blocks underneath the fixed header element */
+.client-dashboard-views-central-hull {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  
+  /* OVERRIDE: 100px top padding pushes your title out from underneath your header bar */
+  padding: 112px 40px 48px 40px !important; 
+}
+
+/* --- HEADLINE CONTRAST ENHANCEMENTS --- */
+.client-dashboard-views-central-hull h2 {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 2.2rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important; /* Pure high-contrast uniform white text fill */
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+  margin: 0 0 14px 0 !important;
+  line-height: 1.2 !important;
+}
+
+.client-dashboard-views-central-hull p {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 0.95rem !important;
+  color: #64748b !important; /* Legible dashboard slate-gray descriptive text */
+  line-height: 1.6 !important;
+  max-width: 720px !important;
+  margin: 0 !important;
+}
+
+/* --- MOBILEbreak ADJUSTMENTS CONTROLLER --- */
+@media (max-width: 1024px) {
+  .client-dashboard-views-central-hull {
+    padding: 32px 24px !important; /* Resets padding boundaries normally if navbar converts to absolute on tablets */
+  }
+}
+
+/* ==========================================================================
+   PRODUCTION-GRADE MOBILE ARCHITECTURE FIXES (ZERO-COLLISION LAYOUT ENGINE)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  
+  /* Forces the master wrapper layout to stack vertically in a clean single mobile stream track */
+  .dash-master-wrapper {
+    flex-direction: column !important;
+    min-height: 100vh !important;
+    overflow-y: auto !important;
+  }
+
+  /* SIDEBAR REPAIR: Converts the left sidebar into a sleek top header block container */
+  .dash-sidebar-navigation-chassis {
+    width: 100% !important;
+    height: auto !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03) !important;
+    padding: 16px 20px !important;
+    display: flex !important;
+    flex-direction: row !important; /* Arranges brand and links side-by-side */
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    position: relative !important;
+    z-index: 2000 !important; /* Layers menu nodes safely above content text */
+  }
+
+  .dash-sidebar-brand-lockup {
+    width: auto !important;
+    margin-bottom: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Arranges menu links horizontally into an easy-to-tap touch navigation strip */
+  .dash-sidebar-navigation-links-deck {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important; /* Prevents rows wrapping overlaps clips bugs */
+    overflow-x: auto !important; /* Allows horizontal scrolling touch navigation swipes if names exceed space bounds */
+    gap: 8px !important;
+    padding-bottom: 4px !important;
+    scrollbar-width: none !important; /* Hides raw ugly system scroll track bars on mobile scroll panels */
+  }
+  .dash-sidebar-navigation-links-deck::-webkit-scrollbar { display: none !important; }
+
+  .dash-menu-link-pill {
+    width: max-content !important;
+    padding: 8px 14px !important;
+    font-size: 0.78rem !important;
+    white-space: nowrap !important; /* Keeps text links cleanly on a single line */
+  }
+
+  /* Suppresses vertical termination buttons inside horizontal rows track bounds to preserve space */
+  .dash-sidebar-termination-footer {
+    display: none !important;
+  }
+
+  /* ==========================================================================
+     GLOBAL NAVIGATION BAR FIXED MOBILE POSITION REPAIR
+     ========================================================================== */
+  
+  .client-dashboard-global-nav-header {
+    position: relative !important; /* Converts out of absolute tracking to sit inline with single vertical flow */
+    width: 100% !important;
+    height: 56px !important; /* Squashes heights down to fit phone boundaries tightly */
+    padding: 0 20px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02) !important;
+    background-color: #060913 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important; /* Pushes utility badges to the far right corner cleanly */
+  }
+
+  /* FIX 1: Suppresses long breadcrumb text arrays on phone views to bypass text collision barriers completely */
+  .dash-top-header-left {
+    display: none !important;
+  }
+
+  /* Fixes tools alignment racks coordinates */
+  .dash-top-actions-rack {
+    gap: 14px !important;
+  }
+
+  /* Drops dropdown boxes centered below touch points on smaller screens profiles */
+  .dash-top-nav-dropdown-wrapper {
+    width: 260px !important;
+    right: -10px !important;
+  }
+
+  /* ==========================================================================
+     MAIN CANVAS VIEW RE-PADDING ADJUSTMENTS
+     ========================================================================== */
+  
+  .dash-central-workspace-canvas {
+    width: 100% !important;
+  }
+
+  /* FIX 2: Tightens interior view paddings, preventing titles from clipping under the nav bars */
+  .client-dashboard-views-central-hull {
+    padding: 24px 20px 48px 20px !important; /* Removes massive 120px top space allocation */
+    width: 100% !important;
+  }
+
+  /* Scales down main dashboard heading text elements safely to look crisp on compact mobile glass panels */
+  .view-panel-main-headline {
+    font-size: 1.6rem !important;
+    letter-spacing: -0.01em !important;
+    line-height: 1.25 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .view-panel-narrative {
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 28px !important;
+  }
+}
+
+</style>
+
+      <!-- ==========================================================================
+           C. DYNAMIC VIEWS CONTAINER WORKSPACE CHASSIS
+           ========================================================================== -->
+      <main class="client-dashboard-views-central-hull">
+    
+           <div class="client-dashboard-views-central-hull" id="dash-views-mount-point">
+        
+        <!-- View Panel 01: Overview Matrix Content Section (Active Default) -->
+       <!-- VIEW PANEL 01: ENHANCED OVERVIEW TELEMETRY MATRIX COCKPIT -->
+<section class="client-dashboard-view-panel view-panel-active" id="client-overview-view" style="display: block;">
+  
+  <!-- DASHBOARD PANEL HEADER DESCRIPTORS -->
+  <div class="dash-panel-title-block">
+    <h2 class="view-panel-main-headline">Overview Telemetry Matrix</h2>
+    <p class="view-panel-narrative">Real-time telemetry feeds validating system resource deployment states, edge bandwidth quotas, and infrastructure health parameters loop networks.</p>
+  </div>
+
+  <!-- A. HIGH-DENSITY INFRASTRUCTURE METRICS GRID CARDS -->
+  <div class="dash-metrics-cards-grid">
+    
+    <!-- Card Node 01: Compute Load -->
+    <div class="dash-metric-summary-tile tile-glow-cyan">
+      <div class="tile-header-row">
+        <span class="tile-serial-tag">TLM // NODE_A</span>
+        <div class="tile-bead-indicator state-pulse-cyan"></div>
+      </div>
+      <div class="tile-numeric-display">
+        <h3>84.2<span class="tile-unit-mod">%</span></h3>
+        <span class="tile-label-text">Compute Allocation</span>
+      </div>
+      <div class="tile-vector-progress-track">
+        <div class="tile-vector-progress-fill fill-cyan" style="width: 84.2%;"></div>
+        <div class="tile-laser-sweep-beam"></div>
+      </div>
+      <div class="tile-footer-specs">
+        <span>Active Slices: <strong>1,420 Core</strong></span>
+        <span>SLA Health: <strong>Optimal</strong></span>
+      </div>
+    </div>
+
+    <!-- Card Node 02: Network Throughput -->
+    <div class="dash-metric-summary-tile tile-glow-purple">
+      <div class="tile-header-row">
+        <span class="tile-serial-tag">TLM // NODE_B</span>
+        <div class="tile-bead-indicator state-pulse-purple"></div>
+      </div>
+      <div class="tile-numeric-display">
+        <h3>94.8<span class="tile-unit-mod">Gb/s</span></h3>
+        <span class="tile-label-text">Edge Ingestion Rate</span>
+      </div>
+      <div class="tile-vector-progress-track">
+        <div class="tile-vector-progress-fill fill-purple" style="width: 94.8%;"></div>
+        <div class="tile-laser-sweep-beam"></div>
+      </div>
+      <div class="tile-footer-specs">
+        <span>Peak Traversal: <strong>108 Gb/s</strong></span>
+        <span>Gateway Latency: <strong>0.12ms</strong></span>
+      </div>
+    </div>
+
+    <!-- Card Node 03: Security Integrity -->
+    <div class="dash-metric-summary-tile tile-glow-emerald">
+      <div class="tile-header-row">
+        <span class="tile-serial-tag">TLM // NODE_C</span>
+        <div class="tile-bead-indicator state-pulse-emerald"></div>
+      </div>
+      <div class="tile-numeric-display">
+        <h3>100<span class="tile-unit-mod">%</span></h3>
+        <span class="tile-label-text">Perimeter Integrity</span>
+      </div>
+      <div class="tile-vector-progress-track">
+        <div class="tile-vector-progress-fill fill-emerald" style="width: 100%;"></div>
+        <div class="tile-laser-sweep-beam"></div>
+      </div>
+      <div class="tile-footer-specs">
+        <span>Handshakes Valid: <strong>14.2M req/s</strong></span>
+        <span>Threat Slices: <strong>0 Breaches</strong></span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- B. ENTERPRISE TELEMETRY PERFORMANCE CHART NODE MATRIX CONTAINER -->
+  <div class="dash-chart-visualization-wrapper">
+    <div class="chart-wrapper-header-row">
+      <div class="chart-title-lockup">
+        <h4>Network Traffic Volume Load Over Time</h4>
+        <span class="chart-serial-tag">DAT_STREAM // PORT_ETH0</span>
+      </div>
+      <div class="chart-legend-labels">
+        <span class="legend-item"><span class="legend-color-dot fill-cyan"></span> Ingress Proxy</span>
+        <span class="legend-item"><span class="legend-color-dot fill-purple"></span> Egress Sink</span>
+      </div>
+    </div>
+
+    <!-- PURE CSS HARDWARE-ACCELERATED DYNAMIC BLUEPRINT SIMULATION CANVAS CHART GRID -->
+    <div class="dash-mock-chart-grid-canvas">
+      <div class="chart-grid-y-axis-lines"></div>
+      
+      <!-- HIGH-ANIMATION SYNTHESIZED LINE GRAPH TRACK SPLINES -->
+      <div class="chart-line-spline-vector-wrapper">
+        <svg class="chart-svg-spline-canvas" viewBox="0 0 1000 200" preserveAspectRatio="none">
+          <!-- Animated Ingress Line Spline -->
+          <path class="spline-path-track curve-ingress" d="M 0 150 Q 150 40 300 120 T 600 50 T 900 110 L 1000 80" fill="none" stroke="url(#cyan-spline-gradient)" stroke-width="3" />
+          <!-- Animated Egress Line Spline -->
+          <path class="spline-path-track curve-egress" d="M 0 180 Q 200 90 400 140 T 700 80 T 900 140 L 1000 120" fill="none" stroke="url(#purple-spline-gradient)" stroke-width="2.5" stroke-dasharray="4 4" />
+          
+          <!-- Gradient Fill Targets Setup -->
+          <defs>
+            <linearGradient id="cyan-spline-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#2563eb" />
+              <stop offset="100%" stop-color="#22d3ee" />
+            </linearGradient>
+            <linearGradient id="purple-spline-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#6366f1" />
+              <stop offset="100%" stop-color="#a855f7" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+    </div>
+    
+    <div class="chart-x-axis-timeline-readout">
+      <span>14:00</span><span>14:10</span><span>14:20</span><span>14:30</span><span>14:40</span><span>14:50</span><span>15:00 // LIVE</span>
+    </div>
+  </div>
+
+</section>
+<style>
+  /* ==========================================================================
+   ENTERPRISE OVERVIEW Cockpit MODULE (HIGH ANIMATION & TOTAL RESPONSIVE)
+   ========================================================================== */
+
+.dash-panel-title-block { text-align: left !important; margin-bottom: 36px !important; }
+
+/* 3-Column Base Infrastructure Summary Metrics Row Layout Grid */
+.dash-metrics-cards-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important; width: 100% !important; margin-bottom: 40px !important;
+  box-sizing: border-box !important;
+}
+
+.dash-metric-summary-tile {
+  background-color: #0c1222 !important; border: 1px solid rgba(255, 255, 255, 0.02) !important;
+  border-radius: 14px !important; padding: 28px 24px !important; box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  box-sizing: border-box !important; display: flex !important; flex-direction: column !important; gap: 18px !important;
+  position: relative !important; overflow: hidden !important;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease, box-shadow 0.4s ease !important;
+}
+
+.tile-header-row { display: flex !important; justify-content: space-between !important; align-items: center !important; width: 100% !important; }
+.tile-serial-tag { font-family: monospace !important; font-size: 0.72rem !important; font-weight: 700; color: #475569; letter-spacing: 0.04em; }
+
+/* Radar micro status light pulses */
+.tile-bead-indicator { width: 6px; height: 6px; border-radius: 50%; position: relative; }
+.state-pulse-cyan { background-color: #22d3ee; box-shadow: 0 0 6px #22d3ee; }.state-pulse-cyan::after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; border-radius:50%; background-color:#22d3ee; animation: corporatePreloaderRadarPulse 1.8s ease-out infinite; }
+.state-pulse-purple { background-color: #a855f7; box-shadow: 0 0 6px #a855f7; }.state-pulse-purple::after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; border-radius:50%; background-color:#a855f7; animation: corporatePreloaderRadarPulse 1.8s ease-out infinite; }
+.state-pulse-emerald { background-color: #10b981; box-shadow: 0 0 6px #10b981; }.state-pulse-emerald::after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; border-radius:50%; background-color:#10b981; animation: corporatePreloaderRadarPulse 1.8s ease-out infinite; }
+
+.tile-numeric-display { display: flex !important; flex-direction: column !important; text-align: left !important; gap: 4px; }
+.tile-numeric-display h3 { font-size: 2.2rem !important; font-weight: 800; color: #ffffff !important; margin: 0 !important; letter-spacing: -0.01em; }
+.tile-unit-mod { font-size: 1.1rem !important; font-weight: 700; color: #475569; margin-left: 2px; }
+.tile-label-text { font-size: 0.8rem !important; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* Internal progress meter line bars loops tracking channels */
+.tile-vector-progress-track { width: 100% !important; height: 4px !important; background-color: rgba(255,255,255,0.01) !important; border-radius: 10px !important; overflow: hidden !important; position: relative !important; }
+.tile-vector-progress-fill { height: 100% !important; border-radius: 10px !important; }
+.fill-cyan { background: linear-gradient(90deg, #2563eb, #22d3ee) !important; }
+.fill-purple { background: linear-gradient(90deg, #6366f1, #a855f7) !important; }
+.fill-emerald { background: linear-gradient(90deg, #059669, #10b981) !important; }
+
+.tile-laser-sweep-beam {
+  position: absolute; top: 0; width: 40px; height: 100%; z-index: 5;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.35), transparent) !important;
+  animation: srvDashboardTileLaser Sweep 3s linear infinite !important;
+}
+
+.tile-footer-specs { display: flex !important; justify-content: space-between !important; width: 100% !important; border-top: 1px solid rgba(255,255,255,0.02); padding-top: 12px; font-family: monospace !important; font-size: 0.78rem !important; color: #475569 !important; }
+.tile-footer-specs strong { color: #cbd5e1 !important; }
+
+/* Tile Interaction Hovers Physics */
+.dash-metric-summary-tile:hover { transform: translateY(-4px) scale(1.015) !important; box-shadow: 0 20px 45px rgba(0,0,0,0.45) !important; }
+.tile-glow-cyan:hover { border-color: rgba(34, 211, 238, 0.25) !important; }
+.tile-glow-purple:hover { border-color: rgba(168, 85, 247, 0.25) !important; }
+.tile-glow-emerald:hover { border-color: rgba(16, 185, 129, 0.25) !important; }
+
+/* ==========================================================================
+   B. DYNAMIC BLUEPRINT SIMULATION CHART ROW PANEL DESIGN
+   ========================================================================== */
+.dash-chart-visualization-wrapper {
+  background-color: #0c1222 !important; border: 1px solid rgba(255, 255, 255, 0.02) !important;
+  border-radius: 16px !important; padding: 32px !important; box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  width: 100% !important; box-sizing: border-box !important; display: flex !important; flex-direction: column !important; gap: 24px !important;
+}
+
+.chart-wrapper-header-row { display: flex !important; justify-content: space-between !important; align-items: center !important; width: 100% !important; flex-wrap: wrap !important; gap: 16px; }
+.chart-title-lockup { display: flex !important; flex-direction: column !important; text-align: left !important; gap: 4px; }
+.chart-title-lockup h4 { font-size: 1.05rem !important; font-weight: 700; color: #ffffff !important; margin: 0 !important; text-transform: uppercase; letter-spacing: -0.01em; }
+.chart-serial-tag { font-family: monospace !important; font-size: 0.72rem !important; font-weight: 700; color: #475569; letter-spacing: 0.04em; }
+
+.chart-legend-labels { display: flex !important; align-items: center !important; gap: 16px !important; }
+.legend-item { font-size: 0.82rem !important; font-weight: 700; color: #64748b !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; }
+.legend-color-dot { width: 5px; height: 5px; border-radius: 50%; display: inline-block; }
+
+/* The blueprint simulation tracking lines grid coordinates deck */
+.dash-mock-chart-grid-canvas {
+  width: 100% !important; height: 200px !important; background-color: #060913 !important;
+  border: 1px solid rgba(255,255,255,0.01) !important; border-radius: 8px !important; position: relative !important; overflow: hidden !important;
+}
+.chart-grid-y-axis-lines {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.005) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.005) 1px, transparent 1px) !important;
+}
+
+.chart-line-spline-vector-wrapper { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; }
+.chart-svg-spline-canvas { width: 100% !important; height: 100% !important; }
+
+/* Dynamic vector curves running waves morph loop timelines */
+.spline-path-track {
+  animation: srvDashboardChartWaveMove 12s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate !important;
+  transform-origin: center center;
+}
+.curve-egress { animation-duration: 9s !important; animation-delay: -3s !important; }
+
+.chart-x-axis-timeline-readout { display: flex !important; justify-content: space-between !important; width: 100% !important; font-family: monospace !important; font-size: 0.78rem !important; color: #334155 !important; font-weight: 700; }
+
+/* ==========================================================================
+   HARDWARE-ACCELERATED DASHBOARD LAYER ANIMATIONS KEYFRAMES
+   ========================================================================== */
+@keyframes srvDashboardTileLaserSweep { 0% { left: -20%; } 100% { left: 120%; } }
+@keyframes srvDashboardChartWaveMove {
+  0% { transform: scaleY(0.95) scaleX(1) rotate(0deg); opacity: 0.85; }
+  50% { transform: scaleY(1.08) scaleX(0.98) translateY(-4px); opacity: 1; }
+  100% { transform: scaleY(0.92) scaleX(1.01) translateY(2px); opacity: 0.75; }
+}
+
+/* ==========================================================================
+   MULTI-DEVICE RESPONSIVE BREAKPOINT GRID SWITCH OVERRIDES (TOTAL MOBILE COVERS)
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .dash-metrics-cards-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; }
+}
+
+@media (max-width: 768px) {
+  .dash-metrics-cards-grid { grid-template-columns: 1fr !important; gap: 16px !important; } /* Stacks metrics cards vertically on smartphones touch paths */
+  .dash-chart-visualization-wrapper { padding: 20px 16px !important; gap: 18px !important; }
+  .chart-wrapper-header-row { flex-direction: column !important; align-items: flex-start !important; }
+  .chart-title-lockup h4 { font-size: 0.95rem !important; }
+  .dash-mock-chart-grid-canvas { height: 160px !important; }
+}
+
+</style>
+
+        <!-- View Panel 02: Compute Instances Section (Hidden Default) -->
+       <!-- VIEW PANEL 02: ENHANCED VIRTUAL COMPUTE CLUSTERS LEDGER -->
+<section class="client-dashboard-view-panel" id="client-allocations-view" style="display: none;">
+  
+  <!-- DASHBOARD PANEL HEADER DESCRIPTORS -->
+  <div class="dash-panel-title-block">
+    <h2 class="view-panel-main-headline">Virtual Compute Clusters</h2>
+    <p class="view-panel-narrative">Provisioning status parameters tracking high-density virtual instances scaled across multi-region core multi-cloud fabrics corridors.</p>
+  </div>
+
+  <!-- A. QUICK PLATFORM QUOTA CONSUMPTION STRIP -->
+  <div class="dash-quota-summary-strip">
+    <div class="quota-progress-capsule">
+      <div class="quota-label-row"><span>Allocated vCPUs:</span> <strong>174 / 256 Cores</strong></div>
+      <div class="quota-bar-track"><div class="quota-bar-fill fill-cyan" style="width: 68%;"></div></div>
+    </div>
+    <div class="quota-progress-capsule">
+      <div class="quota-label-row"><span>Memory Lake Sync:</span> <strong>688 GB / 1 TB</strong></div>
+      <div class="quota-bar-track"><div class="quota-bar-fill fill-purple" style="width: 68.8%;"></div></div>
+    </div>
+    <div class="quota-progress-capsule">
+      <div class="quota-label-row"><span>NVMe Array Block:</span> <strong>12.4 TB / 20 TB</strong></div>
+      <div class="quota-bar-track"><div class="quota-bar-fill fill-emerald" style="width: 62%;"></div></div>
+    </div>
+  </div>
+
+  <!-- B. ENTERPRISE BARE-METAL INSTANCES LEDGER TABLE -->
+  <div class="dash-table-visualization-wrapper">
+    <div class="table-wrapper-header-row">
+      <div class="table-title-lockup">
+        <h4>Active Virtual Core Allocations</h4>
+        <span class="table-serial-tag">REGISTRY // COMPUTE_POOL_01</span>
+      </div>
+      <div class="table-action-controls">
+        <button class="table-action-pill-btn" onclick="window.location.reload();">
+          <svg class="pill-btn-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121 12h-1.5" /></svg> Refresh Ledger
+        </button>
+      </div>
+    </div>
+
+    <!-- HIGH-DENSITY HIGH-CONTRAST SYSTEM MATRIX RECORDS DATA TABLE -->
+    <div class="dash-responsive-table-scroller">
+      <table class="dash-matrix-data-table">
+        <thead>
+          <tr>
+            <th>INSTANCE RUNTIME CODE</th>
+            <th>REGION ORIGIN</th>
+            <th>HARDWARE CONFIG</th>
+            <th>TRAFFIC BANDWIDTH</th>
+            <th>SYNC STATE</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <!-- Instance Record 01 -->
+          <tr>
+            <td class="td-primary-token">
+              <span class="instance-code-link">INSTANCE_VM // 0A1</span>
+              <span class="instance-subtext-token">ID: 8fa2-411d-90c1</span>
+            </td>
+            <td><span class="region-geo-tag">US-EAST (N. Virginia)</span></td>
+            <td><div class="hardware-spec-node"><span>64 vCPU</span> &bull; <span>256 GB RAM</span></div></td>
+            <td><strong>42.8 Gb/s</strong></td>
+            <td>
+              <span class="table-pulse-status-badge badge-online">
+                <span class="badge-radar-dot pulse-cyan"></span> Operational
+              </span>
+            </td>
+          </tr>
+
+          <!-- Instance Record 02 -->
+          <tr>
+            <td class="td-primary-token">
+              <span class="instance-code-link">INSTANCE_VM // 0A2</span>
+              <span class="instance-subtext-token">ID: 3bc4-768f-10b9</span>
+            </td>
+            <td><span class="region-geo-tag">EU-WEST (Frankfurt)</span></td>
+            <td><div class="hardware-spec-node"><span>32 vCPU</span> &bull; <span>128 GB RAM</span></div></td>
+            <td><strong>28.4 Gb/s</strong></td>
+            <td>
+              <span class="table-pulse-status-badge badge-online">
+                <span class="badge-radar-dot pulse-cyan"></span> Operational
+              </span>
+            </td>
+          </tr>
+
+          <!-- Instance Record 03 -->
+          <tr>
+            <td class="td-primary-token">
+              <span class="instance-code-link">INSTANCE_VM // 0B4</span>
+              <span class="instance-subtext-token">ID: 9e42-124c-0c12</span>
+            </td>
+            <td><span class="region-geo-tag">AP-SOUTH (Mumbai)</span></td>
+            <td><div class="hardware-spec-node"><span>78 vCPU</span> &bull; <span>304 GB RAM</span></div></td>
+            <td><strong>11.2 Gb/s</strong></td>
+            <td>
+              <span class="table-pulse-status-badge badge-warning">
+                <span class="badge-radar-dot pulse-amber"></span> Capacity Strain
+              </span>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</section>
+<style>
+  /* ==========================================================================
+   ENTERPRISE COMPUTE ALLOCATIONS MATRIX MODULE (TOTAL RESPONSIVE COVERS)
+   ========================================================================== */
+
+/* --- A. PLATFORM RESOURCE QUOTA CONSUMPTION STRIP --- */
+.dash-quota-summary-strip {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important; width: 100% !important; margin-bottom: 40px !important;
+  box-sizing: border-box !important;
+}
+
+.quota-progress-capsule {
+  background-color: #0c1222 !important; border: 1px solid rgba(255, 255, 255, 0.02) !important;
+  border-radius: 12px !important; padding: 24px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  display: flex !important; flex-direction: column !important; gap: 12px !important; box-sizing: border-box !important;
+}
+
+.quota-label-row { display: flex !important; justify-content: space-between !important; font-size: 0.82rem !important; color: #64748b !important; font-weight: 700; }
+.quota-label-row strong { color: #ffffff !important; }
+
+.quota-bar-track { width: 100% !important; height: 5px !important; background-color: rgba(255,255,255,0.015) !important; border-radius: 10px !important; overflow: hidden !important; }
+.quota-bar-fill { height: 100% !important; border-radius: 10px !important; }
+
+/* --- B. HIGH-DENSITY HIGH-CONTRAST DATA LEDGER TABLE GRAPHICS --- */
+.dash-table-visualization-wrapper {
+  background-color: #0c1222 !important; border: 1px solid rgba(255, 255, 255, 0.02) !important;
+  border-radius: 16px !important; padding: 32px !important; box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  width: 100% !important; box-sizing: border-box !important; display: flex !important; flex-direction: column !important; gap: 28px !important;
+}
+
+.table-wrapper-header-row { display: flex !important; justify-content: space-between !important; align-items: center !important; width: 100% !important; flex-wrap: wrap !important; gap: 16px; }
+.table-title-lockup { display: flex !important; flex-direction: column !important; text-align: left !important; gap: 4px; }
+.table-title-lockup h4 { font-size: 1.05rem !important; font-weight: 700; color: #ffffff !important; margin: 0 !important; text-transform: uppercase; letter-spacing: -0.01em; }
+.table-serial-tag { font-family: monospace !important; font-size: 0.72rem !important; font-weight: 700; color: #475569; letter-spacing: 0.04em; }
+
+.table-action-pill-btn {
+  display: inline-flex !important; align-items: center !important; gap: 8px !important;
+  background-color: rgba(255, 255, 255, 0.005) !important; border: 1px solid rgba(255, 255, 255, 0.04) !important;
+  padding: 8px 16px !important; border-radius: 6px !important; color: #cbd5e1 !important;
+  font-size: 0.8rem !important; font-weight: 700 !important; cursor: pointer !important; text-transform: uppercase; letter-spacing: 0.02em;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+.table-action-pill-btn:hover { border-color: rgba(34, 211, 238, 0.25) !important; color: #22d3ee !important; background-color: rgba(6, 182, 212, 0.02) !important; }
+.pill-btn-svg { width: 12px; height: 12px; color: currentcolor; }
+
+.dash-responsive-table-scroller { width: 100% !important; overflow-x: auto !important; scrollbar-width: thin !important; }
+
+/* The Core Table Cell Foundations Matrix */
+.dash-matrix-data-table {
+  width: 100% !important; border-collapse: collapse !important; border-spacing: 0 !important; box-sizing: border-box !important; text-align: left !important;
+}
+.dash-matrix-data-table th {
+  background-color: #060913 !important; border-bottom: 2px solid rgba(255,255,255,0.02) !important;
+  padding: 16px 20px !important; font-family: monospace !important; font-size: 0.75rem !important; font-weight: 700 !important; color: #475569 !important; letter-spacing: 0.05em; text-transform: uppercase;
+}
+.dash-matrix-data-table td {
+  padding: 20px !important; border-bottom: 1px solid rgba(255,255,255,0.015) !important; font-size: 0.88rem !important; color: #94a3b8 !important; box-sizing: border-box !important;
+  transition: background-color 0.25s ease !important;
+}
+.dash-matrix-data-table tr:hover td { background-color: rgba(255,255,255,0.005) !important; }
+
+/* Row Text Formatting Details */
+.td-primary-token { display: flex !important; flex-direction: column !important; gap: 4px !important; align-items: flex-start !important; }
+.instance-code-link { font-family: monospace !important; font-size: 0.88rem !important; font-weight: 700; color: #ffffff !important; }
+.instance-subtext-token { font-family: monospace !important; font-size: 0.68rem !important; font-weight: 600; color: #334155; }
+
+.region-geo-tag { font-size: 0.85rem !important; font-weight: 700; color: #cbd5e1 !important; }
+.hardware-spec-node { font-size: 0.82rem !important; color: #475569 !important; font-weight: 600; }
+.hardware-spec-node span { color: #64748b !important; }
+
+/* Semantic Status Badges inside cell columns */
+.table-pulse-status-badge { display: inline-flex !important; align-items: center !important; gap: 8px !important; font-size: 0.72rem !important; font-weight: 700 !important; padding: 4px 10px !important; border-radius: 4px !important; text-transform: uppercase; letter-spacing: 0.02em; }
+.badge-online { background-color: rgba(16, 185, 129, 0.04) !important; border: 1px solid rgba(16, 185, 129, 0.12) !important; color: #10b981 !important; }
+.badge-warning { background-color: rgba(245, 158, 11, 0.04) !important; border: 1px solid rgba(245, 158, 11, 0.12) !important; color: #f59e0b !important; }
+
+.badge-radar-dot { width: 5px; height: 5px; border-radius: 50%; position: relative; }
+.pulse-cyan { background-color: #22d3ee; box-shadow: 0 0 6px #22d3ee; }.pulse-cyan::after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; border-radius:50%; background-color:#22d3ee; animation: corporatePreloaderRadarPulse 1.8s ease-out infinite; }
+.pulse-amber { background-color: #f59e0b; box-shadow: 0 0 6px #f59e0b; }.pulse-amber::after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; border-radius:50%; background-color:#f59e0b; animation: corporatePreloaderRadarPulse 1.8s ease-out infinite; }
+
+/* ==========================================================================
+   C. DOWNSCALE ADAPTIVE MOBILE OVERRIDES ENGINE (ZERO LAYOUT OVERFLOWS)
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .dash-quota-summary-strip { grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; }
+}
+
+@media (max-width: 768px) {
+  .dash-quota-summary-strip { grid-template-columns: 1fr !important; gap: 14px !important; margin-bottom: 28px !important; }
+  .quota-progress-capsule { padding: 18px 20px !important; gap: 8px !important; border-radius: 8px !important; }
+  .dash-table-visualization-wrapper { padding: 20px 16px !important; gap: 20px !important; border-radius: 12px !important; }
+  
+  /* FLIP DIRECTION OVERRIDE: Deconstructs the classic grid data table layout into full-width vertical block cards for smartphone screens */
+  .dash-matrix-data-table, 
+  .dash-matrix-data-table thead, 
+  .dash-matrix-data-table tbody, 
+  .dash-matrix-data-table tr, 
+  .dash-matrix-data-table th, 
+  .dash-matrix-data-table td {
+    display: block !important; width: 100% !important; box-sizing: border-box !important;
+  }
+  
+  .dash-matrix-data-table thead { display: none !important; } /* Strips header row completely to prevent tracking mismatch bugs */
+  .dash-matrix-data-table tr { background-color: #060913 !important; border: 1px solid rgba(255,255,255,0.015) !important; border-radius: 8px !important; padding: 16px !important; margin-bottom: 16px !important; }
+  .dash-matrix-data-table tr:hover td { background-color: transparent !important; }
+  
+  .dash-matrix-data-table td {
+    padding: 8px 0 !important; border-bottom: 1px solid rgba(255,255,255,0.01) !important; text-align: right !important; display: flex !important; justify-content: space-between !important; align-items: center !important;
+  }
+  .dash-matrix-data-table td::before { font-family: monospace !important; font-size: 0.7rem !important; font-weight: 700 !important; color: #475569 !important; text-transform: uppercase !important; letter-spacing: 0.04em !important; }
+  
+  /* Automatically injects dynamic row-title attributes values across smartphone screen nodes layout borders */
+  .dash-matrix-data-table td:nth-of-type(1)::before { content: "INSTANCE:"; }
+  .dash-matrix-data-table td:nth-of-type(2)::before { content: "LOCATION:"; }
+  .dash-matrix-data-table td:nth-of-type(3)::before { content: "HARDWARE:"; }
+  .dash-matrix-data-table td:nth-of-type(4)::before { content: "BANDWIDTH:"; }
+  .dash-matrix-data-table td:nth-of-type(5)::before { content: "STATUS:"; }
+  
+  .dash-matrix-data-table td:last-child { border-bottom: none !important; padding-bottom: 0 !important; }
+  .td-primary-token { align-items: flex-end !important; }
+}
+
+</style>
+
+        <!-- View Panel 03: Perimeter Security Section (Hidden Default) -->
+        <!-- ZERO-TRUST SECURE CORRIDOR TELEMETRY HUB CHASSIS -->
+<section class="client-dashboard-view-panel" id="client-security-view" style="display: none;">
+  
+  <div class="security-view-header-row">
+    <div class="security-title-lockup">
+      <h2 class="view-panel-main-headline">Zero-Trust Perimeter Shield</h2>
+      <p class="view-panel-narrative">Real-time status tracking profiles mapping active firewall handshake authorization paths, micro-segmentation isolations, and real-time perimeter traversal blocks.</p>
+    </div>
+    
+    <!-- Dynamic Cryptographic Registry Counter Status -->
+    <div class="security-live-status-pill">
+      <span class="status-pulse-core core-emerald"></span>
+      <span class="status-pill-txt">SHIELD: ACTIVE</span>
+    </div>
+  </div>
+
+  <!-- ASYMMETRIC TWO-COLUMN TELEMETRY GRID HUB -->
+  <div class="security-asymmetric-split-matrix">
+    
+    <!-- LEFT SIDE RADIAL COLUMN: HANDSHAKE INTERCEPTOR FIREWALL LEDGER -->
+    <div class="security-ledger-left-wing">
+      <div class="security-card-glass-hull">
+        <div class="security-card-header-track">
+          <h4>Active Rules Matrix</h4>
+          <span class="security-card-serial">REGISTRY_PATH // SEC_0A</span>
+        </div>
+
+        <!-- High-Density Telemetry Status Checklist Grid Loop Rows -->
+        <div class="security-checklist-flow-stack">
+          
+          <!-- Firewall Node Rule 01 -->
+          <div class="security-checklist-item-row item-state-active">
+            <div class="checklist-item-left">
+              <div class="item-checkbox-bead-wrapper">
+                <div class="item-checkbox-inner-core"></div>
+              </div>
+              <div class="item-meta-details">
+                <span class="item-meta-title">Edge Handshake Isolation</span>
+                <span class="item-meta-subtext">Isolating ingress traffic channels dynamically via token verification rules.</span>
+              </div>
+            </div>
+            <span class="item-status-label tag-online">Enforced</span>
+          </div>
+
+          <!-- Firewall Node Rule 02 -->
+          <div class="security-checklist-item-row item-state-active">
+            <div class="checklist-item-left">
+              <div class="item-checkbox-bead-wrapper">
+                <div class="item-checkbox-inner-core"></div>
+              </div>
+              <div class="item-meta-details">
+                <span class="item-meta-title">TLS 1.3 Boundary Decryption</span>
+                <span class="item-meta-subtext">Decrypting and payload-scanning edge socket data streams at line rate.</span>
+              </div>
+            </div>
+            <span class="item-status-label tag-online">Enforced</span>
+          </div>
+
+          <!-- Firewall Node Rule 03 -->
+          <div class="security-checklist-item-row item-state-active">
+            <div class="checklist-item-left">
+              <div class="item-checkbox-bead-wrapper">
+                <div class="item-checkbox-inner-core"></div>
+              </div>
+              <div class="item-meta-details">
+                <span class="item-meta-title">Asymmetric Brute Partitioning</span>
+                <span class="item-meta-subtext">Instantly blackholing source networks displaying repeated authentication failures.</span>
+              </div>
+            </div>
+            <span class="item-status-label tag-online">Enforced</span>
+          </div>
+
+          <!-- Firewall Node Rule 04 -->
+          <div class="security-checklist-item-row item-state-warning">
+            <div class="checklist-item-left">
+              <div class="item-checkbox-bead-wrapper">
+                <div class="item-checkbox-inner-core"></div>
+              </div>
+              <div class="item-meta-details">
+                <span class="item-meta-title">Decentralized Shard Mirror Sync</span>
+                <span class="item-meta-subtext">Cross-checking cluster transaction states for split-brain database anomalies.</span>
+              </div>
+            </div>
+            <span class="item-status-label tag-warning">Auditing</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE RADIAL COLUMN: THREAT TELEMETRY METRIC MONITORING CARDS -->
+    <div class="security-metrics-right-wing">
+      
+      <!-- Telemetry Metric Card 01 -->
+      <div class="security-metric-mini-tile hover-lift-node" style="--sec-index: 1;">
+        <span class="tile-serial-tag">METRIC // CH_01</span>
+        <h5>Perimeter Traversal Delay</h5>
+        <div class="mini-tile-value-row">
+          <h2>0.04</h2>
+          <span class="mini-tile-unit">ms</span>
+        </div>
+        <!-- Progress Vector Fill Bar Track -->
+        <div class="mini-tile-progress-track">
+          <div class="mini-tile-progress-fill fill-cyan" style="width: 12%;"></div>
+        </div>
+      </div>
+
+      <!-- Telemetry Metric Card 02 -->
+      <div class="security-metric-mini-tile hover-lift-node" style="--sec-index: 2;">
+        <span class="tile-serial-tag">METRIC // CH_02</span>
+        <h5>Trapped Intrusion Blocks</h5>
+        <div class="mini-tile-value-row">
+          <h2>1,424</h2>
+          <span class="mini-tile-unit">Nodes / 24h</span>
+        </div>
+        <div class="mini-tile-progress-track">
+          <div class="mini-tile-progress-fill fill-purple" style="width: 68%;"></div>
+        </div>
+      </div>
+
+      <!-- Telemetry Metric Card 03 -->
+      <div class="security-metric-mini-tile hover-lift-node" style="--sec-index: 3;">
+        <span class="tile-serial-tag">METRIC // CH_03</span>
+        <h5>Ledger Validation State</h5>
+        <div class="mini-tile-value-row">
+          <h2>100</h2>
+          <span class="mini-tile-unit">% Integrity</span>
+        </div>
+        <div class="mini-tile-progress-track">
+          <div class="mini-tile-progress-fill fill-emerald" style="width: 100%;"></div>
+        </div>
+      </div>
+
+      <!-- Telemetry Metric Card 04 -->
+      <div class="security-metric-mini-tile hover-lift-node" style="--sec-index: 4;">
+        <span class="tile-serial-tag">METRIC // CH_04</span>
+        <h5>Automated Shard Quarantine</h5>
+        <div class="mini-tile-value-row">
+          <h2>0</h2>
+          <span class="mini-tile-unit">Active Threats</span>
+        </div>
+        <div class="mini-tile-progress-track">
+          <div class="mini-tile-progress-fill fill-cyan" style="width: 0%;"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<style>
+  /* ==========================================================================
+   PRODUCTION-GRADE ZERO-TRUST FIREWALL MANAGEMENT CONSOLE DESIGN SYSTEM
+   ========================================================================== */
+
+#client-security-view {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.security-view-header-row {
+  display: flex !important; justify-content: space-between !important; align-items: flex-start !important;
+  width: 100% !important; margin-bottom: 40px !important; gap: 24px !important;
+}
+.security-title-lockup { display: flex !important; flex-direction: column !important; gap: 8px !important; text-align: left !important; }
+.security-title-lockup h2 { font-size: 1.8rem !important; font-weight: 800 !important; color: #ffffff !important; text-transform: uppercase !important; margin: 0 !important; letter-spacing: -0.01s; }
+.security-title-lockup p { font-size: 0.9rem !important; color: #64748b !important; margin: 0 !important; line-height: 1.5 !important; max-width: 740px !important; }
+
+.security-live-status-pill {
+  display: inline-flex !important; align-items: center !important; gap: 8px !important;
+  background-color: rgba(16, 185, 129, 0.05) !important; border: 1px solid rgba(16, 185, 129, 0.2) !important;
+  padding: 6px 14px !important; border-radius: 30px !important; flex-shrink: 0 !important;
+}
+.status-pulse-core { width: 5px; height: 5px; border-radius: 50%; display: inline-block; }
+.core-emerald { background-color: #10b981; box-shadow: 0 0 6px #10b981; animation: corporatePreloaderRadarPulse 1.8s ease-out infinite; }
+.status-pill-txt { font-family: monospace !important; font-size: 0.72rem !important; font-weight: 700 !important; color: #ffffff !important; letter-spacing: 0.05em !important; }
+
+/* --- THE ASYMMETRIC TWO-COLUMN SPLIT MASTER MATRIX WRAPPER --- */
+.security-asymmetric-split-matrix {
+  display: grid !important;
+  grid-template-columns: 1.15fr 0.85fr !important; /* 58% Left Checklist Box / 42% Right Monitor Cards Allocation */
+  gap: 32px !important; width: 100% !important; align-items: start !important;
+}
+
+/* --- LEFT SIDE RADIUS PANEL: CHECKLIST FIREWALL LEDGER BOX --- */
+.security-card-glass-hull {
+  background: rgba(14, 21, 38, 0.35) !important;
+  backdrop-filter: blur(12px) saturate(1.1) !important; -webkit-backdrop-filter: blur(12px) saturate(1.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.02) !important; border-radius: 16px !important;
+  padding: 36px !important; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); box-sizing: border-box !important;
+  display: flex !important; flex-direction: column !important; gap: 28px !important;
+}
+.security-card-header-track { display: flex !important; justify-content: space-between !important; align-items: center !important; width: 100% !important; border-bottom: 1px solid rgba(255,255,255,0.02); padding-bottom: 16px; }
+.security-card-header-track h4 { font-size: 1.1rem !important; font-weight: 700; color: #ffffff !important; margin: 0 !important; text-transform: uppercase; }
+.security-card-serial { font-family: monospace !important; font-size: 0.7rem !important; font-weight: 700; color: #475569; letter-spacing: 0.04em; }
+
+.security-checklist-flow-stack { display: flex !important; flex-direction: column !important; gap: 16px !important; width: 100% !important; }
+
+.security-checklist-item-row {
+  display: flex !important; justify-content: space-between !important; align-items: center !important;
+  background-color: rgba(6, 9, 22, 0.4) !important; border: 1px solid rgba(255, 255, 255, 0.01) !important;
+  padding: 16px 20px !important; border-radius: 10px !important; box-sizing: border-box !important;
+  transition: border-color 0.3s ease, background-color 0.3s ease !important;
+}
+.checklist-item-left { display: flex !important; align-items: center !important; gap: 16px !important; text-align: left !important; }
+
+/* Premium Checkbox Component Node Indicators */
+.item-checkbox-bead-wrapper {
+  width: 16px !important; height: 16px !important; border-radius: 4px !important;
+  display: inline-flex !important; align-items: center !important; justify-content: center !important; flex-shrink: 0 !important;
+  transition: all 0.3s ease !important;
+}
+.item-checkbox-inner-core { width: 6px; height: 6px; border-radius: 1px; transition: transform 0.3s ease !important; }
+
+.item-meta-details { display: flex !important; flex-direction: column !important; gap: 4px !important; }
+.item-meta-title { font-size: 0.92rem !important; font-weight: 700; color: #ffffff !important; }
+.item-meta-subtext { font-size: 0.78rem !important; color: #475569 !important; line-height: 1.4 !important; max-width: 440px; }
+
+.item-status-label { font-family: monospace !important; font-size: 0.65rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 0.04em !important; padding: 3px 8px !important; border-radius: 4px !important; }
+
+/* Semantic Status Variants Mapping Conditions */
+.item-state-active .item-checkbox-bead-wrapper { border: 1px solid rgba(34, 211, 238, 0.3) !important; background-color: rgba(34, 211, 238, 0.02) !important; }
+.item-state-active .item-checkbox-inner-core { background-color: #22d3ee !important; box-shadow: 0 0 6px #22d3ee; }
+.tag-online { background-color: rgba(34, 211, 238, 0.05) !important; border: 1px solid rgba(34, 211, 238, 0.15) !important; color: #22d3ee !important; }
+
+.item-state-warning .item-checkbox-bead-wrapper { border: 1px solid rgba(168, 85, 247, 0.3) !important; background-color: rgba(168, 85, 247, 0.02) !important; }
+.item-state-warning .item-checkbox-inner-core { background-color: #a855f7; box-shadow: 0 0 6px #a855f7; }
+.tag-warning { background-color: rgba(168, 85, 247, 0.05) !important; border: 1px solid rgba(168, 85, 247, 0.15) !important; color: #c084fc !important; }
+
+/* Left Row Elements Cursor Hover Highlights Trigger Tracks */
+.security-checklist-item-row:hover {
+  border-color: rgba(34, 211, 238, 0.15) !important; background-color: rgba(14, 22, 38, 0.5) !important;
+}
+
+/* --- RIGHT SIDE RADIUS PANEL: PERFORMANCE MONITOR CARD TILES --- */
+.security-metrics-right-wing {
+  display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; width: 100% !important;
+}
+.security-metric-mini-tile {
+  background-color: #0c1222 !important; border: 1px solid rgba(255, 255, 255, 0.02) !important; border-radius: 12px !important;
+  padding: 24px 20px !important; box-shadow: 0 10px 30px rgba(0,0,0,0.3); box-sizing: border-box !important;
+  display: flex !important; flex-direction: column !important; gap: 14px !important; text-align: left !important;
+}
+.tile-serial-tag { font-family: monospace !important; font-size: 0.68rem !important; font-weight: 700; color: #334155; letter-spacing: 0.04em; display: block; }
+.security-metric-mini-tile h5 { font-size: 0.9rem !important; font-weight: 700; color: #ffffff !important; margin: 0 !important; text-transform: uppercase; letter-spacing: -0.01em; }
+
+.mini-tile-value-row { display: flex !important; align-items: baseline !important; gap: 4px !important; width: 100% !important; }
+.mini-tile-value-row h2 { font-size: 1.85rem !important; font-weight: 800; color: #ffffff !important; margin: 0 !important; letter-spacing: -0.01em; transition: color 0.25s ease; }
+.mini-tile-unit { font-family: monospace !important; font-size: 0.75rem !important; font-weight: 700; color: #475569; }
+
+.mini-tile-progress-track { width: 100% !important; height: 3px !important; background-color: rgba(255,255,255,0.01) !important; border-radius: 4px !important; overflow: hidden !important; }
+.mini-tile-progress-fill { height: 100% !important; border-radius: 4px !important; }
+.fill-cyan { background: linear-gradient(90deg, #2563eb, #22d3ee) !important; }
+.fill-purple { background: linear-gradient(90deg, #6366f1, #a855f7) !important; }
+.fill-emerald { background: linear-gradient(90deg, #059669, #10b981) !important; }
+
+/* --- RIGHT SIDE MONITOR CARD TILES MICRO-INTERACTIONS HOVERS --- */
+.security-metric-mini-tile {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease, box-shadow 0.4s ease !important;
+}
+.security-metric-mini-tile:hover {
+  transform: translateY(-5px) scale(1.02) !important; border-color: rgba(34, 211, 238, 0.2) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4) !important;
+}
+.security-metric-mini-tile:hover h2 { color: #22d3ee !important; text-shadow: 0 0 10px rgba(34, 211, 238, 0.25); }
+
+
+/* ==========================================================================
+   MULTI-DEVICE RESPONSIVE BREAKPOINT SWITCH OVERRIDES (TOTAL MOBILE COVERS)
+   ========================================================================== */
+@media (max-width: 1200px) {
+  /* FLIP ROWS SIDE-SPLIT: Collapses side split down to clean single column list stack rows on medium tablets screens */
+  .security-asymmetric-split-matrix {
+    grid-template-columns: 1fr !important; gap: 28px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .security-view-header-row {
+    flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; margin-bottom: 28px !important;
+  }
+  .security-title-lockup h2 { font-size: 1.5rem !important; }
+  .security-card-glass-hull { padding: 24px 20px !important; border-radius: 12px !important; }
+  .security-card-header-track h4 { font-size: 1rem !important; }
+  
+  .item-meta-subtext { display: none !important; } /* Strips lengthy text descriptions out on small touch fields to maximize screen real estate balance data density */
+  .security-checklist-item-row { padding: 14px 16px !important; }
+  
+  .security-metrics-right-wing {
+    grid-template-columns: 1fr !important; /* Forces right mini cards loop down to single column on phones */
+    gap: 14px !important;
+  }
+  .security-metric-mini-tile { padding: 20px !important; border-radius: 10px !important; }
+}
+
+</style>
+
+        <!-- View Panel 04: Ledger Accounts Billing Section (Hidden Default) -->
+       <!-- SYSTEM ENTERPRISE FINANCIAL LEDGER & COST CONFIGURATOR MATRIX -->
+<section class="client-dashboard-view-panel" id="client-billing-view" style="display: none;">
+  
+  <!-- VIEW MODULE HEADER DESCRIPTORS -->
+  <div class="billing-module-header">
+    <h2 class="view-panel-main-headline">Ecosystem Ledger & Billing</h2>
+    <p class="view-panel-narrative">Real-time resource billing queries validating localized compute instance allocations, edge bandwidth data pools, and micro-metered transaction statements.</p>
+  </div>
+
+  <!-- 3-COLUMN HIGH-DENSITY LEDGER FINANCIAL SPECS STRIP -->
+  <div class="billing-metrics-row-rack">
+    
+    <!-- Cost Metric Tile 01 -->
+    <div class="billing-stat-card">
+      <span class="stat-card-serial">METRIC // MT_01</span>
+      <h4>Current Month Accrual</h4>
+      <div class="stat-amount-lockup">
+        <span class="stat-currency-token">$</span>
+        <h3 class="stat-numeric-value">1,482.60</h3>
+      </div>
+      <p class="stat-card-footer-log"><span class="footer-trend-dot state-cyan"></span> Micro-metered query rate</p>
+    </div>
+
+    <!-- Cost Metric Tile 02 -->
+    <div class="billing-stat-card">
+      <span class="stat-card-serial">METRIC // MT_02</span>
+      <h4>Forecasted Allocation</h4>
+      <div class="stat-amount-lockup">
+        <span class="stat-currency-token">$</span>
+        <h3 class="stat-numeric-value">1,850.00</h3>
+      </div>
+      <p class="stat-card-footer-log"><span class="footer-trend-dot state-purple"></span> Predictive variance limits</p>
+    </div>
+
+    <!-- Cost Metric Tile 03 -->
+    <div class="billing-stat-card">
+      <span class="stat-card-serial">METRIC // MT_03</span>
+      <h4>Remaining Compute Quota</h4>
+      <div class="stat-amount-lockup">
+        <span class="stat-currency-token">$</span>
+        <h3 class="stat-numeric-value">2,149.40</h3>
+      </div>
+      <p class="stat-card-footer-log"><span class="footer-trend-dot state-emerald"></span> Credit corridor active</p>
+    </div>
+
+  </div>
+
+  <!-- ASYMMETRIC METRIC WRAPPER ROW CHASSIS -->
+  <div class="billing-asymmetric-wrapper-row">
+    
+    <!-- LEFT EXPANDED BLOCK: HIGH-DENSITY TRANSACTION LEDGER TABLE -->
+    <div class="billing-ledger-table-hull">
+      <div class="table-hull-header-row">
+        <h4>Recent Transaction Ledger</h4>
+        <span class="table-meta-counter">Logs // 003 Active</span>
+      </div>
+      
+      <div class="table-scroll-containment-box">
+        <table class="billing-native-datagrid">
+          <thead>
+            <tr>
+              <th>Invoice ID</th>
+              <th>Billing Era</th>
+              <th>Compute Charge</th>
+              <th>System Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-mono-token">INV-2026-004</td>
+              <td>May 2026</td>
+              <td class="td-weight-bold">$1,482.60</td>
+              <td><span class="grid-status-pill pill-online">Processed</span></td>
+            </tr>
+            <tr>
+              <td class="td-mono-token">INV-2026-003</td>
+              <td>Apr 2026</td>
+              <td class="td-weight-bold">$1,610.45</td>
+              <td><span class="grid-status-pill pill-online">Processed</span></td>
+            </tr>
+            <tr>
+              <td class="td-mono-token">INV-2026-002</td>
+              <td>Mar 2026</td>
+              <td class="td-weight-bold">$1,294.10</td>
+              <td><span class="grid-status-pill pill-online">Processed</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- RIGHT COMPRESSED BLOCK: PROGRESS VECTOR RESOURCE USAGE -->
+    <div class="billing-resource-usage-panel">
+      <div class="usage-panel-header">
+        <h4>Bandwidth Allocation Quota</h4>
+      </div>
+      
+      <div class="usage-progress-vector-casing">
+        <div class="usage-label-row">
+          <span>Data Transferred: <strong>4.2 TB</strong></span>
+          <span>Quota Limit: <strong>5.0 TB</strong></span>
+        </div>
+        <div class="usage-bar-track-backbone">
+          <div class="usage-bar-fill-cyan-gradient" style="width: 84%;"></div>
+        </div>
+        <span class="usage-footer-warning-note">Ecosystem tracking near threshold limit volume parameters (84% Consumed).</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+<style>
+  /* ==========================================================================
+   PRODUCTION CLOUD ECOSYSTEM FINANCIAL BILLING DESIGN SYSTEM
+   ========================================================================== */
+
+#client-billing-view.view-panel-active {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 36px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.billing-module-header { text-align: left !important; display: flex; flex-direction: column; }
+
+/* --- 3-COLUMN HIGH-DENSITY METRICS ROW DECK --- */
+.billing-metrics-row-rack {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+  width: 100% !important;
+}
+
+.billing-stat-card {
+  background-color: #0c1222 !important; /* Solid block background avoids transparent overlapping conflicts */
+  border: 1px solid rgba(255, 255, 255, 0.02) !important;
+  border-radius: 12px !important; padding: 28px 24px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  display: flex !important; flex-direction: column !important; gap: 12px !important;
+  box-sizing: border-box !important;
+}
+
+.stat-card-serial { font-family: monospace !important; font-size: 0.68rem !important; font-weight: 700; color: #475569; letter-spacing: 0.04em; text-align: left; }
+.billing-stat-card h4 { font-size: 0.88rem !important; font-weight: 700; color: #64748b !important; margin: 0 !important; text-transform: uppercase; text-align: left; }
+
+.stat-amount-lockup { display: flex !important; align-items: flex-start !important; color: #ffffff !important; }
+.stat-currency-token { font-size: 1.1rem !important; font-weight: 700; margin-top: 2px; margin-right: 2px; color: #475569; }
+.stat-numeric-value { font-size: 2.15rem !important; font-weight: 800; line-height: 1 !important; margin: 0 !important; letter-spacing: -0.01em; }
+
+.stat-card-footer-log { font-size: 0.78rem !important; color: #475569 !important; font-weight: 600; text-align: left; margin: 4px 0 0 0 !important; display: flex; align-items: center; gap: 6px; text-transform: uppercase; }
+.footer-trend-dot { width: 5px; height: 5px; border-radius: 50%; display: inline-block; }
+.state-cyan { background-color: #22d3ee; box-shadow: 0 0 6px #22d3ee; }
+.state-purple { background-color: #a855f7; box-shadow: 0 0 6px #a855f7; }
+.state-emerald { background-color: #10b981; box-shadow: 0 0 6px #10b981; }
+
+/* --- ASYMMETRIC SPLIT DETAIL BLOCK HUBS --- */
+.billing-asymmetric-wrapper-row {
+  display: grid !important;
+  grid-template-columns: 1.22fr 0.78fr !important; /* 61% Table ledger block / 39% Progress layout right allocation */
+  gap: 28px !important; width: 100% !important; align-items: start !important;
+}
+
+/* 1. Invoicing Datagrid Core Container */
+.billing-ledger-table-hull {
+  background-color: #0c1222 !important; border: 1px solid rgba(255, 255, 255, 0.02) !important;
+  border-radius: 12px !important; padding: 28px 24px !important; box-sizing: border-box !important;
+  display: flex !important; flex-direction: column !important; gap: 20px !important;
+}
+.table-hull-header-row { display: flex !important; justify-content: space-between !important; align-items: center !important; width: 100% !important; }
+.table-hull-header-row h4 { font-size: 1.05rem !important; font-weight: 700; color: #ffffff !important; margin: 0 !important; text-transform: uppercase; }
+.table-meta-counter { font-family: monospace !important; font-size: 0.72rem !important; font-weight: 700; color: #475569; text-transform: uppercase; }
+
+.table-scroll-containment-box { width: 100% !important; overflow-x: auto !important; }
+
+.billing-native-datagrid { width: 100% !important; border-collapse: collapse !important; text-align: left !important; }
+.billing-native-datagrid th { padding: 14px 16px !important; font-size: 0.75rem !important; font-weight: 700; color: #475569 !important; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.03) !important; letter-spacing: 0.02em; }
+.billing-native-datagrid td { padding: 16px !important; font-size: 0.88rem !important; color: #cbd5e1 !important; border-bottom: 1px solid rgba(255,255,255,0.015) !important; }
+
+.td-mono-token { font-family: monospace !important; font-weight: 700 !important; color: #22d3ee !important; }
+.td-weight-bold { font-weight: 700 !important; color: #ffffff !important; }
+
+.grid-status-pill { font-size: 0.68rem !important; font-weight: 700; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; display: inline-block; }
+.pill-online { background-color: rgba(16, 185, 129, 0.05) !important; border: 1px solid rgba(16, 185, 129, 0.15) !important; color: #10b981 !important; }
+
+/* 2. Right Side Vector Resource Usage Tracker Panel */
+.billing-resource-usage-panel {
+  background-color: #0c1222 !important; border: 1px solid rgba(255, 255, 255, 0.02) !important;
+  border-radius: 12px !important; padding: 28px 24px !important; box-sizing: border-box !important;
+  display: flex !important; flex-direction: column !important; gap: 24px !important;
+}
+.usage-panel-header { text-align: left !important; }
+.usage-panel-header h4 { font-size: 1.05rem !important; font-weight: 700; color: #ffffff !important; margin: 0 !important; text-transform: uppercase; }
+
+.usage-progress-vector-casing { display: flex !important; flex-direction: column !important; gap: 14px !important; width: 100% !important; text-align: left !important; }
+.usage-label-row { display: flex !important; justify-content: space-between !important; font-size: 0.85rem !important; color: #64748b !important; }
+.usage-label-row strong { color: #ffffff !important; }
+
+.usage-bar-track-backbone { width: 100% !important; height: 6px !important; background-color: rgba(255,255,255,0.01) !important; border-radius: 10px !important; overflow: hidden !important; }
+.usage-bar-fill-cyan-gradient { height: 100% !important; background: linear-gradient(90deg, #2563eb, #22d3ee) !important; border-radius: 10px !important; box-shadow: 0 0 10px rgba(34, 211, 238, 0.2); }
+.usage-footer-warning-note { font-size: 0.78rem !important; color: #475569 !important; line-height: 1.5; margin: 0 !important; }
+
+/* --- ACTIVE HOVER CARDS MICRO-INTERACTIONS --- */
+.billing-stat-card, .billing-ledger-table-hull, .billing-resource-usage-panel { transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease, box-shadow 0.4s ease !important; }
+.billing-stat-card:hover, .billing-ledger-table-hull:hover, .billing-resource-usage-panel:hover { transform: translateY(-4px) scale(1.005) !important; border-color: rgba(34, 211, 238, 0.2) !important; box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45) !important; }
+
+/* ==========================================================================
+   MULTI-DEVICE RESPONSIVE MOBILE OVERRIDES FOR PRICING LEDGER
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .billing-metrics-row-rack { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .billing-asymmetric-wrapper-row { grid-template-columns: 1fr !important; gap: 20px !important; }
+  .billing-stat-card, .billing-ledger-table-hull, .billing-resource-usage-panel { padding: 24px 20px !important; }
+  .billing-stat-card:hover, .billing-ledger-table-hull:hover, .billing-resource-usage-panel:hover { transform: none !important; } /* Mutes float reactions on touchscreen mobile docks */
+}
+
+</style>
+
+      </div>
+    </main>
+
+  </div>
+
+  <style>
+    /* ==========================================================================
+   PRODUCTION-GRADE ENTERPRISE DASHBOARD FRAMEWORK BASE STYLES
+   ========================================================================== */
+
+.dashboard-workspace-body {
+  background-color: #030611 !important; /* Base matte slate space black finish */
+  margin: 0 !important; padding: 0 !important;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  color: #cbd5e1 !important; overflow-x: hidden !important;
+}
+
+.dash-master-wrapper {
+  display: flex !important; width: 100% !important; min-height: 100vh !important; position: relative !important;
+}
+
+/* ==========================================================================
+   A. SIDEBAR NAVIGATION RAIL CONTROLLERS (LEFT SIDE RADIUS PANEL)
+   ========================================================================== */
+/* ==========================================================================
+   PINNED FIXED SIDEBAR RAILS ENFORCEMENT (FIXES LOGOUT BUTTON DROPS)
+   ========================================================================== */
+
+/* FIX 1: Pins the left sidebar rail statically to the viewport so it never scrolls away */
+.dash-sidebar-navigation-chassis {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 260px !important;
+  height: 100vh !important; /* Forces layout to match exact monitor browser viewing height */
+  background-color: #060913 !important; /* Midnight slate block back fill remains uniform */
+  border-right: 1px solid rgba(255, 255, 255, 0.02) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 32px 20px !important;
+  box-sizing: border-box !important;
+  z-index: 1100 !important; /* Ensures navigation rail floats over scrolling background grids */
+}
+
+/* FIX 2: Offsets the right-side central canvas to the right to clear the pinned sidebar width area */
+.dash-central-workspace-canvas {
+  position: relative !important;
+  margin-left: 260px !important; /* Shifts workspace right by exactly the sidebar width */
+  flex-grow: 1 !important;
+  min-width: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background-color: #030611 !important;
+}
+
+/* FIX 3: Dynamic horizontal math adjustments recalculates top header width context precisely */
+.client-dashboard-global-nav-header {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important; /* Spans across full shifted central workspace canvas */
+  height: 72px !important;
+  padding: 0 40px !important;
+  box-sizing: border-box !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02) !important;
+  background-color: #060913 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  z-index: 1000 !important;
+}
+
+/* Sidebar navigation switches block stack space layouts wrapper */
+.dash-sidebar-navigation-links-deck {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  flex-grow: 1 !important;
+}
+
+/* Pinned logout button wrapper stays locked to the bottom tracking limits */
+.dash-sidebar-termination-footer {
+  width: 100% !important;
+  padding-top: 24px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.02) !important;
+  margin-top: auto !important; /* Snaps block tightly to base floor margin */
+}
+
+/* ==========================================================================
+   PORTRAIT TOUCH PHONE CONVERSIONS RESPONSIVE MERGES SAFETY OVERRIDES
+   ========================================================================== */
+@media (max-width: 1024px) {
+  /* Restores the horizontal mobile header strip layout rules from previous milestone updates */
+  .dash-sidebar-navigation-chassis {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03) !important;
+    padding: 16px 20px !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    margin-left: 0 !important;
+  }
+
+  .dash-central-workspace-canvas {
+    margin-left: 0 !important; /* Normalizes layout shifts on smartphone views */
+  }
+
+  .dash-sidebar-termination-footer {
+    display: none !important; /* Keeps layout clean by hiding it inside mobile horizontal headers strips */
+  }
+}
+
+
+.dash-sidebar-brand-lockup { width: 100% !important; margin-bottom: 48px !important; }
+.sidebar-brand-anchor { display: flex !important; align-items: center !important; gap: 10px !important; text-decoration: none !important; }
+.brand-vector-node { width: 28px; height: 28px; background: linear-gradient(135deg, #2563eb, #22d3ee); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #ffffff; font-size: 0.95rem; }
+.brand-text-label { font-size: 1.1rem !important; font-weight: 800 !important; color: #ffffff !important; letter-spacing: -0.01em; text-transform: uppercase; }
+.brand-label-sub { font-size: 0.65rem; color: #22d3ee; margin-left: 2px; font-weight: 700; }
+
+.dash-sidebar-navigation-links-deck { display: flex !important; flex-direction: column !important; gap: 8px !important; flex-grow: 1 !important; }
+.dash-menu-link-pill {
+  width: 100% !important; background: transparent !important; border: none !important; padding: 12px 16px !important;
+  border-radius: 8px !important; color: #475569 !important; font-size: 0.88rem !important; font-weight: 700 !important;
+  text-align: left !important; cursor: pointer !important; display: flex !important; align-items: center !important; gap: 10px !important;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important; box-sizing: border-box !important;
+}
+.nav-icon-token { color: currentcolor; font-size: 1.1rem; vertical-align: middle; }
+
+/* Interactive State Selection Highlight Modifiers */
+.dash-menu-link-pill:hover { background-color: rgba(255, 255, 255, 0.01) !important; color: #94a3b8 !important; }
+.dash-menu-link-pill.link-pill-active { background-color: rgba(6, 182, 212, 0.05) !important; border: 1px solid rgba(34, 211, 238, 0.15) !important; color: #ffffff !important; }
+
+.dash-sidebar-termination-footer { width: 100% !important; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.02); }
+.dash-sidebar-logout-btn { display: inline-flex !important; align-items: center !important; gap: 8px !important; text-decoration: none !important; color: #475569 !important; font-size: 0.82rem !important; font-weight: 700 !important; text-transform: uppercase; letter-spacing: 0.02em; transition: color 0.25s ease !important; }
+.dash-sidebar-logout-btn:hover { color: #f43f5e !important; } /* Lights up bright red on session log terminal click triggers */
+
+/* ==========================================================================
+   B. CENTRAL MAIN WORKSPACE HUB VIEW MAP CANVAS & DYNAMIC HEADER CORES
+   ========================================================================== */
+.dash-central-workspace-canvas { display: flex !important; flex-direction: column !important; flex-grow: 1 !important; min-width: 0 !important; }
+
+.client-dashboard-global-nav-header {
+  height: 72px !important; width: 100% !important; padding: 0 40px !important; box-sizing: border-box !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02) !important; background-color: #060913 !important;
+  display: flex !important; align-items: center !important; justify-content: space-between !important; z-index: 100 !important;
+}
+.dash-console-breadcrumb { font-family: monospace !important; font-size: 0.72rem !important; font-weight: 700; color: #334155; letter-spacing: 0.06em; }
+
+.dash-top-actions-rack { display: flex !important; align-items: center !important; gap: 18px !important; }
+.top-action-icon-bead { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; position: relative !important; cursor: pointer; border-radius: 50%; }
+.action-svg { width: 20px; height: 20px; color: #475569; transition: color 0.25s ease !important; }
+.top-action-icon-bead:hover .action-svg { color: #ffffff !important; }
+
+.alerts-notification-bead-dot { position: absolute; top: 8px; right: 8px; width: 6px; height: 6px; background-color: #ef4444; border-radius: 50%; box-shadow: 0 0 6px #ef4444; }
+.top-profile-native-avatar { background-color:linear gradient (#42cee3 to #053942 ) 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.06); transition: border-color 0.25s ease !important; }
+.top-action-icon-bead:hover .top-profile-native-avatar { border-color: #42cee3 !important; }
+
+/* ==========================================================================
+   C. BULLETPROOF TOP NAVIGATION DROPDOWN WINDOW PANELS WRAPPERS
+   ========================================================================== */
+.dash-top-nav-dropdown-wrapper {
+  position: absolute !important; top: 100% !important; right: 0 !important; margin-top: 10px !important;
+  width: 280px !important; background-color: #0c1222 !important; border: 1px solid rgba(255, 255, 255, 0.04) !important;
+  border-radius: 12px !important; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6) !important;
+  padding: 20px 18px !important; box-sizing: border-box !important; cursor: default !important;
+  
+  /* Initial hidden state structures setup tracking rules */
+  opacity: 0 !important; visibility: hidden !important; transform: translateY(10px) !important;
+  will-change: transform, opacity;
+  transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.3s ease !important;
+  z-index: 9999 !important;
+}
+
+/* Fired forward instantly by Javascript control loops toggling actions */
+.dash-top-nav-dropdown-wrapper.dropdown-active-reveal { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; }
+
+.dropdown-header-title { font-size: 0.85rem !important; font-weight: 800; color: #ffffff !important; text-transform: uppercase; letter-spacing: 0.02em; margin: 0 0 14px 0 !important; border-bottom: 1px solid rgba(255,255,255,0.02); padding-bottom: 8px; text-align: left !important; }
+.dropdown-log-line { display: flex !important; align-items: center !important; gap: 8px !important; font-size: 0.78rem !important; color: #64748b !important; margin-bottom: 10px !important; text-align: left !important; }
+.log-status-dot { width: 5px; height: 5px; border-radius: 50%; display: inline-block; }
+.status-ok { background-color: #10b981; box-shadow: 0 0 4px #10b981; }
+.status-alert { background-color: #f59e0b; box-shadow: 0 0 4px #f59e0b; }
+
+.dropdown-meta-token { font-family: monospace; font-size: 0.68rem; font-weight: 700; color: #22d3ee; display: block; margin-bottom: 14px; text-align: left !important; }
+.dropdown-links-list { list-style: none !important; padding: 0 !important; margin: 0 !important; display: flex !important; flex-direction: column !important; gap: 10px !important; text-align: left !important; }
+.dropdown-links-list a { text-decoration: none !important; font-size: 0.82rem !important; font-weight: 700; color: #475569 !important; transition: color 0.2s ease !important; }
+.dropdown-links-list a:hover { color: #ffffff !important; }
+
+/* ==========================================================================
+   D. VIEW CANVAS PANELS MATRIX ENFORCERS TRANSITIONS
+   ========================================================================== */
+.client-dashboard-views-central-hull { padding: 48px 40px !important; box-sizing: border-box !important; flex-grow: 1 !important; }
+
+.client-dashboard-view-panel {
+  width: 100% !important; box-sizing: border-box !important;
+  opacity: 0; transform: translateY(15px); will-change: transform, opacity;
+  transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+.client-dashboard-view-panel.view-panel-active { opacity: 1 !important; transform: translateY(0) !important; }
+
+.view-panel-main-headline { font-size: 1.85rem !important; font-weight: 800 !important; color: #ffffff !important; text-transform: uppercase !important; letter-spacing: -0.01em !important; margin: 0 0 12px 0 !important; text-align: left !important; }
+.view-panel-narrative { font-size: 0.95rem !important; color: #475569 !important; line-height: 1.6 !important; max-width: 740px !important; margin: 0 0 40px 0 !important; text-align: left !important; }
+
+/* ==========================================================================
+   E. RESPONSIVE TABLET VIEWS SYSTEM DOWN SCALES QUERIES
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .dash-master-wrapper { flex-direction: column !important; }
+  .dash-sidebar-navigation-chassis { width: 100% !important; height: auto !important; border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.02) !important; padding: 20px 24px !important; gap: 24px !important; }
+  .dash-sidebar-brand-lockup { margin-bottom: 0 !important; }
+.dash-sidebar-navigation-links-deck { flex-direction: row !important; flex-wrap: wrap !important; gap: 8px !important; }.dash-menu-link-pill { width: auto !important; padding: 10px 14px !important; font-size: 0.8rem !important; }.dash-sidebar-termination-footer { display: none !important; } /* Suppresses logout link inside horizontal mobile rows field */.client-dashboard-global-nav-header { padding: 0 24px !important; }.client-dashboard-views-central-hull { padding: 36px 24px !important; }}
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+  // ==========================================================================
+  // 1. TOP BAR DYNAMIC DROPDOWNS CHANNEL TRIGGERS
+  // ==========================================================================
+  const alertsTrigger = document.getElementById('alerts-trigger-node');
+  const profileTrigger = document.getElementById('profile-trigger-node');
+  const alertsDropdown = document.getElementById('alerts-dropdown-panel');
+  const profileDropdown = document.getElementById('profile-dropdown-panel');
+
+  if (alertsTrigger && alertsDropdown) {
+    alertsTrigger.addEventListener('click', (e) => {
+      e.stopPropagation(); // Halts instant window baseline event dismiss triggers
+      if (profileDropdown) profileDropdown.classList.remove('dropdown-active-reveal');
+      alertsDropdown.classList.toggle('dropdown-active-reveal');
+    });
+  }
+
+  if (profileTrigger && profileDropdown) {
+    profileTrigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (alertsDropdown) alertsDropdown.classList.remove('dropdown-active-reveal');
+      profileDropdown.classList.toggle('dropdown-active-reveal');
+    });
+  }
+
+  // Global window tracking clears open menus when user clicks inside empty canvas spaces boundaries
+  document.addEventListener('click', (e) => {
+    if (alertsDropdown && !alertsDropdown.contains(e.target) && e.target !== alertsTrigger) {
+      alertsDropdown.classList.remove('dropdown-active-reveal');
+    }
+    if (profileDropdown && !profileDropdown.contains(e.target) && e.target !== profileTrigger) {
+      profileDropdown.classList.remove('dropdown-active-reveal');
+    }
+  });
+
+
+  // ==========================================================================
+  // 2. SIDEBAR MULTI-PAGE VIEW SWAPPING MAPPER ENGINE
+  // ==========================================================================
+  const sidebarNavButtons = document.querySelectorAll('.dash-menu-link-pill');
+  const dashboardViewPanels = document.querySelectorAll('.client-dashboard-view-panel');
+
+  if (sidebarNavButtons.length > 0 && dashboardViewPanels.length > 0) {
+    sidebarNavButtons.forEach(buttonLink => {
+      buttonLink.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // Extract designated sub view destination from button parameter data tag fields
+        const targetedViewID = buttonLink.getAttribute('data-view-target');
+        if (!targetedViewID) return;
+
+        // A. Toggle Sidebar text selection highlight classes parameters
+        sidebarNavButtons.forEach(btn => btn.classList.remove('link-pill-active'));
+        buttonLink.classList.add('link-pill-active');
+
+        // B. Clear display settings across panels arrays to pop the targeted workspace window forward
+        dashboardViewPanels.forEach(panelBox => {
+          panelBox.classList.remove('view-panel-active');
+          panelBox.style.display = 'none';
+
+          if (panelBox.getAttribute('id') === targetedViewID) {
+            panelBox.style.display = 'block';
+            // Strategic timeout delays ensures smooth hardware accelerated fade transitions lift execution tracks
+            setTimeout(() => {
+              panelBox.classList.add('view-panel-active');
+            }, 10);
+          }
+        });
+      });
+    });
+  }
+
+
+  // ==========================================================================
+  // 3. BRAND REFRESH LOGO INTERACTION CONTEXT DISPATCHER
+  // ==========================================================================
+  const brandLogoAnchor = document.getElementById('stackly-brand-refresh');
+  if (brandLogoAnchor) {
+    brandLogoAnchor.addEventListener('click', (e) => {
+      e.preventDefault();
+      // Forces full page refresh cache wipe natively straight off drive protocols paths
+      window.location.reload();
+    });
+  }
+});
+  </script>
 </body>
 </html>

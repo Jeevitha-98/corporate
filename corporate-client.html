@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Partner Console Hub | Stackly Corp</title>
+  <title>Client Console Hub | Stackly Corp</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="dashboard-workspace-body">
@@ -382,6 +382,34 @@
     </div>
 
   </div>
+  <style>
+ @media (max-width: 768px) {
+  /* Force both dropdown panels to break out of the hidden overflow master wrapper */
+  #alerts-dropdown-panel,
+  #profile-dropdown-panel {
+    position: fixed !important;
+    bottom: 85px !important;    /* Floating safely above the bottom navbar bar */
+    top: auto !important;       /* Removes desktop top positioning */
+    width: 280px !important;    /* Standard mobile card width */
+    max-width: 85vw !important; /* Safety constraint for narrow screens */
+    z-index: 999999 !important; /* Forces layout stacking priority above everything */
+  }
+
+  /* Position the Bell Alert menu on the left side of the viewport */
+  #alerts-dropdown-panel {
+    left: 20px !important;
+    right: auto !important;
+  }
+
+  /* Position the Profile menu slightly shifted right so they don't stack directly on top of each other */
+  #profile-dropdown-panel {
+    left: 60px !important;
+    right: auto !important;
+  }
+}
+
+
+  </style>
 </header>
 
 <style>

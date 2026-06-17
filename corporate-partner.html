@@ -364,6 +364,26 @@
         </div>
       </div>
     </div>
+    <style>
+      @media (max-width: 768px) {
+  /* Ensure the trigger container acts as the anchor point */
+  #alerts-trigger-node {
+    position: relative;
+  }
+
+  /* Force the dropdown to stay within the mobile viewport */
+  #alerts-dropdown-panel {
+    position: absolute;
+    top: 100%;       /* Positions it directly below the bell icon */
+    left: 0;         /* Aligns it to the left edge of the trigger */
+    right: auto;     
+    width: 280px;    /* Prevents the panel from scaling too wide */
+    max-width: 85vw; /* Caps the width so it never clips off mobile screens */
+    z-index: 9999;   /* Forces it to sit on top of the main main body content */
+  }
+}
+
+    </style>
 
     <!-- REPAIRED PROFILE ICON POD: Built with an explicit high-contrast vector bead -->
     <div class="top-action-icon-bead" id="profile-trigger-node">
@@ -381,6 +401,28 @@
     </div>
 
   </div>
+  <style>
+    @media (max-width: 768px) {
+  /* Anchor both trigger nodes */
+  #alerts-trigger-node,
+  #profile-trigger-node {
+    position: relative;
+  }
+
+  /* Fix both dropdown menus on mobile viewports */
+  #alerts-dropdown-panel,
+  #profile-dropdown-panel {
+    position: absolute;
+    top: 100%;       /* Positions them right beneath their icons */
+    left: 0;         /* Aligns them to the left edge of the icon */
+    right: auto;     
+    width: 280px;    /* Standard mobile container width */
+    max-width: 85vw; /* Caps width so it never breaks the viewport */
+    z-index: 9999;   /* Layer them above your content and layout text */
+  }
+}
+
+  </style>
 </header>
 
 <style>
